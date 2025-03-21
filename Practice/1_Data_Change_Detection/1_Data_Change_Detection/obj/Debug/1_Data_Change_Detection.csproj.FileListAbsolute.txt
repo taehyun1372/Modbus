@@ -1,0 +1,6 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\1_Data_Change_Detection\1_Data_Change_Detection\bin\Debug\1_Data_Change_Detection.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\1_Data_Change_Detection\1_Data_Change_Detection\bin\Debug\1_Data_Change_Detection.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\1_Data_Change_Detection\1_Data_Change_Detection\obj\Debug\1_Data_Change_Detection.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\1_Data_Change_Detection\1_Data_Change_Detection\obj\Debug\1_Data_Change_Detection.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\1_Data_Change_Detection\1_Data_Change_Detection\obj\Debug\1_Data_Change_Detection.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\1_Data_Change_Detection\1_Data_Change_Detection\obj\Debug\1_Data_Change_Detection.pdb
