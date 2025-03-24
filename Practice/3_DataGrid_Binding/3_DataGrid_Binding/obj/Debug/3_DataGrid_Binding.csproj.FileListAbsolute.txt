@@ -1,0 +1,15 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\bin\Debug\3_DataGrid_Binding.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\bin\Debug\3_DataGrid_Binding.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\3_DataGrid_Binding_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\3_DataGrid_Binding_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\3_DataGrid_Binding.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\_3_DataGrid_Binding.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\3_DataGrid_Binding.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\3_DataGrid_Binding.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\3_DataGrid_Binding.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\3_DataGrid_Binding.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\Views\DataGridView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\3_DataGrid_Binding\3_DataGrid_Binding\obj\Debug\Views\DataGridView.baml

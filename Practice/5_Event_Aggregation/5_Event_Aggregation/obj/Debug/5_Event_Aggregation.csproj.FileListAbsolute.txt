@@ -1,0 +1,6 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\5_Event_Aggregation\5_Event_Aggregation\bin\Debug\5_Event_Aggregation.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\5_Event_Aggregation\5_Event_Aggregation\bin\Debug\5_Event_Aggregation.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\5_Event_Aggregation\5_Event_Aggregation\obj\Debug\5_Event_Aggregation.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\5_Event_Aggregation\5_Event_Aggregation\obj\Debug\5_Event_Aggregation.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\5_Event_Aggregation\5_Event_Aggregation\obj\Debug\5_Event_Aggregation.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\5_Event_Aggregation\5_Event_Aggregation\obj\Debug\5_Event_Aggregation.pdb
