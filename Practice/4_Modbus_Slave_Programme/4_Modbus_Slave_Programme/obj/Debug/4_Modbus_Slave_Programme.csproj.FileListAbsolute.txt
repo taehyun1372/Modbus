@@ -1,0 +1,16 @@
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\bin\Debug\4_Modbus_Slave_Programme.dll
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\bin\Debug\4_Modbus_Slave_Programme.pdb
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme.csproj.AssemblyReference.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\UserControl1.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\Views\DataColumnView.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme_MarkupCompile.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme_MarkupCompile.lref
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\UserControl1.baml
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\Views\DataColumnView.baml
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme.g.resources
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\_4_Modbus_Slave_Programme.Properties.Resources.resources
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme.csproj.GenerateResource.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme.csproj.CoreCompileInputs.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme.dll
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme.pdb
+C:\Users\taehy\Desktop\Code\Modbus\Practice\4_Modbus_Slave_Programme\4_Modbus_Slave_Programme\obj\Debug\4_Modbus_Slave_Programme.csproj.SuggestedBindingRedirects.cache

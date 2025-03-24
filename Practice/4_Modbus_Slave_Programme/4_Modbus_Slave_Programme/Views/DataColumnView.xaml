@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="_4_Modbus_Slave_Programme.Views.DataColumnView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_4_Modbus_Slave_Programme.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="200">
+    <Grid>
+        <DataGrid GridLinesVisibility="None" AutoGenerateColumns="False" ItemsSource="{Binding DataItems}">
+            <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="50"/>
+            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="100"/>
+            <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="50"/>
+        </DataGrid>
+    </Grid>
+</UserControl>
