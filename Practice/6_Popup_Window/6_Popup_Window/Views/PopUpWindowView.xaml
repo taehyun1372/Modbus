@@ -5,9 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_6_Popup_Window.Views"
         mc:Ignorable="d"
-        Title="PopUpWindowView" Height="450" Width="800">
+        Title="PopUpWindowView" Height="200" Width="350">
     <Grid>
-        <TextBlock Text="This is pop up window" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        
+        <StackPanel Orientation="Vertical">
+            <Label Content="Bit Fields"/>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Name="cbBit15" IsChecked="{Binding Bit15}"/>
+                <CheckBox Name="cbBit14" IsChecked="{Binding Bit14}"/>
+                <CheckBox Name="cbBit13" IsChecked="{Binding Bit13}"/>
+                <CheckBox Name="cbBit12" IsChecked="{Binding Bit12}"/>
+                <Label Content=" "/>
+                <CheckBox Name="cbBit11" IsChecked="{Binding Bit11}"/>
+                <CheckBox Name="cbBit10" IsChecked="{Binding Bit10}"/>
+                <CheckBox Name="cbBit9" IsChecked="{Binding Bit9}"/>
+                <CheckBox Name="cbBit8" IsChecked="{Binding Bit8}"/>
+                <Label Content=" "/>
+                <CheckBox Name="cbBit7" IsChecked="{Binding Bit7}"/>
+                <CheckBox Name="cbBit6" IsChecked="{Binding Bit6}"/>
+                <CheckBox Name="cbBit5" IsChecked="{Binding Bit5}"/>
+                <CheckBox Name="cbBit4" IsChecked="{Binding Bit4}"/>
+                <Label Content=" "/>
+                <CheckBox Name="cbBit3" IsChecked="{Binding Bit3}"/>
+                <CheckBox Name="cbBit2" IsChecked="{Binding Bit2}"/>
+                <CheckBox Name="cbBit1" IsChecked="{Binding Bit1}"/>
+                <CheckBox Name="cbBit0" IsChecked="{Binding Bit0}"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

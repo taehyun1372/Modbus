@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using _6_Popup_Window.Views;
+using _6_Popup_Window.ViewModels;
 
 namespace _6_Popup_Window
 {
@@ -21,19 +22,13 @@ namespace _6_Popup_Window
     /// </summary>
     public partial class MainWindow : Window
     {
-        private PopUpWindowView _popup;
 
         public MainWindow()
         {
             InitializeComponent();
-            
-            
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            _popup = new PopUpWindowView();
-            _popup.Show();
+            MainViewModel mainViewModel = new MainViewModel();
+            MainView mainView = new MainView(mainViewModel);
+            fmMain.Content = mainView;
         }
     }
 }

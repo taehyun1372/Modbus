@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using _6_Popup_Window.ViewModels;
 
 namespace _6_Popup_Window.Views
 {
@@ -19,9 +20,10 @@ namespace _6_Popup_Window.Views
     /// </summary>
     public partial class PopUpWindowView : Window
     {
-        public PopUpWindowView()
+        public PopUpWindowView(PopUpWindowViewModel model)
         {
             InitializeComponent();
+            DataContext = model;
         }
     }
 }

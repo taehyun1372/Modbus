@@ -16,3 +16,21 @@ C:\Users\taehy\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\De
 C:\Users\taehy\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.csproj.CoreCompileInputs.cache
 C:\Users\taehy\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.exe
 C:\Users\taehy\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\bin\Debug\6_Popup_Window.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\bin\Debug\6_Popup_Window.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\bin\Debug\6_Popup_Window.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\Views\PopUpWindowView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\Views\PopUpWindowView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\_6_Popup_Window.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\Views\MainView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\Views\MainView.baml

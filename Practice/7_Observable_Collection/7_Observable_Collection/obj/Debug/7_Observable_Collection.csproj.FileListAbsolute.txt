@@ -1,0 +1,16 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\bin\Debug\7_Observable_Collection.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\bin\Debug\7_Observable_Collection.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\7_Observable_Collection.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\7_Observable_Collection_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\7_Observable_Collection_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\7_Observable_Collection.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\_7_Observable_Collection.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\7_Observable_Collection.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\7_Observable_Collection.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\7_Observable_Collection.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\7_Observable_Collection.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\PopupWindowView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\7_Observable_Collection\7_Observable_Collection\obj\Debug\PopupWindowView.baml
