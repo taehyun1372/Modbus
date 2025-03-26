@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,9 +11,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using _6_Popup_Window.ViewModels;
+using System.Windows;
 
-namespace _6_Popup_Window.Views
+namespace _8_ICommand
 {
     /// <summary>
     /// Interaction logic for MainView.xaml
@@ -30,10 +29,11 @@ namespace _6_Popup_Window.Views
             _model = model;
         }
 
-
-        private void dgMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            _model.dgMain_SelectionChanged_Handler(sender, e);
+            _model.CheckBoxEventHandler(sender, e);
         }
+
+        
     }
 }

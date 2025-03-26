@@ -6,13 +6,35 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.ComponentModel;
+using System.Windows.Controls;
+using _6_Popup_Window.Views;
 
 namespace _6_Popup_Window.ViewModels
 {
-    public class MainViewModel
+    public class MainViewModel : INotifyPropertyChanged
     {
+        private PopUpWindowViewModel _popupModel;
+        private PopUpWindowView _popupView;
 
         public ObservableCollection<DataItem> DataItems { get; set; }
+
+        private DataItem _selectedItem;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public DataItem SelectedItem
+        {
+            get
+            {
+                return _selectedItem;
+            }
+            set
+            {
+                _selectedItem = value;
+                UpdateSelectedIndex(value);
+                OnPropertyChanged(nameof(SelectedItem));
+            }
+        }
 
         public MainViewModel()
         {
@@ -22,10 +44,36 @@ namespace _6_Popup_Window.ViewModels
             {
                 DataItems.Add(new DataItem(i));
             }
-
-            //Test
-            DataItems[5].Value = 10;
         }
+        private int SelectedIndex { get; set; }
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        public void UpdateSelectedIndex(DataItem item)
+        {
+            SelectedIndex = DataItems.IndexOf(item);
+        }
+
+        public void dgMain_SelectionChanged_Handler(object sender, SelectionChangedEventArgs e)
+        {
+            if (SelectedIndex == -1)
+            {
+                return;
+            }
+
+            if (_popupModel != null || _popupView != null)
+            {
+                _popupView.Close();
+            }
+
+            _popupModel = new PopUpWindowViewModel(this, SelectedIndex);
+            _popupView = new PopUpWindowView(_popupModel);
+            _popupView.ShowDialog ();
+        }
+
+
     }
 
     public class DataItem : INotifyPropertyChanged

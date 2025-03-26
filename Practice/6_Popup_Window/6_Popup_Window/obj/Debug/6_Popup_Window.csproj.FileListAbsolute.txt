@@ -34,3 +34,4 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Po
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.pdb
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\Views\MainView.g.cs
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\Views\MainView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\6_Popup_Window\6_Popup_Window\obj\Debug\6_Popup_Window.csproj.AssemblyReference.cache

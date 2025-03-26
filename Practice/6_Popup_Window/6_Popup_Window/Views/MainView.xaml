@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="200">
     <Grid>
-        <DataGrid Name="dgMain" AutoGenerateColumns="False" GridLinesVisibility="None" ItemsSource="{Binding DataItems}" GotFocus="DataGrid_GotFocus">
+        <DataGrid Name="dgMain" AutoGenerateColumns="False" GridLinesVisibility="None" ItemsSource="{Binding DataItems}" SelectionChanged="dgMain_SelectionChanged" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Address" Width="50" Binding="{Binding Address}"/>
                 <DataGridTextColumn Header="Description" Width="100" Binding="{Binding Description}"/>

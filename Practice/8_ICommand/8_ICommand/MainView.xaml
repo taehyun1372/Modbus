@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="_8_ICommand.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_8_ICommand"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="260">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <TextBox Text="{Binding InputString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100"/>
+            <Button Content="Button" Width="100" Command="{Binding ButtonICommand}"/>
+            <CheckBox  HorizontalAlignment="Center" VerticalAlignment="Center" Checked="CheckBox_Checked" IsEnabled="{Binding CheckBoxAvailable}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
