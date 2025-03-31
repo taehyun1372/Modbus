@@ -12,8 +12,6 @@ namespace _9_DataGrid_Ordering
     {
         public ObservableCollection<DataItem> DataItems { get; set; }
         public int SelectedItem { get; set; }
-        private PopupView _popupView;
-        private PopupViewModel _popupViewModel;
         public MainGridViewModel()
         {
             DataItems = new ObservableCollection<DataItem>();
@@ -29,21 +27,24 @@ namespace _9_DataGrid_Ordering
             DataItems.Add(new DataItem() { Address = 9, Description = "", Value = 0 });
         }
 
-        public void DataGrid_Selected_Handler(object sender, RoutedEventArgs e)
+        public void UpdateRowQuantity(int count)
         {
-            if (SelectedItem == -1)
+            if (count <= 0 ) return;
+            if (count == DataItems.Count) return;
+            if (count < DataItems.Count)
             {
-                return;
+                for (int i = DataItems.Count -1; i >= count; i--)
+                {
+                    DataItems.RemoveAt(i);
+                }
             }
-            if (_popupView != null)
+            if (count > DataItems.Count)
             {
-                _popupView.Close();
+                for (int i = DataItems.Count; i < count; i++)
+                {
+                    DataItems.Add(new DataItem() { Address=i, Description="", Value = 0 });
+                }
             }
-
-            _popupViewModel = new PopupViewModel(SelectedItem);
-            _popupView = new PopupView(_popupViewModel);
-
-            _popupView.ShowDialog();
         }
     }
 

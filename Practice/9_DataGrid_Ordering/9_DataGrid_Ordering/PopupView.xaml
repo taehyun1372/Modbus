@@ -8,12 +8,12 @@
         Title="PopupView" Height="200" Width="200">
     <Grid>
         <StackPanel>
-            <RadioButton Content="10" Checked="{Binding Check10, Mode=TwoWay}"/>
-            <RadioButton Content="20" Checked="{Binding Check20, Mode=TwoWay}"/>
-            <RadioButton Content="30" Checked="{Binding Check30, Mode=TwoWay}"/>
+            <RadioButton Content="10" IsChecked="{Binding Check10, Mode=TwoWay}"/>
+            <RadioButton Content="20" IsChecked="{Binding Check20, Mode=TwoWay}"/>
+            <RadioButton Content="30" IsChecked="{Binding Check30, Mode=TwoWay}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Name="Okay" Margin="10, 0, 10, 0"  Content="Okay" Click="Okay_Click" />
-                <Button Margin="10, 0, 10, 0" Content="Cancel"/>
+                <Button Name="Cancel" Margin="10, 0, 10, 0" Content="Cancel" Click="Cancel_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

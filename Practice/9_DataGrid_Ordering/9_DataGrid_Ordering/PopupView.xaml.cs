@@ -30,6 +30,12 @@ namespace _9_DataGrid_Ordering
         private void Okay_Click(object sender, RoutedEventArgs e)
         {
             _model.Okay_Click_Handler(sender, e);
+            this.Close();
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

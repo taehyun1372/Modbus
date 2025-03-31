@@ -10,21 +10,28 @@ namespace _9_DataGrid_Ordering
     public class PopupViewModel : INotifyPropertyChanged
     {
         private MainGridViewModel _mainGridViewModel;
-        public PopupViewModel(int selectedItem, MainGridViewModel mainGridViewModel)
+        public PopupViewModel(MainGridViewModel mainGridViewModel)
         {
             _mainGridViewModel = mainGridViewModel;
-            SelectedItem = selectedItem;
         }
-        public int SelectedItem { get; set; }
 
         public void Okay_Click_Handler(object sender, RoutedEventArgs e)
         {
+            int count = 0;
             if (Check10)
             {
-
+                count = 10;
+            }
+            else if (Check20)
+            {
+                count = 20;
+            }
+            else if (Check30)
+            {
+                count = 30;
             }
 
-            _mainGridViewModel.Update_Columns();
+            _mainGridViewModel.UpdateRowQuantity(count);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

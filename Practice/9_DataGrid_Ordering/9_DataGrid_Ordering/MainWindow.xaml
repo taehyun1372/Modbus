@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Frame Name="fmMain" NavigationUIVisibility="Hidden"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Column="0" Name="fmMain" NavigationUIVisibility="Hidden"/>
+        <StackPanel  Grid.Column="1">
+            <Button Name="btnRowSetting" Content="Row Setting" Click="btnRowSetting_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

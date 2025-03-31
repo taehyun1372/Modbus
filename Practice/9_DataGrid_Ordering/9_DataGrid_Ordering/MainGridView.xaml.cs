@@ -27,10 +27,5 @@ namespace _9_DataGrid_Ordering
             this.DataContext = model;
             _model = model;
         }
-
-        private void DataGrid_Selected(object sender, RoutedEventArgs e)
-        {
-            _model.DataGrid_Selected_Handler(sender, e);
-        }
     }
 }

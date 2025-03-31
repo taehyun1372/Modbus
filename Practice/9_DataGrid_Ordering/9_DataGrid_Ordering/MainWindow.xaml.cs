@@ -19,13 +19,30 @@ namespace _9_DataGrid_Ordering
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainGridViewModel _mainGridViewModel;
+        private PopupView _popupView;
+        private PopupViewModel _popupViewModel;
         public MainWindow()
         {
             InitializeComponent();
             MainGridViewModel model = new MainGridViewModel();
+            _mainGridViewModel = model;
             MainGridView view = new MainGridView(model);
             fmMain.Content = view;
 
+        }
+
+        private void btnRowSetting_Click(object sender, RoutedEventArgs e)
+        {
+            if (_popupView != null)
+            {
+                _popupView.Close();
+            }
+
+            _popupViewModel = new PopupViewModel(_mainGridViewModel);
+            _popupView = new PopupView(_popupViewModel);
+
+            _popupView.ShowDialog();
         }
     }
 }
