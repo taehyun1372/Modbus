@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_9_DataGrid_Ordering"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="550">
+    <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
         <Frame Grid.Column="0" Name="fmMain" NavigationUIVisibility="Hidden"/>
         <StackPanel  Grid.Column="1">
-            <Button Name="btnRowSetting" Content="Row Setting" Click="btnRowSetting_Click"/>
+            <Button Name="btnRowSetting" Content="Row" Click="btnRowSetting_Click" Margin="10, 0, 10, 5"/>
+            <Button Name="btnQuantitySetting" Content="Quantity" Click="btnQuantitySetting_Click"  Margin="10, 0, 10, 5"/>
         </StackPanel>
     </Grid>
 </Window>

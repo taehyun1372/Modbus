@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using _9_DataGrid_Ordering.Views;
+using _9_DataGrid_Ordering.ViewModels;
 
 namespace _9_DataGrid_Ordering
 {
@@ -20,8 +22,13 @@ namespace _9_DataGrid_Ordering
     public partial class MainWindow : Window
     {
         private MainGridViewModel _mainGridViewModel;
-        private PopupView _popupView;
-        private PopupViewModel _popupViewModel;
+        private RowSettingPopupView _rowSettingPopupView;
+        private RowSettingPopupViewModel _rowSettingPopupViewModel;
+
+        private QuantitySettingPopupView _quantitySettingPopupView;
+        private QuantitySettingPopupViewModel _quantitySettingPopupViewModel;
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,15 +41,28 @@ namespace _9_DataGrid_Ordering
 
         private void btnRowSetting_Click(object sender, RoutedEventArgs e)
         {
-            if (_popupView != null)
+            if (_rowSettingPopupView != null)
             {
-                _popupView.Close();
+                _rowSettingPopupView.Close();
             }
 
-            _popupViewModel = new PopupViewModel(_mainGridViewModel);
-            _popupView = new PopupView(_popupViewModel);
+            _rowSettingPopupViewModel = new RowSettingPopupViewModel(_mainGridViewModel);
+            _rowSettingPopupView = new RowSettingPopupView(_rowSettingPopupViewModel);
 
-            _popupView.ShowDialog();
+            _rowSettingPopupView.ShowDialog();
+        }
+
+        private void btnQuantitySetting_Click(object sender, RoutedEventArgs e)
+        {
+            if (_quantitySettingPopupView != null)
+            {
+                _quantitySettingPopupView.Close();
+            }
+
+            _quantitySettingPopupViewModel = new QuantitySettingPopupViewModel(_mainGridViewModel);
+            _quantitySettingPopupView = new QuantitySettingPopupView(_quantitySettingPopupViewModel);
+
+            _quantitySettingPopupView.ShowDialog();
         }
     }
 }

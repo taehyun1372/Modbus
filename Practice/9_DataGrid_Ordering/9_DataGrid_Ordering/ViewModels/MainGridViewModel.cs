@@ -5,8 +5,10 @@ using System.Text;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
+using _9_DataGrid_Ordering.Views;
+using _9_DataGrid_Ordering.Core;
 
-namespace _9_DataGrid_Ordering
+namespace _9_DataGrid_Ordering.ViewModels
 {
     public class MainGridViewModel
     {
@@ -15,32 +17,58 @@ namespace _9_DataGrid_Ordering
         public MainGridViewModel()
         {
             DataItems = new ObservableCollection<DataItem>();
-            DataItems.Add(new DataItem() { Address = 0, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 1, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 2, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 3, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 4, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 5, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 6, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 7, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 8, Description = "", Value = 0 });
-            DataItems.Add(new DataItem() { Address = 9, Description = "", Value = 0 });
+            RowSetting = Features.EnumRowSetting.Row10;
         }
 
-        public void UpdateRowQuantity(int count)
+        private Features.EnumRowSetting _rowSetting;
+        public Features.EnumRowSetting RowSetting
         {
-            if (count <= 0 ) return;
-            if (count == DataItems.Count) return;
-            if (count < DataItems.Count)
+            get { return _rowSetting; }
+            set
             {
-                for (int i = DataItems.Count -1; i >= count; i--)
+                _rowSetting = value;
+                UpdateRowSetting(_rowSetting);
+            }
+        }
+
+        private int _quantity;
+        public int Quantity
+        {
+            get
+            {
+                return _quantity;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    value = 1;
+                }
+                _quantity = value;
+                UpdateQuantitySetting(_quantity);
+            }
+        }
+
+        public void UpdateQuantitySetting(int quantity)
+        {
+            
+        }
+
+        public void UpdateRowSetting(Features.EnumRowSetting rowSetting)
+        {
+
+            if ((int)rowSetting <= 0 ) return;
+            if ((int)rowSetting == DataItems.Count) return;
+            if ((int)rowSetting < DataItems.Count)
+            {
+                for (int i = DataItems.Count -1; i >= (int)rowSetting; i--)
                 {
                     DataItems.RemoveAt(i);
                 }
             }
-            if (count > DataItems.Count)
+            if ((int)rowSetting > DataItems.Count)
             {
-                for (int i = DataItems.Count; i < count; i++)
+                for (int i = DataItems.Count; i < (int)rowSetting; i++)
                 {
                     DataItems.Add(new DataItem() { Address=i, Description="", Value = 0 });
                 }
@@ -63,7 +91,6 @@ namespace _9_DataGrid_Ordering
             {
                 _address = value;
                 OnPropertyChanged(nameof(Address));
-
             }
         }
 

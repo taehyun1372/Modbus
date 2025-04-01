@@ -10,16 +10,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using _9_DataGrid_Ordering.ViewModels;
 
-namespace _9_DataGrid_Ordering
+namespace _9_DataGrid_Ordering.Views
 {
     /// <summary>
     /// Interaction logic for PopupView.xaml
     /// </summary>
-    public partial class PopupView : Window
+    public partial class RowSettingPopupView : Window
     {
-        private PopupViewModel _model;
-        public PopupView(PopupViewModel model)
+        private RowSettingPopupViewModel _model;
+        public RowSettingPopupView(RowSettingPopupViewModel model)
         {
             InitializeComponent();
             this.DataContext = model;

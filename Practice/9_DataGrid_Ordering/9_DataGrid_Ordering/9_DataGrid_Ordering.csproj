@@ -56,7 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainGridView.xaml">
+    <Page Include="Views\MainGridView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -68,24 +68,33 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainGridView.xaml.cs">
+    <Compile Include="Core\Features.cs" />
+    <Compile Include="ViewModels\QuantitySettingPopupViewModel.cs" />
+    <Compile Include="Views\MainGridView.xaml.cs">
       <DependentUpon>MainGridView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainGridViewModel.cs" />
+    <Compile Include="ViewModels\MainGridViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PopupView.xaml">
+    <Page Include="Views\QuantitySettingPopupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RowSettingPopupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PopupView.xaml.cs">
-      <DependentUpon>PopupView.xaml</DependentUpon>
+    <Compile Include="Views\QuantitySettingPopupView.xaml.cs">
+      <DependentUpon>QuantitySettingPopupView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopupViewModel.cs" />
+    <Compile Include="Views\RowSettingPopupView.xaml.cs">
+      <DependentUpon>RowSettingPopupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\RowSettingPopupViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -109,5 +118,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

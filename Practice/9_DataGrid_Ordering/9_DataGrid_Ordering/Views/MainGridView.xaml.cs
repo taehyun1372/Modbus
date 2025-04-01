@@ -12,8 +12,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using _9_DataGrid_Ordering.ViewModels;
 
-namespace _9_DataGrid_Ordering
+namespace _9_DataGrid_Ordering.Views
 {
     /// <summary>
     /// Interaction logic for MainGridView.xaml

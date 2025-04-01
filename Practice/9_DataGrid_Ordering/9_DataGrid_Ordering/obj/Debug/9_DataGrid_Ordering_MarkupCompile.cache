@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\taehy\Desktop\Code\Modbus\Practice\9_DataGrid_Ordering\9_DataGrid_Ordering\obj\Debug\
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\9_DataGrid_Ordering\9_DataGrid_Ordering\obj\Debug\
 _9_DataGrid_Ordering
 none
 false
 DEBUG;TRACE
-C:\Users\taehy\Desktop\Code\Modbus\Practice\9_DataGrid_Ordering\9_DataGrid_Ordering\App.xaml
-3-382838744
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\9_DataGrid_Ordering\9_DataGrid_Ordering\App.xaml
+444789723
 
-9-1444073805
-121182277259
-MainGridView.xaml;MainWindow.xaml;PopupView.xaml;
+121379376782
+12-1311582721
+Views\MainGridView.xaml;MainWindow.xaml;Views\QuantitySettingPopupView.xaml;Views\RowSettingPopupView.xaml;
 
 False
 
