@@ -1,0 +1,16 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\bin\Debug\10_DataGrid_Dynamic_Ordering.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\bin\Debug\10_DataGrid_Dynamic_Ordering.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\bin\Debug\10_DataGrid_Dynamic_Ordering.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\MainDataGridView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\MainDataGridView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\_10_DataGrid_Dynamic_Ordering.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.pdb
