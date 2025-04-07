@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_10_DataGrid_Dynamic_Ordering"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="600">
     <Grid>
-        <Frame Name="fmMain"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Name="fmMain" Grid.Column="0"/>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Quantity"/>
+                <TextBox Name="tbQuantity" Width="100"/>
+            </StackPanel>
+            <Button Name="btnApply" Content="Apply" Click="btnApply_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

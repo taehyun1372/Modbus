@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding DataItems}" AutoGenerateColumns="True">
+        <DataGrid Name="myDataGrid" ItemsSource="{Binding DataItems}" AutoGenerateColumns="false">
         </DataGrid>
     </Grid>
 </UserControl>

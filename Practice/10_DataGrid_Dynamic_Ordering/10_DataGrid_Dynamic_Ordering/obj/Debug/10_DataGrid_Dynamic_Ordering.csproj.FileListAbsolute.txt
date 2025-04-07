@@ -14,3 +14,4 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_D
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.csproj.CoreCompileInputs.cache
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.exe
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\10_DataGrid_Dynamic_Ordering\10_DataGrid_Dynamic_Ordering\obj\Debug\10_DataGrid_Dynamic_Ordering.csproj.AssemblyReference.cache

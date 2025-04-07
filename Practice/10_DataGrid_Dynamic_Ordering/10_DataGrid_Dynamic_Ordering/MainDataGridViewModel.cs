@@ -5,13 +5,96 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace _10_DataGrid_Dynamic_Ordering
 {
     public class MainDataGridViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<Dictionary<string, string>> _dataItems = new ObservableCollection<Dictionary<string, string>>();
-        public ObservableCollection<Dictionary<string, string>> DataItems
+        private ObservableCollection<Dictionary<string, int>> _dataItems = new ObservableCollection<Dictionary<string, int>>();
+        private List<int> _listDataItems = new List<int>();
+        private int _rowSetting = 10;
+        public int RowSetting
+        {
+            get
+            {
+                return _rowSetting;
+            }
+            set
+            {
+                _rowSetting = value;
+            }
+        }
+        
+        
+        public int Quantity 
+        { 
+            get
+            {
+                return _listDataItems.Count;
+            }
+            set
+            {
+                SetDataGridQuantity(value);
+            }
+        }
+
+        public void SetDataGridQuantity(int value)
+        {
+            if (Quantity == value)
+            {
+                return;
+            }
+
+            if (Quantity < value )
+            {
+                for (int i = Quantity; i <= value; i++)
+                {
+                    _listDataItems.Add(0);
+                }
+            }
+            else if (Quantity > value)
+            {
+                for (int i = Quantity - 1; i <= value; i--)
+                {
+                    _listDataItems.RemoveAt(i);
+                }
+            }
+
+            ConvertListToObservableCollection();
+        }
+
+        public void ConvertListToObservableCollection()
+        {
+            DataItems.Clear();
+            int count = 0;
+            int columnIndex = 0;
+            foreach (var item in _listDataItems)
+            {
+                count++;
+                
+                if (count >= RowSetting)
+                {
+                    count = 0;
+                    columnIndex++;
+                }
+
+                var dic = new Dictionary<string, int>();
+                dic.Add(columnIndex.ToString(), item);
+
+                if (columnIndex == 0)
+                {
+                    DataItems.Add(dic);
+                }
+                else
+                {
+                    DataItems[count].Add(columnIndex.ToString(), item);
+                }
+                
+            }
+        }
+
+        public ObservableCollection<Dictionary<string, int>> DataItems
         {
             get
             {
@@ -24,16 +107,14 @@ namespace _10_DataGrid_Dynamic_Ordering
             }
         }
 
+        public void Apply_Clicked_Handler(object sender, RoutedEventArgs e, int quantity)
+        {
+            Quantity = quantity;
+        }
+
         public MainDataGridViewModel()
         {
-            var dic1 = new Dictionary<string, string> { {"Name", "Alice" }, { "Age", "25"} };
-
-            var dic2 = new Dictionary<string, string> { { "Name", "Bob" }, { "Age", "30" } };
-
-            var dic3 = new Dictionary<string, string> { { "Name", "Charlie" }, { "Age", "35" } };
-
-            DataItems.Add(dic1);
-            DataItems.Add(dic2);
+            Quantity = 10;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

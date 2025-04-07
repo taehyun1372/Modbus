@@ -20,13 +20,25 @@ namespace _10_DataGrid_Dynamic_Ordering
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainDataGridViewModel _model;
         public MainWindow()
         {
             InitializeComponent();
 
             MainDataGridViewModel model = new MainDataGridViewModel();
+            _model = model;
             MainDataGridView view = new MainDataGridView(model);
             fmMain.Content = view;
+        }
+        private void btnApply_Click(object sender, RoutedEventArgs e)
+        {
+            int quantity;
+            if(!int.TryParse(tbQuantity.Text, out quantity))
+            {
+                return;
+            }
+
+            _model.Apply_Clicked_Handler(sender, e, quantity);
         }
     }
 }
