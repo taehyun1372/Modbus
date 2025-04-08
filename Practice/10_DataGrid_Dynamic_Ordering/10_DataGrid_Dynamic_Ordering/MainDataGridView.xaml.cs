@@ -28,11 +28,10 @@ namespace _10_DataGrid_Dynamic_Ordering
             InitializeComponent();
             this.DataContext = model;
             _model = model;
-            _model.DataItems.CollectionChanged += DataItems_CollectionChanged;
-            GenerateColumnsFromDictionaryKeys();
+            _model.DataItemsChanged += DataItems_CollectionChanged;
         }
-
-        private void DataItems_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        
+        private void DataItems_CollectionChanged(object sender, EventArgs e)
         {
             GenerateColumnsFromDictionaryKeys();
         }
@@ -40,6 +39,10 @@ namespace _10_DataGrid_Dynamic_Ordering
         public void GenerateColumnsFromDictionaryKeys()
         {
             myDataGrid.Columns.Clear();
+            if (_model.DataItems[0] == null)
+            {
+                return;
+            }
 
             var keys = _model.DataItems[0].Keys;
 

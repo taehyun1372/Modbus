@@ -12,8 +12,21 @@ namespace _10_DataGrid_Dynamic_Ordering
     public class MainDataGridViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<Dictionary<string, int>> _dataItems = new ObservableCollection<Dictionary<string, int>>();
+        private ObservableCollection<int> _rowNumbering = new ObservableCollection<int>();
+        public ObservableCollection<int> RowNumbering
+        {
+            get { return _rowNumbering; }
+            set
+            {
+                _rowNumbering = value;
+            }
+        }
+
         private List<int> _listDataItems = new List<int>();
-        private int _rowSetting = 10;
+        public event EventHandler<EventArgs> DataItemsChanged; 
+        private int _rowSetting;
+
+
         public int RowSetting
         {
             get
@@ -23,10 +36,33 @@ namespace _10_DataGrid_Dynamic_Ordering
             set
             {
                 _rowSetting = value;
+                UpdateRowNumbering();
             }
         }
-        
-        
+
+        private void UpdateRowNumbering()
+        {
+            if (RowSetting == RowNumbering.Count)
+            { 
+                return; 
+            }
+            else if(RowSetting > RowNumbering.Count)
+            {
+                for (int i = RowSetting; i < RowNumbering.Count; i++)
+                {
+                    RowNumbering.Add(i);
+                }
+            }
+            else if (RowSetting < RowNumbering.Count)
+            {
+                for (int i = RowNumbering.Count - 1; i <= RowSetting; i--)
+                {
+                    RowNumbering.RemoveAt(i);
+                }
+            }
+        }
+
+
         public int Quantity 
         { 
             get
@@ -45,22 +81,20 @@ namespace _10_DataGrid_Dynamic_Ordering
             {
                 return;
             }
-
             if (Quantity < value )
             {
-                for (int i = Quantity; i <= value; i++)
+                for (int i = Quantity; i < value; i++)
                 {
                     _listDataItems.Add(0);
                 }
             }
             else if (Quantity > value)
             {
-                for (int i = Quantity - 1; i <= value; i--)
+                for (int i = Quantity - 1 ; i >= value; i--)
                 {
                     _listDataItems.RemoveAt(i);
                 }
             }
-
             ConvertListToObservableCollection();
         }
 
@@ -71,7 +105,7 @@ namespace _10_DataGrid_Dynamic_Ordering
             int columnIndex = 0;
             foreach (var item in _listDataItems)
             {
-                count++;
+                
                 
                 if (count >= RowSetting)
                 {
@@ -80,7 +114,7 @@ namespace _10_DataGrid_Dynamic_Ordering
                 }
 
                 var dic = new Dictionary<string, int>();
-                dic.Add(columnIndex.ToString(), item);
+                dic.Add(columnIndex.ToString("D4"), item);
 
                 if (columnIndex == 0)
                 {
@@ -88,10 +122,12 @@ namespace _10_DataGrid_Dynamic_Ordering
                 }
                 else
                 {
-                    DataItems[count].Add(columnIndex.ToString(), item);
+                    DataItems[count].Add(columnIndex.ToString("D4"), item);
                 }
-                
+
+                count++;
             }
+            DataItemsChanged?.Invoke(this, EventArgs.Empty);
         }
 
         public ObservableCollection<Dictionary<string, int>> DataItems
@@ -114,7 +150,7 @@ namespace _10_DataGrid_Dynamic_Ordering
 
         public MainDataGridViewModel()
         {
-            Quantity = 10;
+            RowSetting = 10;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

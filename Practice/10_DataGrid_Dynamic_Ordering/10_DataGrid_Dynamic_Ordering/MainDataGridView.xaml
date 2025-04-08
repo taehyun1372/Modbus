@@ -8,6 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DataGrid Name="myDataGrid" ItemsSource="{Binding DataItems}" AutoGenerateColumns="false">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Index" Binding="{Binding RowNumbering}" IsReadOnly="True" Width="50"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </UserControl>
