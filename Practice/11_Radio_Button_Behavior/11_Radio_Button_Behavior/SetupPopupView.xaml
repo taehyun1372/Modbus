@@ -1,0 +1,26 @@
+﻿<Window x:Class="_11_Radio_Button_Behavior.SetupPopupView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_11_Radio_Button_Behavior"
+        mc:Ignorable="d"
+        Title="SetupPopupView" Height="330" Width="300">
+    <Grid>
+        <StackPanel>
+            <RadioButton Content="10" GroupName="RowSetting" IsChecked="{Binding Row10}"/>
+            <RadioButton Content="20" GroupName="RowSetting" IsChecked="{Binding Row20}"/>
+            <RadioButton Content="30" GroupName="RowSetting" IsChecked="{Binding Row30}"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Content="Custom" VerticalAlignment="Center" GroupName="RowSetting" IsChecked="{Binding RowCustom}"/>
+                <Label Content="Value : "/>
+                <TextBox Name="tbCustomValue" Width="50" Text="{Binding CustomValue}" IsEnabled="{Binding RowCustom}"/>
+            </StackPanel>
+            <Label Height="200"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Name="btnOkay" Content="Okay" Margin="10 0 5 0" Click="btnOkay_Click"/>
+                <Button Name="btnCancel" Content="Cancel" Margin="5 0 10 0" Click="btnCancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
