@@ -1,0 +1,15 @@
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\Control_Library.dll
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\Control_Library.pdb
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.csproj.AssemblyReference.cache
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\UserControl1.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library_MarkupCompile.cache
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library_MarkupCompile.lref
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\UserControl1.baml
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.g.resources
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.Properties.Resources.resources
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.csproj.GenerateResource.cache
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.csproj.CoreCompileInputs.cache
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.dll
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.pdb
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\SetupView.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\SetupView.baml
