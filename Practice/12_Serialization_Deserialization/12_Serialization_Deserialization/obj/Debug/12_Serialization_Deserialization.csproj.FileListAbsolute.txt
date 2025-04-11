@@ -1,0 +1,17 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\bin\Debug\12_Serialization_Deserialization.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\bin\Debug\12_Serialization_Deserialization.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\bin\Debug\12_Serialization_Deserialization.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\12_Serialization_Deserialization.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\SetupView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\12_Serialization_Deserialization_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\12_Serialization_Deserialization_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\SetupView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\12_Serialization_Deserialization.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\_12_Serialization_Deserialization.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\12_Serialization_Deserialization.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\12_Serialization_Deserialization.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\12_Serialization_Deserialization.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\12_Serialization_Deserialization\12_Serialization_Deserialization\obj\Debug\12_Serialization_Deserialization.pdb
