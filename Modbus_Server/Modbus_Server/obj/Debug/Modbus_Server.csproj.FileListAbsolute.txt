@@ -14,3 +14,18 @@ C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.CoreCompileInputs.cache
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.exe
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.pdb

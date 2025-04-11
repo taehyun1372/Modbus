@@ -48,6 +48,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="ControlViews\DataTableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PopupViews\SetupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -56,6 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="ControlViewModels\DataTableViewModel.cs" />
+    <Compile Include="ControlViews\DataTableView.xaml.cs">
+      <DependentUpon>DataTableView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PopupViewModels\SetupViewModel.cs" />
     <Compile Include="PopupViews\SetupView.xaml.cs">
       <DependentUpon>SetupView.xaml</DependentUpon>
@@ -88,9 +96,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ControlViewModels\" />
-    <Folder Include="ControlViews\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

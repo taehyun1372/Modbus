@@ -7,20 +7,52 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
-            <Button Content="Setup Popup" Click="Button_Click"/>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Row :" VerticalAlignment="Center"/>
-                <TextBlock Name="tbRow" Width="50" VerticalAlignment="Center"/>
-                <Label Content="Quantity :" VerticalAlignment="Center"/>
-                <TextBlock Name="tbQuantity" Width="50" VerticalAlignment="Center"/>
-            </StackPanel>
-        </StackPanel>
+        <TabControl>
+            <TabItem Header="Popup Test">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Button Content="Setup Popup" Click="Button_Click"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Row :" VerticalAlignment="Center"/>
+                            <TextBlock Name="tbRow" Width="50" VerticalAlignment="Center"/>
+                            <Label Content="Quantity :" VerticalAlignment="Center"/>
+                            <TextBlock Name="tbQuantity" Width="50" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Data Table Test">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Name="fmMain"/>
+                    <StackPanel Grid.Column="1">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Test1 : "/>
+                            <TextBox Name="tbTest1" Width="50"/>
+                            <Button Name="btnTest1" Content="Test1"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Test2 : "/>
+                            <TextBox Name="tbTest2" Width="50"/>
+                            <Button Name="btnTest2" Content="Test1"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Test3 : "/>
+                            <TextBox Name="tbTest3" Width="50"/>
+                            <Button Name="btnTest3" Content="Test1"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
