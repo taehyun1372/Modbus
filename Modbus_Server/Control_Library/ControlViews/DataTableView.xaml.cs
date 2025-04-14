@@ -31,39 +31,30 @@ namespace Control_Library.ControlViews
         }
 
 
-        private void DataItemsChangedEentHandler(object sender, EventArgs e)
+        private void DataItemsChangedEentHandler(object sender, DataItemsChangedEventArg e)
         {
-            GenerateColumnsFromDictionaryKeys();
+            GenerateColumnsFromDictionaryKeys(e.ColCounts);
         }
 
-        public void GenerateColumnsFromDictionaryKeys()
+        public void GenerateColumnsFromDictionaryKeys(int colCount)
         {
             dgMainTable.Columns.Clear();
-            if (_model.DataItems[0] == null)
-            {
-                return;
-            }
 
-            var keys = _model.DataItems[0].Keys;
-
-            foreach (var key in keys)
+            for (int colIndex = 0; colIndex < colCount; colIndex++)
             {
-                var nameColumn = new DataGridTextColumn //Name Column
+                dgMainTable.Columns.Add(new DataGridTextColumn
                 {
                     Header = "Name",
-                    Binding = new Binding($"[{key}]")
-                };
+                    Binding = new Binding($"Name{colIndex}")
+                });
 
-                var valueColumn = new DataGridTextColumn //Name Column
+                dgMainTable.Columns.Add(new DataGridTextColumn
                 {
-                    Header = key,
-                    Binding = new Binding("Value")
-                };
-
-
-                dgMainTable.Columns.Add(nameColumn);
-                dgMainTable.Columns.Add(valueColumn);
+                    Header = colIndex.ToString("D4"),
+                    Binding = new Binding($"Value{colIndex}")
+                });
             }
+
         }
     }
 }

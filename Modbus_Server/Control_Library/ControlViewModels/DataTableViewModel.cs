@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Windows.Media;
 using System.Collections.ObjectModel;
+using System.Dynamic;
 
 namespace Control_Library.ControlViewModels
 {
     public class DataTableViewModel : INotifyPropertyChanged
     {
-        public event EventHandler<EventArgs> DataItemsChanged;
+        public event EventHandler<DataItemsChangedEventArg> DataItemsChanged;
         private const int MAXROWCOUNTS = 100;
         private int _quantity;
         public int Quantity
@@ -27,8 +28,8 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        private ObservableCollection<Dictionary<string, DataItem>> _dataItems = new ObservableCollection<Dictionary<string, DataItem>>();
-        public ObservableCollection<Dictionary<string, DataItem>> DataItems
+        private ObservableCollection<ExpandoObject> _dataItems = new ObservableCollection<ExpandoObject>();
+        public ObservableCollection<ExpandoObject> DataItems
         {
             get
             {
@@ -140,37 +141,33 @@ namespace Control_Library.ControlViewModels
                 }
             }
 
-            ConvertDataItemListToDictionary();
+            TranformDataItemList();
         }
 
-        private void ConvertDataItemListToDictionary()
+        private void TranformDataItemList()
         {
             DataItems.Clear();
-            int rowIndex = 0;
-            int columnIndex = 0;
-            if (rowIndex >= RowCounts)
+            int colCounts = ((Quantity - 1) / RowCounts) + 1;
+            int endRowIndex = (Quantity - 1 ) % RowCounts;
+
+            for (int rowIndex = 0; rowIndex < RowCounts; rowIndex++)
             {
-                rowIndex = 0;
-                columnIndex++;
+                dynamic item = new ExpandoObject();
+                var expandoDict = (IDictionary<string, object>)item;
+
+                for (int colIndex = 0; colIndex < colCounts; colIndex++)
+                {
+                    if (rowIndex > endRowIndex && colIndex == colCounts - 1) //If it is the last column, exceeded end row index.
+                    {
+                        continue;
+                    }
+                    expandoDict[$"Name{colIndex}"] = $"Test{colIndex}{rowIndex}";
+                    expandoDict[$"Value{colIndex}"] = colIndex * 10 + rowIndex;
+                }
+                DataItems.Add(item);
             }
 
-            foreach (var item in _listDataItems)
-            {
-                var dic = new Dictionary<string, DataItem>();
-
-                dic.Add(columnIndex.ToString("D4"), item);
-
-                if (columnIndex == 0)
-                {
-                    DataItems.Add(dic);
-                }
-                else
-                {
-                    DataItems[rowIndex].Add(columnIndex.ToString("D4"), item);
-                }
-                rowIndex++;
-            }
-            DataItemsChanged?.Invoke(this, EventArgs.Empty);
+            DataItemsChanged?.Invoke(this, new DataItemsChangedEventArg() { ColCounts = colCounts});
         }
 
         private void UpdateRowIndex()
@@ -244,5 +241,10 @@ namespace Control_Library.ControlViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
+    }
+
+    public class DataItemsChangedEventArg
+    {
+        public int ColCounts;
     }
 }
