@@ -11,7 +11,48 @@ namespace Control_Library.ControlViewModels
 {
     public class DataTableViewModel : INotifyPropertyChanged
     {
+        public event EventHandler<EventArgs> DataItemsChanged;
         private const int MAXROWCOUNTS = 100;
+        private int _quantity;
+        public int Quantity
+        {
+            get
+            {
+                return _quantity;
+            }
+            set
+            {
+                _quantity = value;
+                UpdateDataTableList();
+            }
+        }
+
+        private ObservableCollection<Dictionary<string, DataItem>> _dataItems = new ObservableCollection<Dictionary<string, DataItem>>();
+        public ObservableCollection<Dictionary<string, DataItem>> DataItems
+        {
+            get
+            {
+                return _dataItems;
+            }
+            set
+            {
+                _dataItems = value;
+            }
+        }
+
+        private List<DataItem> _listDataItems = new List<DataItem>();
+        private List<DataItem> ListDataItems
+        {
+            get
+            {
+                return _listDataItems;
+            }
+            set
+            {
+                _listDataItems = value;
+            }
+        }
+
         private Color _indexColumnColor;
         public Color IndexColumnColor
         {
@@ -25,7 +66,6 @@ namespace Control_Library.ControlViewModels
                 OnPropertyChanged(nameof(IndexColumnColor));
             }
         }
-
 
         private int _indexColumnWidth;
         public int IndexColumnWidth
@@ -71,8 +111,71 @@ namespace Control_Library.ControlViewModels
             }
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public DataTableViewModel()
+        {
+            IndexColumnColor = Colors.AliceBlue;
+            RowCounts = 10;
+        }
+
+        private void UpdateDataTableList()
+        {
+            if (Quantity == ListDataItems.Count)
+            {
+                return;
+            }
+            else if (Quantity > ListDataItems.Count)
+            {
+                for (int i = ListDataItems.Count; i < Quantity; i++)
+                {
+                    ListDataItems.Add(new DataItem() { Name = "", Value = 0 });
+                }
+            }
+            else if (Quantity < ListDataItems.Count)
+            {
+                for (int i = ListDataItems.Count - 1; i >= Quantity; i--)
+                {
+                    ListDataItems.RemoveAt(i);
+                }
+            }
+
+            ConvertDataItemListToDictionary();
+        }
+
+        private void ConvertDataItemListToDictionary()
+        {
+            DataItems.Clear();
+            int rowIndex = 0;
+            int columnIndex = 0;
+            if (rowIndex >= RowCounts)
+            {
+                rowIndex = 0;
+                columnIndex++;
+            }
+
+            foreach (var item in _listDataItems)
+            {
+                var dic = new Dictionary<string, DataItem>();
+
+                dic.Add(columnIndex.ToString("D4"), item);
+
+                if (columnIndex == 0)
+                {
+                    DataItems.Add(dic);
+                }
+                else
+                {
+                    DataItems[rowIndex].Add(columnIndex.ToString("D4"), item);
+                }
+                rowIndex++;
+            }
+            DataItemsChanged?.Invoke(this, EventArgs.Empty);
+        }
+
         private void UpdateRowIndex()
         {
+            //Row Index Update
             if (RowCounts == RowIndex.Count)
             {
                 return;
@@ -81,7 +184,7 @@ namespace Control_Library.ControlViewModels
             {
                 for (int i = RowIndex.Count; i < RowCounts; i++)
                 {
-                    RowIndex.Add(new Index() { Value = i});
+                    RowIndex.Add(new Index() { Value = i });
                 }
             }
             else if (RowCounts < RowIndex.Count)
@@ -93,20 +196,11 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public DataTableViewModel()
-        {
-            IndexColumnColor = Colors.AliceBlue;
-            RowCounts = 10;
-        }
-
         public void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
+
     }
 
     public class Index

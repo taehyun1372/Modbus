@@ -26,7 +26,6 @@ namespace _10_DataGrid_Dynamic_Ordering
         public event EventHandler<EventArgs> DataItemsChanged; 
         private int _rowSetting;
 
-
         public int RowSetting
         {
             get
@@ -43,7 +42,7 @@ namespace _10_DataGrid_Dynamic_Ordering
         private void UpdateRowNumbering()
         {
             if (RowSetting == RowNumbering.Count)
-            { 
+            {
                 return; 
             }
             else if(RowSetting > RowNumbering.Count)
@@ -62,9 +61,8 @@ namespace _10_DataGrid_Dynamic_Ordering
             }
         }
 
-
         public int Quantity 
-        { 
+        {
             get
             {
                 return _listDataItems.Count;
@@ -105,8 +103,6 @@ namespace _10_DataGrid_Dynamic_Ordering
             int columnIndex = 0;
             foreach (var item in _listDataItems)
             {
-                
-                
                 if (count >= RowSetting)
                 {
                     count = 0;

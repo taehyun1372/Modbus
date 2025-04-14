@@ -39,6 +39,7 @@ namespace _10_DataGrid_Dynamic_Ordering
         public void GenerateColumnsFromDictionaryKeys()
         {
             myDataGrid.Columns.Clear();
+
             if (_model.DataItems[0] == null)
             {
                 return;

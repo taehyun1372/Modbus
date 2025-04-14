@@ -54,5 +54,23 @@ namespace Test_Bey
             tbRow.Text = e.Row.ToString();
             tbQuantity.Text = e.Quantity.ToString();
         }
+
+        private void btnRowCounts_Click(object sender, RoutedEventArgs e)
+        {
+            int count;
+            if(int.TryParse(tbDataTableRowCounts.Text, out count))
+            {
+                _dataTableViewModel.RowCounts = count;
+            }
+        }
+
+        private void btnDataTableQuantity_Click(object sender, RoutedEventArgs e)
+        {
+            int count;
+            if (int.TryParse(tbDataTableQuantity.Text, out count))
+            {
+                _dataTableViewModel.Quantity = count;
+            }
+        }
     }
 }

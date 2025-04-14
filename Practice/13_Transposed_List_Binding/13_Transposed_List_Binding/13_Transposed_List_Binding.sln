@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_Transposed_List_Binding", "13_Transposed_List_Binding\13_Transposed_List_Binding.csproj", "{A66D1D29-2D75-4E04-85A0-2D834899D7FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A66D1D29-2D75-4E04-85A0-2D834899D7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66D1D29-2D75-4E04-85A0-2D834899D7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66D1D29-2D75-4E04-85A0-2D834899D7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66D1D29-2D75-4E04-85A0-2D834899D7FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A645B666-6736-40D2-8495-F67D92D2F144}
+	EndGlobalSection
+EndGlobal

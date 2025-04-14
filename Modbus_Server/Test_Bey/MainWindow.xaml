@@ -30,20 +30,20 @@
             <TabItem Header="Data Table Test">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="3*"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Frame Name="fmMain"/>
                     <StackPanel Grid.Column="1">
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Test1 : "/>
-                            <TextBox Name="tbTest1" Width="50"/>
-                            <Button Name="btnTest1" Content="Test1"/>
+                            <Label Content="Row Count : "/>
+                            <TextBox Name="tbDataTableRowCounts" Width="50"/>
+                            <Button Name="btnDataTableRowCounts" Content="Update" Click="btnRowCounts_Click"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Test2 : "/>
-                            <TextBox Name="tbTest2" Width="50"/>
-                            <Button Name="btnTest2" Content="Test1"/>
+                            <Label Content="Quantity : "/>
+                            <TextBox Name="tbDataTableQuantity" Width="50"/>
+                            <Button Name="btnDataTableQuantity" Content="Update" Click="btnDataTableQuantity_Click"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Test3 : "/>

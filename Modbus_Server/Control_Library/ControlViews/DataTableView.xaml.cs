@@ -27,6 +27,43 @@ namespace Control_Library.ControlViews
             InitializeComponent();
             this.DataContext = model;
             _model = model;
+            _model.DataItemsChanged += DataItemsChangedEentHandler;
+        }
+
+
+        private void DataItemsChangedEentHandler(object sender, EventArgs e)
+        {
+            GenerateColumnsFromDictionaryKeys();
+        }
+
+        public void GenerateColumnsFromDictionaryKeys()
+        {
+            dgMainTable.Columns.Clear();
+            if (_model.DataItems[0] == null)
+            {
+                return;
+            }
+
+            var keys = _model.DataItems[0].Keys;
+
+            foreach (var key in keys)
+            {
+                var nameColumn = new DataGridTextColumn //Name Column
+                {
+                    Header = "Name",
+                    Binding = new Binding($"[{key}]")
+                };
+
+                var valueColumn = new DataGridTextColumn //Name Column
+                {
+                    Header = key,
+                    Binding = new Binding("Value")
+                };
+
+
+                dgMainTable.Columns.Add(nameColumn);
+                dgMainTable.Columns.Add(valueColumn);
+            }
         }
     }
 }

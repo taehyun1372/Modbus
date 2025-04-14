@@ -12,7 +12,7 @@
                 <DataGridTextColumn x:Name="colIndexColumn" Header=""  Binding="{Binding Value}" />
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid ItemsSource="{Binding DataItems}" AutoGenerateColumns="false" GridLinesVisibility="None">
+        <DataGrid Name="dgMainTable" ItemsSource="{Binding DataItems}" AutoGenerateColumns="false" GridLinesVisibility="None" CanUserAddRows="false">
         </DataGrid>
     </StackPanel>
 </UserControl>
