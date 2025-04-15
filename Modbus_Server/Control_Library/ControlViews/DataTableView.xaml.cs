@@ -28,6 +28,7 @@ namespace Control_Library.ControlViews
             this.DataContext = model;
             _model = model;
             _model.DataItemsChanged += DataItemsChangedEentHandler;
+            _model.Quantity = DataTableViewModel.DEFAULT_QUANTITY;
         }
 
 
@@ -40,20 +41,38 @@ namespace Control_Library.ControlViews
         {
             dgMainTable.Columns.Clear();
 
+            //Column Index
+            var indexColumn = new DataGridTextColumn();
+            indexColumn.Header = "";
+            indexColumn.Binding = new Binding("RowIndex");
+            indexColumn.IsReadOnly = true;
+            indexColumn.Width = _model.IndexColumnWidth;
+
+            Style cellStyle = new Style(typeof(DataGridCell));
+            cellStyle.Setters.Add(new Setter(DataGridCell.BackgroundProperty, _model.IndexColumnColor));
+            indexColumn.CellStyle = cellStyle;
+
+            dgMainTable.Columns.Add(indexColumn);
+
+
             for (int colIndex = 0; colIndex < colCount; colIndex++)
             {
                 dgMainTable.Columns.Add(new DataGridTextColumn
                 {
                     Header = "Name",
-                    Binding = new Binding($"Name{colIndex}")
+                    Binding = new Binding($"Name{colIndex}"),
+                    Width = _model.NameColumnWidth
                 });
 
                 dgMainTable.Columns.Add(new DataGridTextColumn
                 {
                     Header = colIndex.ToString("D4"),
-                    Binding = new Binding($"Value{colIndex}")
+                    Binding = new Binding($"Value{colIndex}"),
+                    Width = _model.ValueColumnWidth
                 });
             }
+
+
 
         }
     }

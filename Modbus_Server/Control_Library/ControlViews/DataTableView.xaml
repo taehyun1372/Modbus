@@ -7,12 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel Orientation="Horizontal">
-        <DataGrid ItemsSource="{Binding RowIndex}" AutoGenerateColumns="false" ColumnWidth="{Binding IndexColumnWidth}" Background="{Binding IndexColumnColor}" GridLinesVisibility="None" CanUserAddRows="false" IsReadOnly="true">
-            <DataGrid.Columns>
-                <DataGridTextColumn x:Name="colIndexColumn" Header=""  Binding="{Binding Value}" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <DataGrid Name="dgMainTable" ItemsSource="{Binding DataItems}" AutoGenerateColumns="false" GridLinesVisibility="None" CanUserAddRows="false">
+        <DataGrid Name="dgMainTable" ItemsSource="{Binding DataItems}" AutoGenerateColumns="false" GridLinesVisibility="All" CanUserAddRows="false" VerticalScrollBarVisibility="Auto" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray">
         </DataGrid>
     </StackPanel>
 </UserControl>

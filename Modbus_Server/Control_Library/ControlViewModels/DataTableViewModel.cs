@@ -13,7 +13,12 @@ namespace Control_Library.ControlViewModels
     public class DataTableViewModel : INotifyPropertyChanged
     {
         public event EventHandler<DataItemsChangedEventArg> DataItemsChanged;
-        private const int MAXROWCOUNTS = 100;
+        private const int MAX_ROW_COUNTS = 100;
+        private const int DEFAULT_INDEX_COLUMN_WIDTH = 20;
+        private const int DEFAULT_ROW_COUNTS = 10;
+        private const int DEFAULT_NAME_COLUMN_WIDTH = 70;
+        private const int DEFAULT_VALUE_COLUMN_WIDTH = 70;
+        public const int DEFAULT_QUANTITY = 10;
         private int _quantity;
         public int Quantity
         {
@@ -54,8 +59,36 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        private Color _indexColumnColor;
-        public Color IndexColumnColor
+        private int _nameColumnWidth = DEFAULT_NAME_COLUMN_WIDTH;
+
+        public int NameColumnWidth
+        {
+            get
+            {
+                return _nameColumnWidth;
+            }
+            set
+            {
+                _nameColumnWidth = value;
+            }
+        }
+
+        private int _valueColumnWidth = DEFAULT_VALUE_COLUMN_WIDTH;
+
+        public int ValueColumnWidth
+        {
+            get
+            {
+                return _valueColumnWidth;
+            }
+            set
+            {
+                _valueColumnWidth = value;
+            }
+        }
+
+        private Brush _indexColumnColor = new SolidColorBrush(Colors.LightGray);
+        public Brush IndexColumnColor
         {
             get
             {
@@ -68,7 +101,7 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        private int _indexColumnWidth;
+        private int _indexColumnWidth = DEFAULT_INDEX_COLUMN_WIDTH;
         public int IndexColumnWidth
         {
             get
@@ -82,20 +115,7 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        private ObservableCollection<Index> _rowIndex = new ObservableCollection<Index>();
-        public ObservableCollection<Index> RowIndex
-        {
-            get
-            {
-                return _rowIndex;
-            }
-            set
-            {
-                _rowIndex = value;
-            }
-        }
-
-        private int _rowCounts;
+        private int _rowCounts = DEFAULT_ROW_COUNTS;
         public int RowCounts
         {
             get
@@ -105,9 +125,9 @@ namespace Control_Library.ControlViewModels
             set
             {
                 if (value < 0) value = 0;
-                else if (value > MAXROWCOUNTS) value = MAXROWCOUNTS;
+                else if (value > MAX_ROW_COUNTS) value = MAX_ROW_COUNTS;
                 _rowCounts = value;
-                UpdateRowIndex();
+                TranformDataItemList();
                 OnPropertyChanged(nameof(RowCounts));
             }
         }
@@ -116,8 +136,6 @@ namespace Control_Library.ControlViewModels
 
         public DataTableViewModel()
         {
-            IndexColumnColor = Colors.AliceBlue;
-            RowCounts = 10;
         }
 
         private void UpdateDataTableList()
@@ -161,6 +179,12 @@ namespace Control_Library.ControlViewModels
                     {
                         continue;
                     }
+
+                    if (colIndex == 0) //If this is the first row
+                    {
+                        expandoDict["RowIndex"] = rowIndex;
+                    }
+
                     expandoDict[$"Name{colIndex}"] = $"Test{colIndex}{rowIndex}";
                     expandoDict[$"Value{colIndex}"] = colIndex * 10 + rowIndex;
                 }
@@ -168,29 +192,6 @@ namespace Control_Library.ControlViewModels
             }
 
             DataItemsChanged?.Invoke(this, new DataItemsChangedEventArg() { ColCounts = colCounts});
-        }
-
-        private void UpdateRowIndex()
-        {
-            //Row Index Update
-            if (RowCounts == RowIndex.Count)
-            {
-                return;
-            }
-            else if (RowCounts > RowIndex.Count)
-            {
-                for (int i = RowIndex.Count; i < RowCounts; i++)
-                {
-                    RowIndex.Add(new Index() { Value = i });
-                }
-            }
-            else if (RowCounts < RowIndex.Count)
-            {
-                for (int i = RowIndex.Count - 1; i >= RowCounts; i--)
-                {
-                    RowIndex.RemoveAt(i);
-                }
-            }
         }
 
         public void OnPropertyChanged(string name)
