@@ -60,7 +60,7 @@ namespace Control_Library.ControlViews
                 dgMainTable.Columns.Add(new DataGridTextColumn
                 {
                     Header = "Name",
-                    Binding = new Binding($"Name{colIndex}") 
+                    Binding = new Binding($"Name{colIndex}.Content") 
                     { 
                         Mode = BindingMode.TwoWay, 
                         UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
@@ -71,7 +71,7 @@ namespace Control_Library.ControlViews
                 dgMainTable.Columns.Add(new DataGridTextColumn
                 {
                     Header = colIndex.ToString("D4"),
-                    Binding = new Binding($"Value{colIndex}")
+                    Binding = new Binding($"Value{colIndex}.Content")
                     {
                         Mode = BindingMode.TwoWay,
                         UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged

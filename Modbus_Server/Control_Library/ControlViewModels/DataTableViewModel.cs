@@ -148,7 +148,11 @@ namespace Control_Library.ControlViewModels
             {
                 for (int i = ListDataItems.Count; i < Quantity; i++)
                 {
-                    ListDataItems.Add(new DataItem() { Name = "", Value = 0 });
+                    ListDataItems.Add(new DataItem() 
+                    {
+                        Name = new Name() { Content = "" }, 
+                        Value = new Value() { Content = 0 } 
+                    });
                 }
             }
             else if (Quantity < ListDataItems.Count)
@@ -158,7 +162,6 @@ namespace Control_Library.ControlViewModels
                     ListDataItems.RemoveAt(i);
                 }
             }
-
             TranformDataItemList();
         }
 
@@ -175,22 +178,21 @@ namespace Control_Library.ControlViewModels
 
                 for (int colIndex = 0; colIndex < colCounts; colIndex++)
                 {
-                    if (rowIndex > endRowIndex && colIndex == colCounts - 1) //If it is the last column, exceeded end row index.
-                    {
-                        continue;
-                    }
-
                     if (colIndex == 0) //If this is the first row
                     {
                         expandoDict["RowIndex"] = rowIndex;
                     }
 
-                    expandoDict[$"Name{colIndex}"] = $"Test{colIndex}{rowIndex}";
+                    if (rowIndex > endRowIndex && colIndex == colCounts - 1) //If it is the last column, exceeded end row index.
+                    {
+                        continue;
+                    }
+
+                    expandoDict[$"Name{colIndex}"] = ListDataItems[colIndex * RowCounts + rowIndex].Name;
                     expandoDict[$"Value{colIndex}"] = ListDataItems[colIndex * RowCounts + rowIndex].Value;
                 }
                 DataItems.Add(item);
             }
-
             DataItemsChanged?.Invoke(this, new DataItemsChangedEventArg() { ColCounts = colCounts});
         }
 
@@ -198,7 +200,6 @@ namespace Control_Library.ControlViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-
     }
 
     public class Index
@@ -210,8 +211,8 @@ namespace Control_Library.ControlViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string _name;
-        public string Name
+        private Name _name;
+        public Name Name
         {
             get
             {
@@ -224,8 +225,8 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        private int _value;
-        public int Value
+        private Value _value;
+        public Value Value
         {
             get
             {
@@ -247,5 +248,15 @@ namespace Control_Library.ControlViewModels
     public class DataItemsChangedEventArg
     {
         public int ColCounts;
+    }
+
+    public class Name
+    {
+        public string Content { get; set; }
+    }
+
+    public class Value
+    {
+        public int Content { get; set; }
     }
 }
