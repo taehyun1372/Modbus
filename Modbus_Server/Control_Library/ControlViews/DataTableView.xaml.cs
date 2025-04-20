@@ -60,14 +60,22 @@ namespace Control_Library.ControlViews
                 dgMainTable.Columns.Add(new DataGridTextColumn
                 {
                     Header = "Name",
-                    Binding = new Binding($"Name{colIndex}"),
+                    Binding = new Binding($"Name{colIndex}") 
+                    { 
+                        Mode = BindingMode.TwoWay, 
+                        UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+                    },
                     Width = _model.NameColumnWidth
                 });
 
                 dgMainTable.Columns.Add(new DataGridTextColumn
                 {
                     Header = colIndex.ToString("D4"),
-                    Binding = new Binding($"Value{colIndex}"),
+                    Binding = new Binding($"Value{colIndex}")
+                    {
+                        Mode = BindingMode.TwoWay,
+                        UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+                    },
                     Width = _model.ValueColumnWidth
                 });
             }

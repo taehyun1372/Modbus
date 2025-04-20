@@ -42,7 +42,6 @@ namespace _13_Transposed_List_Binding
                     expandoDict[$"Value{colIndex}"] = colIndex * 10 + rowIndex;
                 }
                 DataItems.Add(item1);
-
             }
 
             for (int colIndex = 0; colIndex < 3; colIndex++)

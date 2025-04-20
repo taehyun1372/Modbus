@@ -186,7 +186,7 @@ namespace Control_Library.ControlViewModels
                     }
 
                     expandoDict[$"Name{colIndex}"] = $"Test{colIndex}{rowIndex}";
-                    expandoDict[$"Value{colIndex}"] = colIndex * 10 + rowIndex;
+                    expandoDict[$"Value{colIndex}"] = ListDataItems[colIndex * RowCounts + rowIndex].Value;
                 }
                 DataItems.Add(item);
             }
