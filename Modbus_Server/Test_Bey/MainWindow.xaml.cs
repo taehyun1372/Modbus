@@ -72,5 +72,14 @@ namespace Test_Bey
                 _dataTableViewModel.Quantity = count;
             }
         }
+
+        private void btnStartAddress_Click(object sender, RoutedEventArgs e)
+        {
+            int count;
+            if (int.TryParse(tbStartAddress.Text, out count))
+            {
+                _dataTableViewModel.StartAddress = count;
+            }
+        }
     }
 }

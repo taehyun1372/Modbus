@@ -46,9 +46,9 @@
                             <Button Name="btnDataTableQuantity" Content="Update" Click="btnDataTableQuantity_Click"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Test3 : "/>
-                            <TextBox Name="tbTest3" Width="50"/>
-                            <Button Name="btnTest3" Content="Test1"/>
+                            <Label Content="Start Address : "/>
+                            <TextBox Name="tbStartAddress" Width="50"/>
+                            <Button Name="btnStartAddress" Content="Update" Click="btnStartAddress_Click"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>

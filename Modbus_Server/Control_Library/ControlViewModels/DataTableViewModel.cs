@@ -19,6 +19,38 @@ namespace Control_Library.ControlViewModels
         private const int DEFAULT_NAME_COLUMN_WIDTH = 70;
         private const int DEFAULT_VALUE_COLUMN_WIDTH = 70;
         public const int DEFAULT_QUANTITY = 10;
+        public const int DEFAULT_START_ADDRESS = 0;
+
+        private int _startAddress = DEFAULT_START_ADDRESS;
+        public int StartAddress
+        {
+            get
+            {
+                return _startAddress;
+            }
+            set
+            {
+                _startAddress = value;
+                TranformDataItemList();
+            }
+        }
+
+        public int StartRowIndex
+        {
+            get
+            {
+                return _startAddress % RowCounts;
+            }
+        }
+
+        public int EndRowIndex
+        {
+            get
+            {
+                return (StartRowIndex + RowCounts) % RowCounts;
+            }
+        }
+
         private int _quantity;
         public int Quantity
         {
@@ -87,7 +119,7 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        private Brush _indexColumnColor = new SolidColorBrush(Colors.LightGray);
+        private Brush _indexColumnColor = new SolidColorBrush(Colors.Transparent);
         public Brush IndexColumnColor
         {
             get
@@ -169,7 +201,6 @@ namespace Control_Library.ControlViewModels
         {
             DataItems.Clear();
             int colCounts = ((Quantity - 1) / RowCounts) + 1;
-            int endRowIndex = (Quantity - 1 ) % RowCounts;
 
             for (int rowIndex = 0; rowIndex < RowCounts; rowIndex++)
             {
@@ -178,19 +209,29 @@ namespace Control_Library.ControlViewModels
 
                 for (int colIndex = 0; colIndex < colCounts; colIndex++)
                 {
-                    if (colIndex == 0) //If this is the first row
+                    if (colIndex == 0) //If this is the first column, it is index column
                     {
                         expandoDict["RowIndex"] = rowIndex;
                     }
 
-                    if (rowIndex > endRowIndex && colIndex == colCounts - 1) //If it is the last column, exceeded end row index.
+                    if (colIndex == 1 && rowIndex < StartRowIndex) //If this is the second column, we need to consider staring index
                     {
-                        expandoDict[$"IsReadOnly"] = true;
+                        expandoDict[$"IsFirstColumnReadOnly"] = true;
                         continue;
                     }
                     else
                     {
-                        expandoDict[$"IsReadOnly"] = false;
+                        expandoDict[$"IsFirstColumnReadOnly"] = false;
+                    }
+
+                    if (rowIndex > EndRowIndex && colIndex == colCounts - 1) //If it is the last column, exceeded end row index.
+                    {
+                        expandoDict[$"IsLastColumnReadOnly"] = true;
+                        continue;
+                    }
+                    else
+                    {
+                        expandoDict[$"IsLastColumnReadOnly"] = false;
                     }
 
                     expandoDict[$"Name{colIndex}"] = ListDataItems[colIndex * RowCounts + rowIndex].Name;
