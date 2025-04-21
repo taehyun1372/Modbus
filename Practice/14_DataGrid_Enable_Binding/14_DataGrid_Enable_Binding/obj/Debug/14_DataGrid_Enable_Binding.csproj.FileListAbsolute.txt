@@ -1,0 +1,14 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\14_DataGrid_Enable_Binding_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\bin\Debug\14_DataGrid_Enable_Binding.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\bin\Debug\14_DataGrid_Enable_Binding.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\bin\Debug\14_DataGrid_Enable_Binding.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\14_DataGrid_Enable_Binding_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\14_DataGrid_Enable_Binding.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\_14_DataGrid_Enable_Binding.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\14_DataGrid_Enable_Binding.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\14_DataGrid_Enable_Binding.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\14_DataGrid_Enable_Binding.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\14_DataGrid_Enable_Binding\14_DataGrid_Enable_Binding\obj\Debug\14_DataGrid_Enable_Binding.pdb

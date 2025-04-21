@@ -54,21 +54,46 @@ namespace Control_Library.ControlViews
 
             dgMainTable.Columns.Add(indexColumn);
 
+            var customCellStyle = new Style(typeof(DataGridCell));
+
+            // Default setters
+            cellStyle.Setters.Add(new Setter(DataGridCell.IsTabStopProperty, true));
+            cellStyle.Setters.Add(new Setter(DataGridCell.FocusableProperty, true));
+            cellStyle.Setters.Add(new Setter(DataGridCell.BackgroundProperty, Brushes.Transparent));
+            // Trigger for IsReadOnly == true
+            var trigger = new DataTrigger
+            {
+                Binding = new Binding("IsReadOnly"),
+                Value = true
+            };
+            trigger.Setters.Add(new Setter(DataGridCell.IsTabStopProperty, false));
+            trigger.Setters.Add(new Setter(DataGridCell.FocusableProperty, false));
+            trigger.Setters.Add(new Setter(DataGridCell.BackgroundProperty, Brushes.LightGray));
+
+            customCellStyle.Triggers.Add(trigger);
 
             for (int colIndex = 0; colIndex < colCount; colIndex++)
             {
-                dgMainTable.Columns.Add(new DataGridTextColumn
+                var nameColumn = new DataGridTextColumn()
                 {
                     Header = "Name",
-                    Binding = new Binding($"Name{colIndex}.Content") 
-                    { 
-                        Mode = BindingMode.TwoWay, 
+                    Binding = new Binding($"Name{colIndex}.Content")
+                    {
+                        Mode = BindingMode.TwoWay,
                         UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
                     },
-                    Width = _model.NameColumnWidth
-                });
+                    Width = _model.NameColumnWidth,
+                    CanUserSort = false
+                };
 
-                dgMainTable.Columns.Add(new DataGridTextColumn
+                if (colIndex == colCount - 1)
+                {
+                    nameColumn.CellStyle = customCellStyle;
+                }
+
+                dgMainTable.Columns.Add(nameColumn);
+
+                var valueColumn = new DataGridTextColumn()
                 {
                     Header = colIndex.ToString("D4"),
                     Binding = new Binding($"Value{colIndex}.Content")
@@ -76,12 +101,18 @@ namespace Control_Library.ControlViews
                         Mode = BindingMode.TwoWay,
                         UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
                     },
-                    Width = _model.ValueColumnWidth
-                });
+                    Width = _model.ValueColumnWidth,
+                    CanUserSort = false
+                };
+
+                if (colIndex == colCount - 1)
+                {
+                    valueColumn.CellStyle = customCellStyle;
+                }
+
+                dgMainTable.Columns.Add(valueColumn);
+
             }
-
-
-
         }
     }
 }

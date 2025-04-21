@@ -148,10 +148,10 @@ namespace Control_Library.ControlViewModels
             {
                 for (int i = ListDataItems.Count; i < Quantity; i++)
                 {
-                    ListDataItems.Add(new DataItem() 
+                    ListDataItems.Add(new DataItem()
                     {
-                        Name = new Name() { Content = "" }, 
-                        Value = new Value() { Content = 0 } 
+                        Name = new Name() { Content = "" },
+                        Value = new Value() { Content = 0 },
                     });
                 }
             }
@@ -185,7 +185,12 @@ namespace Control_Library.ControlViewModels
 
                     if (rowIndex > endRowIndex && colIndex == colCounts - 1) //If it is the last column, exceeded end row index.
                     {
+                        expandoDict[$"IsReadOnly"] = true;
                         continue;
+                    }
+                    else
+                    {
+                        expandoDict[$"IsReadOnly"] = false;
                     }
 
                     expandoDict[$"Name{colIndex}"] = ListDataItems[colIndex * RowCounts + rowIndex].Name;
