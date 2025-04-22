@@ -94,7 +94,7 @@ namespace Control_Library.ControlViews
 
             firstColumnCellStyle.Triggers.Add(firstColumnTrigger);
 
-            for (int colIndex = 0; colIndex < colCount; colIndex++)
+            for (int colIndex = 1; colIndex <= colCount; colIndex++)
             {
                 var nameColumn = new DataGridTextColumn()
                 {
@@ -114,7 +114,7 @@ namespace Control_Library.ControlViews
                     nameColumn.CellStyle = firstColumnCellStyle; //First Column
                 }
 
-                if (colIndex == colCount - 1)
+                if (colIndex == colCount)
                 {
                     nameColumn.CellStyle = lastColumnCellStyle; //Last Column
                 }
@@ -123,7 +123,7 @@ namespace Control_Library.ControlViews
 
                 var valueColumn = new DataGridTextColumn()
                 {
-                    Header = (colIndex * _model.RowCounts).ToString("D4"),
+                    Header = (((colIndex-1) + _model.StartAddress/_model.RowCounts) * _model.RowCounts).ToString("D4"),
                     Binding = new Binding($"Value{colIndex}.Content")
                     {
                         Mode = BindingMode.TwoWay,
@@ -134,7 +134,12 @@ namespace Control_Library.ControlViews
                     Foreground = Brushes.Black
                 };
 
-                if (colIndex == colCount - 1)
+                if (colIndex == 1)
+                {
+                    valueColumn.CellStyle = firstColumnCellStyle;
+                }
+
+                if (colIndex == colCount)
                 {
                     valueColumn.CellStyle = lastColumnCellStyle;
                 }

@@ -47,7 +47,15 @@ namespace Control_Library.ControlViewModels
         {
             get
             {
-                return (StartRowIndex + RowCounts) % RowCounts;
+                return (StartRowIndex + Quantity) - ((ColCounts -1) * RowCounts) - 1;
+            }
+        }
+
+        public int ColCounts
+        {
+            get
+            {
+                return (((StartRowIndex + Quantity) - 1) / RowCounts) + 1;
             }
         }
 
@@ -200,46 +208,61 @@ namespace Control_Library.ControlViewModels
         private void TranformDataItemList()
         {
             DataItems.Clear();
-            int colCounts = ((Quantity - 1) / RowCounts) + 1;
 
             for (int rowIndex = 0; rowIndex < RowCounts; rowIndex++)
             {
                 dynamic item = new ExpandoObject();
                 var expandoDict = (IDictionary<string, object>)item;
 
-                for (int colIndex = 0; colIndex < colCounts; colIndex++)
+                for (int colIndex = 0; colIndex <= ColCounts; colIndex++)
                 {
+                    var skipCondition = false;
+
                     if (colIndex == 0) //If this is the first column, it is index column
                     {
                         expandoDict["RowIndex"] = rowIndex;
+                        skipCondition = true;
                     }
 
-                    if (colIndex == 1 && rowIndex < StartRowIndex) //If this is the second column, we need to consider staring index
+                    if (colIndex == 1) //If this is the second column, we need to consider staring index
                     {
-                        expandoDict[$"IsFirstColumnReadOnly"] = true;
+                        if( rowIndex < StartRowIndex)
+                        {
+                            expandoDict["IsFirstColumnReadOnly"] = true;
+                            skipCondition = true;
+                        }
+                        else
+                        {
+                            expandoDict["IsFirstColumnReadOnly"] = false;
+                        }
+                    }
+
+                    if (colIndex == ColCounts) //If it is the last column, exceeded end row index.
+                    {
+                        if (rowIndex > EndRowIndex)
+                        {
+                            expandoDict["IsLastColumnReadOnly"] = true;
+                            skipCondition = true;
+                        }
+                        else
+                        {
+                            expandoDict["IsLastColumnReadOnly"] = false;
+                        }
+                    }
+
+                    if (skipCondition)
+                    {
                         continue;
                     }
                     else
                     {
-                        expandoDict[$"IsFirstColumnReadOnly"] = false;
+                        expandoDict[$"Name{colIndex}"] = ListDataItems[(colIndex - 1) * RowCounts + rowIndex - StartRowIndex].Name;
+                        expandoDict[$"Value{colIndex}"] = ListDataItems[(colIndex - 1) * RowCounts + rowIndex - StartRowIndex].Value;
                     }
-
-                    if (rowIndex > EndRowIndex && colIndex == colCounts - 1) //If it is the last column, exceeded end row index.
-                    {
-                        expandoDict[$"IsLastColumnReadOnly"] = true;
-                        continue;
-                    }
-                    else
-                    {
-                        expandoDict[$"IsLastColumnReadOnly"] = false;
-                    }
-
-                    expandoDict[$"Name{colIndex}"] = ListDataItems[colIndex * RowCounts + rowIndex].Name;
-                    expandoDict[$"Value{colIndex}"] = ListDataItems[colIndex * RowCounts + rowIndex].Value;
                 }
                 DataItems.Add(item);
             }
-            DataItemsChanged?.Invoke(this, new DataItemsChangedEventArg() { ColCounts = colCounts});
+            DataItemsChanged?.Invoke(this, new DataItemsChangedEventArg() { ColCounts = ColCounts});
         }
 
         public void OnPropertyChanged(string name)
