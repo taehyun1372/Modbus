@@ -148,5 +148,10 @@ namespace Control_Library.ControlViews
 
             }
         }
+
+        private void dgMainTable_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            _model.MainTableMouseDoubleClickHandler(sender, dgMainTable.SelectedIndex);
+        }
     }
 }

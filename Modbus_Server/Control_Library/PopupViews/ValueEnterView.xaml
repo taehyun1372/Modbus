@@ -1,0 +1,38 @@
+﻿<Window x:Class="Control_Library.PopupViews.ValueEnterView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_Library.PopupViews"
+        mc:Ignorable="d"
+        Title="Value Enter" Height="130" Width="320">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 8 0 0" VerticalAlignment="Top">
+            <Label Content="Bit" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit15" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit14" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit13" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit12" VerticalAlignment="Center" Margin="0 0 5 0"/>
+            <CheckBox Name="cbBit11" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit10" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit9" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit8" VerticalAlignment="Center" Margin="0 0 5 0"/>
+            <CheckBox Name="cbBit7" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit6" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit5" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit4" VerticalAlignment="Center" Margin="0 0 5 0"/>
+            <CheckBox Name="cbBit3" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit2" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit1" VerticalAlignment="Center"/>
+            <CheckBox Name="cbBit0" VerticalAlignment="Center" Margin="0 0 5 0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+            <Label Content="Value" VerticalAlignment="Center"/>
+            <TextBox Name="tbValue" Width="80"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="btnOkay" Width="40" Margin="5 0 5 0" Content="Okay"/>
+            <Button Name="btnCancel" Width="40" Margin="5 0 5 0" Content="Cancel"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

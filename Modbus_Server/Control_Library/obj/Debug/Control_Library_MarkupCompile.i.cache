@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\
 Control_Library
 none
 false
 DEBUG;TRACE
 
-346399469
+4-388838617
 
-9-660316379
-13-1505183044
-ControlViews\DataTableView.xaml;PopupViews\SetupView.xaml;UserControl1.xaml;
+111458467888
+13-1310406943
+ControlViews\DataTableView.xaml;PopupViews\SetupView.xaml;PopupViews\ValueEnterView.xaml;UserControl1.xaml;
 
 True
 

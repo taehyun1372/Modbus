@@ -26,6 +26,8 @@ namespace Test_Bey
     {
         private SetupViewModel _setupViewModel;
         private SetupView _setupView;
+        private ValueEnterView _valueEnterView;
+        private ValueEnterViewModel _valueEnterViewModel;
         private DataTableViewModel _dataTableViewModel;
         private DataTableView _dataTableView;
 
@@ -36,17 +38,6 @@ namespace Test_Bey
             _dataTableViewModel = new DataTableViewModel();
             _dataTableView = new DataTableView(_dataTableViewModel);
             fmMain.Content = _dataTableView;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-            _setupViewModel = new SetupViewModel();
-            _setupView = new SetupView(_setupViewModel);
-
-            _setupViewModel.SetupFinished += UpdateTextBlocks;
-
-            _setupView.ShowDialog();
         }
 
         private void UpdateTextBlocks(object sender, SetupFinishedEventArg e)
@@ -80,6 +71,24 @@ namespace Test_Bey
             {
                 _dataTableViewModel.StartAddress = count;
             }
+        }
+
+        private void btnSetup_Click(object sender, RoutedEventArgs e)
+        {
+            _setupViewModel = new SetupViewModel();
+            _setupView = new SetupView(_setupViewModel);
+
+            _setupViewModel.SetupFinished += UpdateTextBlocks;
+
+            _setupView.ShowDialog();
+        }
+
+        private void btnValueEnter_Click(object sender, RoutedEventArgs e)
+        {
+            _valueEnterViewModel = new ValueEnterViewModel();
+            _valueEnterView = new ValueEnterView(_valueEnterViewModel);
+
+            _valueEnterView.ShowDialog();
         }
     }
 }

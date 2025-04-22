@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Windows.Media;
 using System.Collections.ObjectModel;
 using System.Dynamic;
+using System.Windows;
 
 namespace Control_Library.ControlViewModels
 {
@@ -263,6 +264,12 @@ namespace Control_Library.ControlViewModels
                 DataItems.Add(item);
             }
             DataItemsChanged?.Invoke(this, new DataItemsChangedEventArg() { ColCounts = ColCounts});
+        }
+
+        public int MainTableMouseDoubleClickHandler(object sender, int selectedIndex)
+        {
+            MessageBox.Show(selectedIndex.ToString());
+            return 1;
         }
 
         public void OnPropertyChanged(string name)

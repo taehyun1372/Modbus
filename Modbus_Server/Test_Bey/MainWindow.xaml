@@ -17,7 +17,8 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
-                        <Button Content="Setup Popup" Click="Button_Click"/>
+                        <Button Name="btnSetup" Content="Setup Popup" Click="btnSetup_Click"/>
+                        <Button Name="btnValueEnter" Content="Value Enter" Click="btnValueEnter_Click"/>
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Row :" VerticalAlignment="Center"/>
                             <TextBlock Name="tbRow" Width="50" VerticalAlignment="Center"/>
