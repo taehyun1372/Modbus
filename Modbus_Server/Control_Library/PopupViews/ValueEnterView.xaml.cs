@@ -47,6 +47,11 @@ namespace Control_Library.PopupViews
 
         private void btnOkay_Click(object sender, RoutedEventArgs e)
         {
+            OnOkayClicked();
+        }
+
+        public void OnOkayClicked()
+        {
             _model.OkayClickHandler();
             Close();
         }
@@ -70,6 +75,18 @@ namespace Control_Library.PopupViews
         private void tbValue_TextChanged(object sender, TextChangedEventArgs e)
         {
             _model.ValueTextChangedHandler(sender, e);
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                Close();
+            }
+            else if (e.Key == Key.Enter)
+            {
+                OnOkayClicked();
+            }
         }
     }
 }
