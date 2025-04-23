@@ -58,25 +58,6 @@ namespace Control_Library.ControlViews
 
             dgMainTable.Columns.Add(indexColumn);
 
-            var lastColumnCellStyle = new Style(typeof(DataGridCell));
-
-            // Default setters
-            lastColumnCellStyle.Setters.Add(new Setter(DataGridCell.IsTabStopProperty, true));
-            lastColumnCellStyle.Setters.Add(new Setter(DataGridCell.FocusableProperty, true));
-            lastColumnCellStyle.Setters.Add(new Setter(DataGridCell.BackgroundProperty, Brushes.Transparent));
-
-            // Trigger for IsReadOnly == true
-            var lastColumnTrigger = new DataTrigger
-            {
-                Binding = new Binding("IsLastColumnReadOnly"),
-                Value = true
-            };
-            lastColumnTrigger.Setters.Add(new Setter(DataGridCell.IsTabStopProperty, false));
-            lastColumnTrigger.Setters.Add(new Setter(DataGridCell.FocusableProperty, false));
-            lastColumnTrigger.Setters.Add(new Setter(DataGridCell.BackgroundProperty, Brushes.LightGray));
-
-            lastColumnCellStyle.Triggers.Add(lastColumnTrigger);
-
             var firstColumnCellStyle = new Style(typeof(DataGridCell));
 
             // Default setters
@@ -96,6 +77,25 @@ namespace Control_Library.ControlViews
 
             firstColumnCellStyle.Triggers.Add(firstColumnTrigger);
 
+            var lastColumnCellStyle = new Style(typeof(DataGridCell));
+
+            // Default setters
+            lastColumnCellStyle.Setters.Add(new Setter(DataGridCell.IsTabStopProperty, true));
+            lastColumnCellStyle.Setters.Add(new Setter(DataGridCell.FocusableProperty, true));
+            lastColumnCellStyle.Setters.Add(new Setter(DataGridCell.BackgroundProperty, Brushes.Transparent));
+
+            // Trigger for IsReadOnly == true
+            var lastColumnTrigger = new DataTrigger
+            {
+                Binding = new Binding("IsLastColumnReadOnly"),
+                Value = true
+            };
+            lastColumnTrigger.Setters.Add(new Setter(DataGridCell.IsTabStopProperty, false));
+            lastColumnTrigger.Setters.Add(new Setter(DataGridCell.FocusableProperty, false));
+            lastColumnTrigger.Setters.Add(new Setter(DataGridCell.BackgroundProperty, Brushes.LightGray));
+
+            lastColumnCellStyle.Triggers.Add(lastColumnTrigger);
+
             for (int colIndex = 1; colIndex <= colCount; colIndex++)
             {
                 var nameColumn = new DataGridTextColumn()
@@ -113,12 +113,12 @@ namespace Control_Library.ControlViews
 
                 if (colIndex == 1)
                 {
-                    nameColumn.CellStyle = firstColumnCellStyle; //First Column
+                    nameColumn.CellStyle = firstColumnCellStyle; //First Name Column
                 }
 
                 if (colIndex == colCount)
                 {
-                    nameColumn.CellStyle = lastColumnCellStyle; //Last Column
+                    nameColumn.CellStyle = lastColumnCellStyle; //Last Name Column
                 }
 
                 dgMainTable.Columns.Add(nameColumn);
@@ -138,16 +138,15 @@ namespace Control_Library.ControlViews
 
                 if (colIndex == 1)
                 {
-                    valueColumn.CellStyle = firstColumnCellStyle;
+                    valueColumn.CellStyle = firstColumnCellStyle; //First Value Column
                 }
 
                 if (colIndex == colCount)
                 {
-                    valueColumn.CellStyle = lastColumnCellStyle;
+                    valueColumn.CellStyle = lastColumnCellStyle; //Last Value Column
                 }
 
                 dgMainTable.Columns.Add(valueColumn);
-
             }
         }
 

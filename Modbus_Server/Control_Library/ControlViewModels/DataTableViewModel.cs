@@ -250,6 +250,11 @@ namespace Control_Library.ControlViewModels
                             expandoDict["IsLastColumnReadOnly"] = true;
                             skipCondition = true;
                         }
+                        else if (ColCounts == 1 && rowIndex < StartRowIndex)
+                        {
+                            expandoDict["IsLastColumnReadOnly"] = true;
+                            skipCondition = true;
+                        }
                         else
                         {
                             expandoDict["IsLastColumnReadOnly"] = false;
@@ -282,7 +287,7 @@ namespace Control_Library.ControlViewModels
         {
             ValueItem valueItem = null;
             int logicalColumnIndex = (columnIndex + 1) / 2;
-            int index = (logicalColumnIndex - 1) * RowCounts + rowIndex - StartAddress;
+            int index = (logicalColumnIndex - 1) * RowCounts + rowIndex - StartRowIndex;
             if (ListDataItems[index].ValueItem != null)
             {
                 valueItem = ListDataItems[index].ValueItem;
