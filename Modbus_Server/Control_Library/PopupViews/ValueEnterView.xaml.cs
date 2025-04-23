@@ -26,6 +26,23 @@ namespace Control_Library.PopupViews
             InitializeComponent();
             this.DataContext = model;
             _model = model;
+
+            _model.ListCheckBox.Add(cbBit0);
+            _model.ListCheckBox.Add(cbBit1);
+            _model.ListCheckBox.Add(cbBit2);
+            _model.ListCheckBox.Add(cbBit3);
+            _model.ListCheckBox.Add(cbBit4);
+            _model.ListCheckBox.Add(cbBit5);
+            _model.ListCheckBox.Add(cbBit6);
+            _model.ListCheckBox.Add(cbBit7);
+            _model.ListCheckBox.Add(cbBit8);
+            _model.ListCheckBox.Add(cbBit9);
+            _model.ListCheckBox.Add(cbBit10);
+            _model.ListCheckBox.Add(cbBit11);
+            _model.ListCheckBox.Add(cbBit12);
+            _model.ListCheckBox.Add(cbBit13);
+            _model.ListCheckBox.Add(cbBit14);
+            _model.ListCheckBox.Add(cbBit15);
         }
 
         private void btnOkay_Click(object sender, RoutedEventArgs e)
@@ -43,6 +60,16 @@ namespace Control_Library.PopupViews
         {
             tbValue.Focus();
             tbValue.SelectAll();
+        }
+
+        private void CheckBox_Clicked(object sender, RoutedEventArgs e)
+        {
+            _model.CheckBoxClickedHanlder(sender, e);
+        }
+
+        private void tbValue_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _model.ValueTextChangedHandler(sender, e);
         }
     }
 }

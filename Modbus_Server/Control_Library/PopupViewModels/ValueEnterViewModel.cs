@@ -5,11 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using Control_Library.ControlViewModels;
 using System.ComponentModel;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace Control_Library.PopupViewModels
 {
     public class ValueEnterViewModel : INotifyPropertyChanged
     {
+        private List<CheckBox> _listCheckBox = new List<CheckBox>();
+        public List<CheckBox> ListCheckBox
+        {
+            get
+            {
+                return _listCheckBox;
+            }
+            set
+            {
+                _listCheckBox = value;
+            }
+        }
+
         private int _value;
         public int Value
         {
@@ -66,6 +81,58 @@ namespace Control_Library.PopupViewModels
             {
                 valueItem.Content = Value;
             }
+        }
+        public void UpdateListCheckBox(int value)
+        {
+            foreach (CheckBox checkBox in ListCheckBox)
+            {
+                int tag = 0;
+                if (int.TryParse(checkBox.Tag.ToString(), out tag))
+                {
+                    int key = 1 << tag;
+                    bool check = (value & key) > 0;
+                    checkBox.IsChecked = check;
+                }
+            }
+        }
+
+        public void ValueTextChangedHandler(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            int value;
+            bool isParseSuccess;
+            bool isEmpty = false;
+            isParseSuccess = int.TryParse(textBox.Text, out value);
+            if (textBox.Text == "")
+            {
+                isEmpty = true;
+                value = 0;
+            }
+            if (isParseSuccess || isEmpty)
+            {
+                UpdateListCheckBox(value);
+            }
+            
+            
+
+        }
+
+        public void CheckBoxClickedHanlder(object sender, RoutedEventArgs e)
+        {
+            int total = 0;
+            foreach (CheckBox checkBox in ListCheckBox)
+            {
+                int tag = 0;
+                bool? isChecked = checkBox.IsChecked;
+                if (int.TryParse(checkBox.Tag.ToString(), out tag))
+                {
+                    if ((bool)isChecked)
+                    {
+                        total += 1 << tag;
+                    }
+                }
+            }
+            Value = total;
         }
 
         public void OnPropertyChanged(string name)

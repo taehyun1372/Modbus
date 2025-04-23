@@ -9,26 +9,26 @@
     <StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 8 0 0" VerticalAlignment="Top">
             <Label Content="Bit" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit15" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit14" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit13" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit12" VerticalAlignment="Center" Margin="0 0 5 0"/>
-            <CheckBox Name="cbBit11" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit10" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit9" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit8" VerticalAlignment="Center" Margin="0 0 5 0"/>
-            <CheckBox Name="cbBit7" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit6" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit5" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit4" VerticalAlignment="Center" Margin="0 0 5 0"/>
-            <CheckBox Name="cbBit3" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit2" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit1" VerticalAlignment="Center"/>
-            <CheckBox Name="cbBit0" VerticalAlignment="Center" Margin="0 0 5 0"/>
+            <CheckBox Name="cbBit15" Tag="15" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit14" Tag="14" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit13" Tag="13" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit12" Tag="12" VerticalAlignment="Center" Margin="0 0 5 0" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit11" Tag="11" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit10" Tag="10" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit9" Tag="9" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit8" Tag="8" VerticalAlignment="Center" Margin="0 0 5 0" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit7" Tag="7" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit6" Tag="6" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit5" Tag="5" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit4" Tag="4" VerticalAlignment="Center" Margin="0 0 5 0" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit3" Tag="3" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit2" Tag="2" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit1" Tag="1" VerticalAlignment="Center" Click="CheckBox_Clicked"/>
+            <CheckBox Name="cbBit0" Tag="0" VerticalAlignment="Center" Margin="0 0 5 0" Click="CheckBox_Clicked"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
             <Label Content="Value" VerticalAlignment="Center"/>
-            <TextBox Name="tbValue" Width="80" Text="{Binding Value}" Loaded="tbValue_Loaded"/>
+            <TextBox Name="tbValue" Width="80" Text="{Binding Value}" Loaded="tbValue_Loaded" TextChanged="tbValue_TextChanged"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Name="btnOkay" Height="25" Width="40" Margin="5 0 5 0" Content="Okay" Click="btnOkay_Click"/>
