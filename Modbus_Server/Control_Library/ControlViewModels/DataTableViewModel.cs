@@ -278,7 +278,8 @@ namespace Control_Library.ControlViewModels
 
         public void MainTableMouseDoubleClickHandler(int rowIndex, int columnIndex)
         {
-            _valueEnterViewModel = new ValueEnterViewModel(this, rowIndex, columnIndex);
+            int value = GetValueItemByIndex(rowIndex, columnIndex).Content;
+            _valueEnterViewModel = new ValueEnterViewModel(this, rowIndex, columnIndex, value);
             _valueEnterView = new ValueEnterView(_valueEnterViewModel);
             _valueEnterView.Show();
         }

@@ -67,12 +67,12 @@ namespace Control_Library.PopupViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ValueEnterViewModel(DataTableViewModel dataTableViewModel, int rowIndex, int columnIndex)
+        public ValueEnterViewModel(DataTableViewModel dataTableViewModel, int rowIndex, int columnIndex, int initialValue = 0)
         {
             _dataTableViewModel = dataTableViewModel;
             RowIndex = rowIndex;
             ColumnIndex = columnIndex;
-            Value = 0;
+            Value = initialValue;
         }
         public void OkayClickHandler()
         {
