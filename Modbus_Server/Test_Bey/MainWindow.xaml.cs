@@ -85,7 +85,7 @@ namespace Test_Bey
 
         private void btnValueEnter_Click(object sender, RoutedEventArgs e)
         {
-            _valueEnterViewModel = new ValueEnterViewModel();
+            _valueEnterViewModel = new ValueEnterViewModel(_dataTableViewModel, 0, 0);
             _valueEnterView = new ValueEnterView(_valueEnterViewModel);
 
             _valueEnterView.ShowDialog();

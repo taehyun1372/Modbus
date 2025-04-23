@@ -34,3 +34,5 @@ C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Contr
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.csproj.AssemblyReference.cache
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.g.cs
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.baml

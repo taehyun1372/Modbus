@@ -18,7 +18,7 @@ namespace Control_Library.PopupViews
     /// <summary>
     /// Interaction logic for ValueEnterView.xaml
     /// </summary>
-    public partial class ValueEnterView : Window
+    public partial class ValueEnterView : Window 
     {
         private ValueEnterViewModel _model;
         public ValueEnterView(ValueEnterViewModel model)
@@ -26,6 +26,23 @@ namespace Control_Library.PopupViews
             InitializeComponent();
             this.DataContext = model;
             _model = model;
+        }
+
+        private void btnOkay_Click(object sender, RoutedEventArgs e)
+        {
+            _model.OkayClickHandler();
+            Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void tbValue_Loaded(object sender, RoutedEventArgs e)
+        {
+            tbValue.Focus();
+            tbValue.SelectAll();
         }
     }
 }

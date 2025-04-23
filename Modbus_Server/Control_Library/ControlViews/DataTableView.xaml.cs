@@ -52,6 +52,8 @@ namespace Control_Library.ControlViews
             Style indexColumnCellStyle = new Style(typeof(DataGridCell));
             indexColumnCellStyle.Setters.Add(new Setter(DataGridCell.BackgroundProperty, _model.IndexColumnColor));
             indexColumnCellStyle.Setters.Add(new Setter(DataGridCell.ForegroundProperty, Brushes.Black));
+            indexColumnCellStyle.Setters.Add(new Setter(DataGridCell.FocusableProperty, false));
+
             indexColumn.CellStyle = indexColumnCellStyle;
 
             dgMainTable.Columns.Add(indexColumn);
@@ -151,7 +153,38 @@ namespace Control_Library.ControlViews
 
         private void dgMainTable_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            _model.MainTableMouseDoubleClickHandler(sender, dgMainTable.SelectedIndex);
+            var point = e.GetPosition(dgMainTable);
+            var hit = VisualTreeHelper.HitTest(dgMainTable, point);
+
+            if (hit == null)
+            {
+                return;
+            }
+
+            DependencyObject obj = hit.VisualHit;
+
+            // Walk up the visual tree to find the DataGridCell
+            while (obj != null && !(obj is DataGridCell))
+            {
+                obj = VisualTreeHelper.GetParent(obj);
+            }
+
+            if (obj is DataGridCell)
+            {
+                DataGridCell cell = (DataGridCell)obj;
+
+                var row = DataGridRow.GetRowContainingElement(cell);
+                var rowIndex = row.GetIndex();
+
+                var column = cell.Column;
+                var columnIndex = dgMainTable.Columns.IndexOf(column);
+
+                //Excluded index column
+                if (_model.VerifyEnabledCellByIndex(rowIndex, columnIndex))
+                {
+                   _model.MainTableMouseDoubleClickHandler(rowIndex, columnIndex);
+                }
+            }
         }
     }
 }

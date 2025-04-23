@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Collections.ObjectModel;
 using System.Dynamic;
 using System.Windows;
+using Control_Library.PopupViewModels;
+using Control_Library.PopupViews;
 
 namespace Control_Library.ControlViewModels
 {
@@ -21,6 +23,9 @@ namespace Control_Library.ControlViewModels
         private const int DEFAULT_VALUE_COLUMN_WIDTH = 70;
         public const int DEFAULT_QUANTITY = 10;
         public const int DEFAULT_START_ADDRESS = 0;
+
+        private ValueEnterView _valueEnterView;
+        private ValueEnterViewModel _valueEnterViewModel;
 
         private int _startAddress = DEFAULT_START_ADDRESS;
         public int StartAddress
@@ -191,8 +196,8 @@ namespace Control_Library.ControlViewModels
                 {
                     ListDataItems.Add(new DataItem()
                     {
-                        Name = new Name() { Content = "" },
-                        Value = new Value() { Content = 0 },
+                        NameItem = new NameItem() { Content = "" },
+                        ValueItem = new ValueItem() { Content = 0 },
                     });
                 }
             }
@@ -257,8 +262,8 @@ namespace Control_Library.ControlViewModels
                     }
                     else
                     {
-                        expandoDict[$"Name{colIndex}"] = ListDataItems[(colIndex - 1) * RowCounts + rowIndex - StartRowIndex].Name;
-                        expandoDict[$"Value{colIndex}"] = ListDataItems[(colIndex - 1) * RowCounts + rowIndex - StartRowIndex].Value;
+                        expandoDict[$"Name{colIndex}"] = ListDataItems[(colIndex - 1) * RowCounts + rowIndex - StartRowIndex].NameItem;
+                        expandoDict[$"Value{colIndex}"] = ListDataItems[(colIndex - 1) * RowCounts + rowIndex - StartRowIndex].ValueItem;
                     }
                 }
                 DataItems.Add(item);
@@ -266,10 +271,46 @@ namespace Control_Library.ControlViewModels
             DataItemsChanged?.Invoke(this, new DataItemsChangedEventArg() { ColCounts = ColCounts});
         }
 
-        public int MainTableMouseDoubleClickHandler(object sender, int selectedIndex)
+        public void MainTableMouseDoubleClickHandler(int rowIndex, int columnIndex)
         {
-            MessageBox.Show(selectedIndex.ToString());
-            return 1;
+            _valueEnterViewModel = new ValueEnterViewModel(this, rowIndex, columnIndex);
+            _valueEnterView = new ValueEnterView(_valueEnterViewModel);
+            _valueEnterView.Show();
+        }
+
+        public ValueItem GetValueItemByIndex(int rowIndex, int columnIndex)
+        {
+            ValueItem valueItem = null;
+            int logicalColumnIndex = (columnIndex + 1) / 2;
+            int index = (logicalColumnIndex - 1) * RowCounts + rowIndex - StartAddress;
+            if (ListDataItems[index].ValueItem != null)
+            {
+                valueItem = ListDataItems[index].ValueItem;
+            }
+            return valueItem;
+        }
+
+        public bool VerifyEnabledCellByIndex(int rowIndex, int columnIndex)
+        {
+            bool enabled = true;
+
+            if (columnIndex == 0)
+            {
+                enabled = false;
+            }
+
+            int logicalColumnIndex = (columnIndex + 1) / 2;
+            
+            if (logicalColumnIndex == 1 && rowIndex < StartRowIndex)
+            {
+                enabled = false;
+            }
+
+            if (logicalColumnIndex == ColCounts && rowIndex > EndRowIndex)
+            {
+                enabled = false;
+            }
+            return enabled;
         }
 
         public void OnPropertyChanged(string name)
@@ -287,31 +328,31 @@ namespace Control_Library.ControlViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private Name _name;
-        public Name Name
+        private NameItem _nameItem;
+        public NameItem NameItem
         {
             get
             {
-                return _name;
+                return _nameItem;
             }
             set
             {
-                _name = value;
-                OnPropertyChanged(nameof(Name));
+                _nameItem = value;
+                OnPropertyChanged(nameof(NameItem));
             }
         }
 
-        private Value _value;
-        public Value Value
+        private ValueItem _valueItem;
+        public ValueItem ValueItem
         {
             get
             {
-                return _value;
+                return _valueItem;
             }
             set
             {
-                _value = value;
-                OnPropertyChanged(nameof(Value));
+                _valueItem = value;
+                OnPropertyChanged(nameof(ValueItem));
             }
         }
 
@@ -326,13 +367,51 @@ namespace Control_Library.ControlViewModels
         public int ColCounts;
     }
 
-    public class Name
+    public class NameItem : INotifyPropertyChanged
     {
-        public string Content { get; set; }
+        public string _content;
+        public string Content
+        {
+            get
+            {
+                return _content;
+            }
+            set
+            {
+                _content = value;
+                OnPropertyChanged(nameof(Content));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
     }
 
-    public class Value
+    public class ValueItem : INotifyPropertyChanged
     {
-        public int Content { get; set; }
+        private int _content;
+        public int Content
+        {
+            get
+            {
+                return _content;
+            }
+            set
+            {
+                _content = value;
+                OnPropertyChanged(nameof(Content));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
     }
 }
