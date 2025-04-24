@@ -3,24 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ad="http://avalondock.orccontrols.com"
+        xmlns:views="clr-namespace:_15_Dock_Panel"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockingManager>
+    <DockingManager Background="WhiteSmoke">
         <LayoutRoot>
             <LayoutPanel Orientation="Horizontal">
-                <LayoutDocumentPane>
-                    <LayoutDocument Title="Document 1">
-                        <TextBox Text="This is Document 1"/>
-                    </LayoutDocument>
-                    <LayoutDocument Title="Document 2">
-                        <TextBox Text="This is Document 2"/>
-                    </LayoutDocument>
-                </LayoutDocumentPane>
-                <LayoutAnchorablePane DockWidth="200">
-                    <LayoutAnchorable Title="Tool Window">
-                        <TextBlock Text="I'm a tool Window"/>
-                    </LayoutAnchorable>
-                </LayoutAnchorablePane>
+                <LayoutPanel Orientation="Horizontal" DockWidth="*">
+                    <LayoutDocumentPane x:Name="mainDocumentPane">
+                    </LayoutDocumentPane>
+                </LayoutPanel>
             </LayoutPanel>
         </LayoutRoot>
     </DockingManager>
