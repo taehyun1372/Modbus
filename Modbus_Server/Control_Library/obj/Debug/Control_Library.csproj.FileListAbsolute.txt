@@ -36,3 +36,22 @@ C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Popup
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.baml
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.g.cs
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\AvalonDock.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\ca-ES\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\cs-CZ\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\de\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\es\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\fr\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\hu\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\it\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\ja\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\ko\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\nl-BE\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\pl\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\pt\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\ro\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\ru\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\sv\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\zh-Hans\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\zh-Hant\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.csproj.CopyComplete

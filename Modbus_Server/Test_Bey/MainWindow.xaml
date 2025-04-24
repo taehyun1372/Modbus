@@ -18,7 +18,6 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
                         <Button Name="btnSetup" Content="Setup Popup" Click="btnSetup_Click"/>
-                        <Button Name="btnValueEnter" Content="Value Enter" Click="btnValueEnter_Click"/>
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Row :" VerticalAlignment="Center"/>
                             <TextBlock Name="tbRow" Width="50" VerticalAlignment="Center"/>
@@ -34,7 +33,14 @@
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Frame Name="fmMain"/>
+                    <DockingManager Name="dockingManager">
+                        <LayoutRoot x:Name="layoutRoot">
+                            <LayoutPanel>
+                                <LayoutAnchorablePane x:Name="mainAnchorablePane">
+                                </LayoutAnchorablePane>
+                            </LayoutPanel>
+                        </LayoutRoot>
+                    </DockingManager>
                     <StackPanel Grid.Column="1">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Row Count : "/>
@@ -50,6 +56,11 @@
                             <Label Content="Start Address : "/>
                             <TextBox Name="tbStartAddress" Width="50"/>
                             <Button Name="btnStartAddress" Content="Update" Click="btnStartAddress_Click"/>
+                        </StackPanel>
+                        <Label Height="200"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button Name="btnCreate" Height="25" Content="Create" Margin="5 0 5 0" Click="btnCreate_Click"/>
+                            <Button Name="btnDelete" Height="25" Content="Delete" Margin="5 0 5 0" Click="btnDelete_Click"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>

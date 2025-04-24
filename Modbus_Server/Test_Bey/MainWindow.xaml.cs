@@ -16,6 +16,7 @@ using Control_Library.PopupViewModels;
 using Control_Library.PopupViews;
 using Control_Library.ControlViewModels;
 using Control_Library.ControlViews;
+using AvalonDock.Layout;
 
 namespace Test_Bey
 {
@@ -26,18 +27,13 @@ namespace Test_Bey
     {
         private SetupViewModel _setupViewModel;
         private SetupView _setupView;
-        private ValueEnterView _valueEnterView;
-        private ValueEnterViewModel _valueEnterViewModel;
-        private DataTableViewModel _dataTableViewModel;
-        private DataTableView _dataTableView;
+        private List<LayoutAnchorable> _currentAnchorables = new List<LayoutAnchorable>();
+        private DataTableViewModel _currentTableModel;
 
         public MainWindow()
         {
             InitializeComponent();
-
-            _dataTableViewModel = new DataTableViewModel();
-            _dataTableView = new DataTableView(_dataTableViewModel);
-            fmMain.Content = _dataTableView;
+            CreateDocument();
         }
 
         private void UpdateTextBlocks(object sender, SetupFinishedEventArg e)
@@ -49,27 +45,43 @@ namespace Test_Bey
         private void btnRowCounts_Click(object sender, RoutedEventArgs e)
         {
             int count;
-            if(int.TryParse(tbDataTableRowCounts.Text, out count))
+            if (!int.TryParse(tbDataTableRowCounts.Text, out count))
             {
-                _dataTableViewModel.RowCounts = count;
+                return;
+            }
+
+            if (_currentTableModel != null)
+            {
+                _currentTableModel.RowCounts = count;
             }
         }
 
         private void btnDataTableQuantity_Click(object sender, RoutedEventArgs e)
         {
             int count;
-            if (int.TryParse(tbDataTableQuantity.Text, out count))
+            if (!int.TryParse(tbDataTableQuantity.Text, out count))
             {
-                _dataTableViewModel.Quantity = count;
+                return;
+            }
+
+            if (_currentTableModel != null)
+            {
+                _currentTableModel.Quantity = count;
             }
         }
 
         private void btnStartAddress_Click(object sender, RoutedEventArgs e)
         {
             int count;
-            if (int.TryParse(tbStartAddress.Text, out count))
+
+            if (!int.TryParse(tbStartAddress.Text, out count))
             {
-                _dataTableViewModel.StartAddress = count;
+                return;
+            }
+
+            if (_currentTableModel != null)
+            {
+                _currentTableModel.StartAddress = count;
             }
         }
 
@@ -83,12 +95,88 @@ namespace Test_Bey
             _setupView.ShowDialog();
         }
 
-        private void btnValueEnter_Click(object sender, RoutedEventArgs e)
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            _valueEnterViewModel = new ValueEnterViewModel(_dataTableViewModel, 0, 0);
-            _valueEnterView = new ValueEnterView(_valueEnterViewModel);
+            CreateDocument();
+        }
 
-            _valueEnterView.ShowDialog();
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteDocument();
+        }
+        public void CreateDocument()
+        {
+            var dataTableViewModel = new DataTableViewModel();
+            var dataTableView = new DataTableView(dataTableViewModel);
+
+            ContentControl contenControl = new ContentControl();
+            contenControl.Content = dataTableView;
+            LayoutAnchorable anchorable = new LayoutAnchorable()
+            {
+                Title = $"Table {mainAnchorablePane.Children.Count + 1}",
+                Content = contenControl
+            };
+
+            anchorable.IsActiveChanged += AnchorableIsActiveChangedHandler;
+            anchorable.IsSelected = true;
+            anchorable.IsActive = true;
+
+            if (mainAnchorablePane.Parent == null)
+            {
+                //putting the mainAnchorablePane into the root layout again
+                layoutRoot.RootPanel.Children.Add(mainAnchorablePane);
+            }
+            mainAnchorablePane.Children.Add(anchorable);
+        }
+        public void AnchorableIsActiveChangedHandler(object sender, EventArgs e)
+        {
+            if (sender is LayoutAnchorable)
+            {
+                LayoutAnchorable anchorable = (LayoutAnchorable)sender;
+                if (anchorable.IsActive)
+                {
+                    _currentAnchorables.Add(anchorable);
+                }
+            }
+        }
+
+        public DataTableViewModel GetDataTableModelFromAnchorable(LayoutAnchorable anchorable)
+        {
+            DataTableViewModel model = null;
+
+            if (anchorable.Content is ContentControl)
+            {
+                ContentControl content = (ContentControl)anchorable.Content;
+                if (content.Content is DataTableView)
+                {
+                    DataTableView view = (DataTableView)content.Content;
+                    model = view.Model;
+                }
+            }
+            
+            return model;
+        }
+
+        public void DeleteDocument()
+        {
+            if (_currentAnchorables.Count > 0)
+            {
+                LayoutAnchorable currentAnchorable = _currentAnchorables.Last();
+
+                //Deleting from the visual tree
+                var parent = currentAnchorable.Parent; 
+                parent?.RemoveChild(currentAnchorable);
+
+                //Deleting also from the current anchorables list
+                _currentAnchorables.RemoveAll(item => item == currentAnchorable);
+
+                //Make sure the previous anchorable is selected before exit the method
+                if (_currentAnchorables.Count > 0)
+                {
+                    LayoutAnchorable previousAnchorable = _currentAnchorables.Last();
+                    previousAnchorable.IsActive = true;
+                }
+            }
         }
     }
 }

@@ -22,16 +22,27 @@ namespace Control_Library.ControlViews
     public partial class DataTableView : UserControl
     {
         private DataTableViewModel _model;
+        public DataTableViewModel Model
+        {
+            get
+            {
+                return _model;
+            }
+            set
+            {
+                _model = value;
+            }
+        }
+
+
         public DataTableView(DataTableViewModel model)
         {
             InitializeComponent();
             this.DataContext = model;
-            _model = model;
-            _model.DataItemsChanged += DataItemsChangedEentHandler;
-            _model.Quantity = DataTableViewModel.DEFAULT_QUANTITY;
+            Model = model;
+            Model.DataItemsChanged += DataItemsChangedEentHandler;
+            Model.Quantity = DataTableViewModel.DEFAULT_QUANTITY;
         }
-
-
         private void DataItemsChangedEentHandler(object sender, DataItemsChangedEventArg e)
         {
             GenerateColumnsFromDictionaryKeys(e.ColCounts);
@@ -46,11 +57,11 @@ namespace Control_Library.ControlViews
             indexColumn.Header = "";
             indexColumn.Binding = new Binding("RowIndex");
             indexColumn.IsReadOnly = true;
-            indexColumn.Width = _model.IndexColumnWidth;
+            indexColumn.Width = Model.IndexColumnWidth;
             indexColumn.CanUserResize = false;
 
             Style indexColumnCellStyle = new Style(typeof(DataGridCell));
-            indexColumnCellStyle.Setters.Add(new Setter(DataGridCell.BackgroundProperty, _model.IndexColumnColor));
+            indexColumnCellStyle.Setters.Add(new Setter(DataGridCell.BackgroundProperty, Model.IndexColumnColor));
             indexColumnCellStyle.Setters.Add(new Setter(DataGridCell.ForegroundProperty, Brushes.Black));
             indexColumnCellStyle.Setters.Add(new Setter(DataGridCell.FocusableProperty, false));
 
@@ -106,7 +117,7 @@ namespace Control_Library.ControlViews
                         Mode = BindingMode.TwoWay,
                         UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
                     },
-                    Width = _model.NameColumnWidth,
+                    Width = Model.NameColumnWidth,
                     CanUserSort = false,
                     Foreground = Brushes.Black
                 };
@@ -125,13 +136,13 @@ namespace Control_Library.ControlViews
 
                 var valueColumn = new DataGridTextColumn()
                 {
-                    Header = (((colIndex-1) + _model.StartAddress/_model.RowCounts) * _model.RowCounts).ToString("D4"),
+                    Header = (((colIndex-1) + Model.StartAddress/ Model.RowCounts) * Model.RowCounts).ToString("D4"),
                     Binding = new Binding($"Value{colIndex}.Content")
                     {
                         Mode = BindingMode.TwoWay,
                         UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
                     },
-                    Width = _model.ValueColumnWidth,
+                    Width = Model.ValueColumnWidth,
                     CanUserSort = false,
                     Foreground = Brushes.Black
                 };
@@ -179,9 +190,9 @@ namespace Control_Library.ControlViews
                 var columnIndex = dgMainTable.Columns.IndexOf(column);
 
                 //Excluded index column
-                if (_model.VerifyEnabledCellByIndex(rowIndex, columnIndex))
+                if (Model.VerifyEnabledCellByIndex(rowIndex, columnIndex))
                 {
-                   _model.MainTableMouseDoubleClickHandler(rowIndex, columnIndex);
+                    Model.MainTableMouseDoubleClickHandler(rowIndex, columnIndex);
                 }
             }
         }
