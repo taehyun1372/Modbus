@@ -42,6 +42,7 @@ namespace Control_Library.ControlViews
             Model = model;
             Model.DataItemsChanged += DataItemsChangedEentHandler;
             Model.Quantity = DataTableViewModel.DEFAULT_QUANTITY;
+            Model.SynchroniseDataTable();
         }
         private void DataItemsChangedEentHandler(object sender, DataItemsChangedEventArg e)
         {

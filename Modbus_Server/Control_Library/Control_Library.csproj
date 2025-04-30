@@ -74,6 +74,7 @@
     <Compile Include="ControlViews\DataTableView.xaml.cs">
       <DependentUpon>DataTableView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Core\SlaveHelper.cs" />
     <Compile Include="PopupViewModels\SetupViewModel.cs" />
     <Compile Include="PopupViewModels\ValueEnterViewModel.cs" />
     <Compile Include="PopupViews\SetupView.xaml.cs">

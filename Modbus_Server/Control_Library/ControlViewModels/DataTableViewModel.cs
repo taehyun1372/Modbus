@@ -10,6 +10,7 @@ using System.Dynamic;
 using System.Windows;
 using Control_Library.PopupViewModels;
 using Control_Library.PopupViews;
+using Control_Library.Core;
 
 namespace Control_Library.ControlViewModels
 {
@@ -26,6 +27,7 @@ namespace Control_Library.ControlViewModels
 
         private ValueEnterView _valueEnterView;
         private ValueEnterViewModel _valueEnterViewModel;
+        private SlaveHelper _slaveHelper;
 
         private int _startAddress = DEFAULT_START_ADDRESS;
         public int StartAddress
@@ -178,10 +180,27 @@ namespace Control_Library.ControlViewModels
             }
         }
 
+        public SlaveHelper SlaveHelper
+        {
+            get { return _slaveHelper; }
+            set { _slaveHelper = value; }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public DataTableViewModel()
+        public DataTableViewModel(SlaveHelper slaveHelper)
         {
+            SlaveHelper = slaveHelper;
+        }
+
+        public void SynchroniseDataTable()
+        {
+            ushort[] values = SlaveHelper.GetHoldingRegisters(StartAddress, Quantity);
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                ListDataItems[i].ValueItem.Content = values[i];
+            }
         }
 
         private void UpdateDataTableList()

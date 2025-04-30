@@ -16,6 +16,7 @@ using Control_Library.PopupViewModels;
 using Control_Library.PopupViews;
 using Control_Library.ControlViewModels;
 using Control_Library.ControlViews;
+using Control_Library.Core;
 using AvalonDock.Layout;
 
 namespace Test_Bey
@@ -27,12 +28,14 @@ namespace Test_Bey
     {
         private SetupViewModel _setupViewModel;
         private SetupView _setupView;
+        private SlaveHelper _slaveHelper;
         private List<LayoutAnchorable> _currentAnchorables = new List<LayoutAnchorable>();
         private DataTableViewModel _currentTableModel;
 
         public MainWindow()
         {
             InitializeComponent();
+            _slaveHelper = new SlaveHelper();
             CreateDocument();
         }
 
@@ -106,7 +109,7 @@ namespace Test_Bey
         }
         public void CreateDocument()
         {
-            var dataTableViewModel = new DataTableViewModel();
+            var dataTableViewModel = new DataTableViewModel(_slaveHelper);
             var dataTableView = new DataTableView(dataTableViewModel);
 
             ContentControl contenControl = new ContentControl();
