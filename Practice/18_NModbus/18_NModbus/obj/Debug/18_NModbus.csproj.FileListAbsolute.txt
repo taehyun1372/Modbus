@@ -1,0 +1,10 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\obj\Debug\18_NModbus.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\obj\Debug\18_NModbus.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\bin\Debug\18_NModbus.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\bin\Debug\18_NModbus.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\bin\Debug\18_NModbus.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\bin\Debug\NModbus4.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\bin\Debug\NModbus4.xml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\obj\Debug\18_NModbus.csproj.CopyComplete
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\obj\Debug\18_NModbus.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\18_NModbus\18_NModbus\obj\Debug\18_NModbus.pdb

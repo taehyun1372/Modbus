@@ -1,0 +1,15 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\bin\Debug\16_Tab_Control_Template.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\bin\Debug\16_Tab_Control_Template.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\bin\Debug\16_Tab_Control_Template.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\16_Tab_Control_Template.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\16_Tab_Control_Template_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\16_Tab_Control_Template_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\16_Tab_Control_Template.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\_16_Tab_Control_Template.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\16_Tab_Control_Template.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\16_Tab_Control_Template.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\16_Tab_Control_Template.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\16_Tab_Control_Template\16_Tab_Control_Template\obj\Debug\16_Tab_Control_Template.pdb

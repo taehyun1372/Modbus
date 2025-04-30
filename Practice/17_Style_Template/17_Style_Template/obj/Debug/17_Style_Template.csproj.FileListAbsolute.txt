@@ -1,0 +1,16 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\bin\Debug\17_Style_Template.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\bin\Debug\17_Style_Template.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\bin\Debug\17_Style_Template.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\PhotoBrowsingView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\17_Style_Template_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\17_Style_Template_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\PhotoBrowsingView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\17_Style_Template.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\_17_Style_Template.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\17_Style_Template.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\17_Style_Template.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\17_Style_Template.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\17_Style_Template\17_Style_Template\obj\Debug\17_Style_Template.pdb

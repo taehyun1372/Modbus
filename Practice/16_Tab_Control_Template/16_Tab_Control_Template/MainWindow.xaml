@@ -1,0 +1,26 @@
+﻿<Window x:Class="_16_Tab_Control_Template.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_16_Tab_Control_Template"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl ItemsSource="{Binding MyTabs}">
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBox Text="{Binding HeaderText, UpdateSourceTrigger=PropertyChanged}" 
+                     BorderThickness="0" Background="Transparent"/>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <!-- Your tab content goes here -->
+                    <TextBlock Text="{Binding Content}" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+    </Grid>
+</Window>
