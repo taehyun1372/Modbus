@@ -77,7 +77,5 @@ namespace Control_Library.Core
         {
             return _slave.DataStore.HoldingRegisters.Skip(start).Take(quantity).ToArray();
         }
-
-
     }
 }

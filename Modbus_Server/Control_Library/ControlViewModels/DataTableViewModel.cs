@@ -191,11 +191,12 @@ namespace Control_Library.ControlViewModels
         public DataTableViewModel(SlaveHelper slaveHelper)
         {
             SlaveHelper = slaveHelper;
+            SlaveHelper.Slave.DataStore.DataStoreWrittenTo += DataWrittenByClient;
         }
 
         public void SynchroniseDataTable()
         {
-            ushort[] values = SlaveHelper.GetHoldingRegisters(StartAddress, Quantity);
+            ushort[] values = SlaveHelper.GetHoldingRegisters(StartAddress + 1, Quantity);
 
             for (int i = 0; i < values.Length; i++)
             {
@@ -213,11 +214,14 @@ namespace Control_Library.ControlViewModels
             {
                 for (int i = ListDataItems.Count; i < Quantity; i++)
                 {
-                    ListDataItems.Add(new DataItem()
+                    var dataItem = new DataItem()
                     {
                         NameItem = new NameItem() { Content = "" },
                         ValueItem = new ValueItem() { Content = 0 },
-                    });
+                        Index = i
+                    };
+                    dataItem.ValueChanged += ValueUpdateByUser;
+                    ListDataItems.Add(dataItem);
                 }
             }
             else if (Quantity < ListDataItems.Count)
@@ -338,6 +342,24 @@ namespace Control_Library.ControlViewModels
             return enabled;
         }
 
+        public void ValueUpdateByUser(object sender, ValueChangedEventArgs e)
+        {
+            SlaveHelper.HoldingRegisters[e.Index + StartAddress + 1] = (ushort)e.Value;
+        }
+
+        public void DataWrittenByClient(object sender, Modbus.Data.DataStoreEventArgs e)
+        {
+            for (int i=0; i < e.Data.B.Count; i++)
+            {
+                var index = StartAddress - (e.StartAddress + 1) + i;
+                if (ListDataItems[ + i] is null)
+                {
+                    continue;
+                }
+                ListDataItems[StartAddress - (e.StartAddress + 1) + i].ValueItem.Content = e.Data.B[i];
+            }
+        }
+
         public void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
@@ -352,6 +374,7 @@ namespace Control_Library.ControlViewModels
     public class DataItem : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        public event Action<object, ValueChangedEventArgs> ValueChanged;
 
         private NameItem _nameItem;
         public NameItem NameItem
@@ -376,10 +399,24 @@ namespace Control_Library.ControlViewModels
             }
             set
             {
+                if (_valueItem != null)
+                {
+                    _valueItem.ValueChanged -= ValueChangedHandler; //Disconnect the previous value item
+                }
                 _valueItem = value;
+                _valueItem.ValueChanged += ValueChangedHandler; //Connect the new value item
+
                 OnPropertyChanged(nameof(ValueItem));
             }
         }
+
+        private void ValueChangedHandler(object sender, ValueChangedEventArgs e)
+        {
+            e.Index = Index;
+            ValueChanged?.Invoke(this, e);
+        }
+
+        public int Index { get; set; }
 
         public void OnPropertyChanged(string name)
         {
@@ -418,6 +455,8 @@ namespace Control_Library.ControlViewModels
 
     public class ValueItem : INotifyPropertyChanged
     {
+        public event Action<object, ValueChangedEventArgs> ValueChanged;
+
         private int _content;
         public int Content
         {
@@ -428,6 +467,7 @@ namespace Control_Library.ControlViewModels
             set
             {
                 _content = value;
+                ValueChanged?.Invoke(this, new ValueChangedEventArgs(value));
                 OnPropertyChanged(nameof(Content));
             }
         }
@@ -438,5 +478,14 @@ namespace Control_Library.ControlViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
+    }
+    public class ValueChangedEventArgs
+    {
+        public int Value { get; set; }
+        public ValueChangedEventArgs(int value)
+        {
+            Value = value;
+        }
+        public int Index { get; set; }
     }
 }

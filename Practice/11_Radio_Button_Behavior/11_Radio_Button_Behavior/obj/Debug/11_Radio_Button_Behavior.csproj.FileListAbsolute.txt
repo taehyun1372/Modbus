@@ -15,3 +15,21 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\11_R
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.csproj.CoreCompileInputs.cache
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.exe
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.pdb
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\bin\Debug\11_Radio_Button_Behavior.exe.config
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\bin\Debug\11_Radio_Button_Behavior.exe
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\bin\Debug\11_Radio_Button_Behavior.pdb
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.csproj.AssemblyReference.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.csproj.SuggestedBindingRedirects.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\MainWindow.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\SetupPopupView.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\App.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior_MarkupCompile.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior_MarkupCompile.lref
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\MainWindow.baml
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\SetupPopupView.baml
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.g.resources
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\_11_Radio_Button_Behavior.Properties.Resources.resources
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.csproj.GenerateResource.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.csproj.CoreCompileInputs.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.exe
+C:\Users\taehy\Desktop\Code\Modbus\Practice\11_Radio_Button_Behavior\11_Radio_Button_Behavior\obj\Debug\11_Radio_Button_Behavior.pdb
