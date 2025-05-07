@@ -13,7 +13,7 @@ namespace Control_Library.Core
     public class SlaveHelper
     {
         public const string DEFAULT_IP_ADDRESS = "127.0.0.1";
-        public const int DEFAULT_PORT = 502;
+        public const int DEFAULT_PORT = 1500;
         public const byte DEFAULT_SLAVE_ID = 1;
 
         private TcpListener _listener;

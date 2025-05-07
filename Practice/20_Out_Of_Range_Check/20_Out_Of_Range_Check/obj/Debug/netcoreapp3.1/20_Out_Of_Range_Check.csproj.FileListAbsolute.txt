@@ -1,0 +1,14 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\bin\Debug\netcoreapp3.1\20_Out_Of_Range_Check.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\bin\Debug\netcoreapp3.1\20_Out_Of_Range_Check.deps.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\bin\Debug\netcoreapp3.1\20_Out_Of_Range_Check.runtimeconfig.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\bin\Debug\netcoreapp3.1\20_Out_Of_Range_Check.runtimeconfig.dev.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\bin\Debug\netcoreapp3.1\20_Out_Of_Range_Check.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\bin\Debug\netcoreapp3.1\20_Out_Of_Range_Check.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\obj\Debug\netcoreapp3.1\20_Out_Of_Range_Check.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\obj\Debug\netcoreapp3.1\20_Out_Of_Range_Check.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\obj\Debug\netcoreapp3.1\20_Out_Of_Range_Check.AssemblyInfoInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\obj\Debug\netcoreapp3.1\20_Out_Of_Range_Check.AssemblyInfo.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\obj\Debug\netcoreapp3.1\20_Out_Of_Range_Check.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\obj\Debug\netcoreapp3.1\20_Out_Of_Range_Check.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\obj\Debug\netcoreapp3.1\20_Out_Of_Range_Check.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\20_Out_Of_Range_Check\20_Out_Of_Range_Check\obj\Debug\netcoreapp3.1\20_Out_Of_Range_Check.genruntimeconfig.cache

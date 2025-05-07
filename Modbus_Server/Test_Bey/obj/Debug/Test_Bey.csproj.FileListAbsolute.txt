@@ -73,3 +73,5 @@ C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csp
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.CopyComplete
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.exe
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\NModbus4.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\NModbus4.xml

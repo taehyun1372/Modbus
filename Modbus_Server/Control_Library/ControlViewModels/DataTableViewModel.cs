@@ -352,7 +352,7 @@ namespace Control_Library.ControlViewModels
             for (int i=0; i < e.Data.B.Count; i++)
             {
                 var index = StartAddress - (e.StartAddress + 1) + i;
-                if (ListDataItems[ + i] is null)
+                if (ListDataItems[index + i] is null)
                 {
                     continue;
                 }
