@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
-using System.Windows.Media;
-using System.Collections.ObjectModel;
-using System.Dynamic;
-using System.Windows;
+﻿using Control_Library.Core;
 using Control_Library.PopupViewModels;
 using Control_Library.PopupViews;
-using Control_Library.Core;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Dynamic;
+using System.Linq;
+using System.Windows.Media;
 
 namespace Control_Library.ControlViewModels
 {
@@ -193,7 +190,8 @@ namespace Control_Library.ControlViewModels
         public DataTableViewModel(SlaveHelper slaveHelper)
         {
             SlaveHelper = slaveHelper;
-            SlaveHelper.Slave.DataStore.DataStoreWrittenTo += DataWrittenByClient;
+            SlaveHelper.Slave.DataStore.DataStoreWrittenTo += OnDataStoreWrittenTo;
+            SlaveHelper.HoldingRegisterChanged += OnSlaveHelperHoldingRegisterChanged;
         }
 
         public void SynchroniseDataTable()
@@ -222,7 +220,7 @@ namespace Control_Library.ControlViewModels
                         ValueItem = new ValueItem() { Content = 0 },
                         Index = i
                     };
-                    dataItem.ValueChanged += ValueUpdateByUser;
+                    dataItem.ValueChanged += OnDataItemValueChanged;
                     ListDataItems.Add(dataItem);
                 }
             }
@@ -344,12 +342,28 @@ namespace Control_Library.ControlViewModels
             return enabled;
         }
 
-        public void ValueUpdateByUser(object sender, ValueChangedEventArgs e)
+        public void OnDataItemValueChanged(object sender, ValueChangedEventArgs e)
         {
-            SlaveHelper.HoldingRegisters[e.Index + StartAddress + 1] = (ushort)e.Value;
+            SlaveHelper.SetHoldingRegister(e.Index + StartAddress + 1, (ushort)e.Value);
         }
 
-        public void DataWrittenByClient(object sender, Modbus.Data.DataStoreEventArgs e)
+        public void OnSlaveHelperHoldingRegisterChanged(object sender, HoldingRegisterChangeEventArg e)
+        {
+            var lowerBound = 0;
+            var upperBound = ListDataItems.Count() - 1;
+            var index = e.Index - StartAddress - 1;
+
+            if (index < lowerBound || index > upperBound)
+            {
+                return;
+            }
+            else
+            {
+                ListDataItems[index].ValueItem.Content = e.Value;
+            }
+        }
+
+        public void OnDataStoreWrittenTo(object sender, Modbus.Data.DataStoreEventArgs e)
         {
             var lowerBound = 0;
             var upperBound = ListDataItems.Count() - 1;
@@ -361,7 +375,7 @@ namespace Control_Library.ControlViewModels
                 {
                     continue;
                 }
-                ListDataItems[(e.StartAddress) - StartAddress + i].ValueItem.Content = e.Data.B[i];
+                ListDataItems[index].ValueItem.Content = e.Data.B[i];
             }
         }
 
@@ -406,16 +420,16 @@ namespace Control_Library.ControlViewModels
             {
                 if (_valueItem != null)
                 {
-                    _valueItem.ValueChanged -= ValueChangedHandler; //Disconnect the previous value item
+                    _valueItem.ValueChanged -= OnValueChanged; //Disconnect the previous value item
                 }
                 _valueItem = value;
-                _valueItem.ValueChanged += ValueChangedHandler; //Connect the new value item
+                _valueItem.ValueChanged += OnValueChanged; //Connect the new value item
 
                 OnPropertyChanged(nameof(ValueItem));
             }
         }
 
-        private void ValueChangedHandler(object sender, ValueChangedEventArgs e)
+        private void OnValueChanged(object sender, ValueChangedEventArgs e)
         {
             e.Index = Index;
             ValueChanged?.Invoke(this, e);
@@ -470,9 +484,12 @@ namespace Control_Library.ControlViewModels
             }
             set
             {
-                _content = value;
-                ValueChanged?.Invoke(this, new ValueChangedEventArgs(value));
-                OnPropertyChanged(nameof(Content));
+                if (_content != value)
+                {
+                    _content = value;
+                    ValueChanged?.Invoke(this, new ValueChangedEventArgs(value)); //Data Synchorisation
+                    OnPropertyChanged(nameof(Content)); //UI Update
+                }
             }
         }
 

@@ -16,6 +16,8 @@ namespace Control_Library.Core
         public const int DEFAULT_PORT = 1500;
         public const byte DEFAULT_SLAVE_ID = 1;
 
+        public event Action<object, HoldingRegisterChangeEventArg> HoldingRegisterChanged;
+
         private TcpListener _listener;
         private ModbusTcpSlave _slave;
         public ModbusTcpSlave Slave
@@ -27,26 +29,6 @@ namespace Control_Library.Core
         public Modbus.Data.DataStore DataStore
         {
             get { return _slave.DataStore; }
-        }
-
-        public Modbus.Data.ModbusDataCollection<ushort> HoldingRegisters
-        {
-            get { return _slave.DataStore.HoldingRegisters; }
-        }
-
-        public Modbus.Data.ModbusDataCollection<ushort> InputRegisters
-        {
-            get { return _slave.DataStore.InputRegisters; }
-        }
-
-        public Modbus.Data.ModbusDataCollection<bool> Coils
-        {
-            get { return _slave.DataStore.CoilDiscretes; }
-        }
-
-        public Modbus.Data.ModbusDataCollection<bool> InputDiscretes
-        {
-            get { return _slave.DataStore.InputDiscretes; }
         }
 
         public byte SlaveId
@@ -76,6 +58,27 @@ namespace Control_Library.Core
         public ushort[] GetHoldingRegisters(int start, int quantity)
         {
             return _slave.DataStore.HoldingRegisters.Skip(start).Take(quantity).ToArray();
+        }
+
+        public void SetHoldingRegister(int index, ushort value)
+        {
+            if (_slave.DataStore.HoldingRegisters.Count() > index)
+            {
+                _slave.DataStore.HoldingRegisters[index] = value;
+                HoldingRegisterChanged?.Invoke(this, new HoldingRegisterChangeEventArg(index, value));
+            }
+        }
+    }
+
+    public class HoldingRegisterChangeEventArg
+    {
+        public int Index { get; set; }
+        public ushort Value { get; set; }
+
+        public HoldingRegisterChangeEventArg(int index, ushort value)
+        {
+            Index = index;
+            Value = value;
         }
     }
 }
