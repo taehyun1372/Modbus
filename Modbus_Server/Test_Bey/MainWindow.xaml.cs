@@ -30,7 +30,6 @@ namespace Test_Bey
         private SetupView _setupView;
         private SlaveHelper _slaveHelper;
         private List<LayoutAnchorable> _currentAnchorables = new List<LayoutAnchorable>();
-        private DataTableViewModel _currentTableModel;
 
         public MainWindow()
         {
@@ -53,9 +52,11 @@ namespace Test_Bey
                 return;
             }
 
-            if (_currentTableModel != null)
+            DataTableViewModel currentTableModel = GetDataTableModelFromAnchorable(_currentAnchorables.Last());
+
+            if (currentTableModel != null)
             {
-                _currentTableModel.RowCounts = count;
+                currentTableModel.RowCounts = count;
             }
         }
 
@@ -67,9 +68,11 @@ namespace Test_Bey
                 return;
             }
 
-            if (_currentTableModel != null)
+            DataTableViewModel currentTableModel = GetDataTableModelFromAnchorable(_currentAnchorables.Last());
+
+            if (currentTableModel != null)
             {
-                _currentTableModel.Quantity = count;
+                currentTableModel.Quantity = count;
             }
         }
 
@@ -82,9 +85,11 @@ namespace Test_Bey
                 return;
             }
 
-            if (_currentTableModel != null)
+            DataTableViewModel currentTableModel = GetDataTableModelFromAnchorable(_currentAnchorables.Last());
+
+            if (currentTableModel != null)
             {
-                _currentTableModel.StartAddress = count;
+                currentTableModel.StartAddress = count;
             }
         }
 
@@ -156,7 +161,6 @@ namespace Test_Bey
                     model = view.Model;
                 }
             }
-            
             return model;
         }
 

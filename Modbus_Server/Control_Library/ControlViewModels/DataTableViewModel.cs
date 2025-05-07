@@ -349,14 +349,17 @@ namespace Control_Library.ControlViewModels
 
         public void DataWrittenByClient(object sender, Modbus.Data.DataStoreEventArgs e)
         {
+            var lowerBound = 0;
+            var upperBound = ListDataItems.Count() - 1;
+            var index = e.StartAddress - StartAddress;
+
             for (int i=0; i < e.Data.B.Count; i++)
             {
-                var index = StartAddress - (e.StartAddress + 1) + i;
-                if (ListDataItems[index + i] is null)
+                if (index + i < lowerBound || index + i > upperBound)
                 {
                     continue;
                 }
-                ListDataItems[StartAddress - (e.StartAddress + 1) + i].ValueItem.Content = e.Data.B[i];
+                ListDataItems[(e.StartAddress) - StartAddress + i].ValueItem.Content = e.Data.B[i];
             }
         }
 
