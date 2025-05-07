@@ -40,11 +40,11 @@ namespace Control_Library.ControlViews
             InitializeComponent();
             this.DataContext = model;
             Model = model;
-            Model.DataItemsChanged += DataItemsChangedEentHandler;
+            Model.DataItemsChanged += DataItemsChangedEventHandler;
             Model.Quantity = DataTableViewModel.DEFAULT_QUANTITY;
             Model.SynchroniseDataTable();
         }
-        private void DataItemsChangedEentHandler(object sender, DataItemsChangedEventArg e)
+        private void DataItemsChangedEventHandler(object sender, DataItemsChangedEventArg e)
         {
             GenerateColumnsFromDictionaryKeys(e.ColCounts);
         }

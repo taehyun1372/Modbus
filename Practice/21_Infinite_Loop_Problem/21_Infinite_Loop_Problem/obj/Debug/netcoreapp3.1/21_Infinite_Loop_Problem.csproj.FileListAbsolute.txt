@@ -1,0 +1,14 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\bin\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\bin\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.deps.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\bin\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.runtimeconfig.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\bin\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.runtimeconfig.dev.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\bin\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\bin\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\obj\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\obj\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\obj\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.AssemblyInfoInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\obj\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.AssemblyInfo.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\obj\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\obj\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\obj\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\21_Infinite_Loop_Problem\21_Infinite_Loop_Problem\obj\Debug\netcoreapp3.1\21_Infinite_Loop_Problem.genruntimeconfig.cache

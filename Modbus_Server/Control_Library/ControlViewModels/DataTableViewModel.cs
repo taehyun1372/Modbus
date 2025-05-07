@@ -40,6 +40,7 @@ namespace Control_Library.ControlViewModels
             {
                 _startAddress = value;
                 TranformDataItemList();
+                SynchroniseDataTable();
             }
         }
 
@@ -78,6 +79,7 @@ namespace Control_Library.ControlViewModels
             {
                 _quantity = value;
                 UpdateDataTableList();
+                SynchroniseDataTable();
             }
         }
 
@@ -455,7 +457,6 @@ namespace Control_Library.ControlViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
-
     public class ValueItem : INotifyPropertyChanged
     {
         public event Action<object, ValueChangedEventArgs> ValueChanged;
