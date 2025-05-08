@@ -1,0 +1,16 @@
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\bin\Debug\22_Menu_Bar.exe.config
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\bin\Debug\22_Menu_Bar.exe
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\bin\Debug\22_Menu_Bar.pdb
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar.csproj.AssemblyReference.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar.csproj.SuggestedBindingRedirects.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\MainWindow.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\App.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar_MarkupCompile.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar_MarkupCompile.lref
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\MainWindow.baml
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar.g.resources
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\_22_Menu_Bar.Properties.Resources.resources
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar.csproj.GenerateResource.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar.csproj.CoreCompileInputs.cache
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar.exe
+C:\Users\taehy\Desktop\Code\Modbus\Practice\22_Menu_Bar\22_Menu_Bar\obj\Debug\22_Menu_Bar.pdb
