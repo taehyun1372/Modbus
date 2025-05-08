@@ -21,10 +21,25 @@ namespace Control_Library.ControlViewModels
         private const int DEFAULT_VALUE_COLUMN_WIDTH = 70;
         public const int DEFAULT_QUANTITY = 10;
         public const int DEFAULT_START_ADDRESS = 0;
+        public static SolidColorBrush DEFUALT_BORDER_COLOR = Brushes.LightGray;
 
         private ValueEnterView _valueEnterView;
         private ValueEnterViewModel _valueEnterViewModel;
         private SlaveHelper _slaveHelper;
+
+        private SolidColorBrush _borderColor = DEFUALT_BORDER_COLOR;
+        public SolidColorBrush BorderColor
+        {
+            get
+            {
+                return _borderColor;
+            }
+            set
+            {
+                _borderColor = value;
+                OnPropertyChanged(nameof(BorderColor));
+            }
+        }
 
         private int _startAddress = DEFAULT_START_ADDRESS;
         public int StartAddress

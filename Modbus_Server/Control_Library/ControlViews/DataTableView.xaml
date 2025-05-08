@@ -6,6 +6,8 @@
              xmlns:local="clr-namespace:Control_Library.ControlViews"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <DataGrid Name="dgMainTable" MouseDoubleClick="dgMainTable_MouseDoubleClick" HorizontalAlignment="Left" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding DataItems}" Foreground="Black" AutoGenerateColumns="false" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" GridLinesVisibility="All" CanUserAddRows="false" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray">
-    </DataGrid>
+    <Border Name="bdMainBorder" BorderBrush="{Binding BorderColor}" BorderThickness="3">
+        <DataGrid Name="dgMainTable" MouseDoubleClick="dgMainTable_MouseDoubleClick" HorizontalAlignment="Left" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding DataItems}" Foreground="Black" AutoGenerateColumns="false" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" GridLinesVisibility="All" CanUserAddRows="false" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray">
+        </DataGrid>
+    </Border>
 </UserControl>

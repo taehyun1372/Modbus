@@ -30,6 +30,8 @@ namespace Test_Bey
         private SetupView _setupView;
         private SlaveHelper _slaveHelper;
         private List<LayoutAnchorable> _currentAnchorables = new List<LayoutAnchorable>();
+        private List<DataTableViewModel> _allDataTableViewModels = new List<DataTableViewModel>();
+        private DataTableViewModel _currentTableModel;
 
         public MainWindow()
         {
@@ -52,11 +54,9 @@ namespace Test_Bey
                 return;
             }
 
-            DataTableViewModel currentTableModel = GetDataTableModelFromAnchorable(_currentAnchorables.Last());
-
-            if (currentTableModel != null)
+            if (_currentTableModel != null)
             {
-                currentTableModel.RowCounts = count;
+                _currentTableModel.RowCounts = count;
             }
         }
 
@@ -68,11 +68,9 @@ namespace Test_Bey
                 return;
             }
 
-            DataTableViewModel currentTableModel = GetDataTableModelFromAnchorable(_currentAnchorables.Last());
-
-            if (currentTableModel != null)
+            if (_currentTableModel != null)
             {
-                currentTableModel.Quantity = count;
+                _currentTableModel.Quantity = count;
             }
         }
 
@@ -85,11 +83,9 @@ namespace Test_Bey
                 return;
             }
 
-            DataTableViewModel currentTableModel = GetDataTableModelFromAnchorable(_currentAnchorables.Last());
-
-            if (currentTableModel != null)
+            if (_currentTableModel != null)
             {
-                currentTableModel.StartAddress = count;
+                _currentTableModel.StartAddress = count;
             }
         }
 
@@ -119,6 +115,8 @@ namespace Test_Bey
 
             ContentControl contenControl = new ContentControl();
             contenControl.Content = dataTableView;
+            contenControl.Tag = dataTableViewModel;
+
             LayoutAnchorable anchorable = new LayoutAnchorable()
             {
                 Title = $"Table {mainAnchorablePane.Children.Count + 1}",
@@ -135,6 +133,7 @@ namespace Test_Bey
                 layoutRoot.RootPanel.Children.Add(mainAnchorablePane);
             }
             mainAnchorablePane.Children.Add(anchorable);
+            _allDataTableViewModels.Add(dataTableViewModel);
         }
         public void AnchorableIsActiveChangedHandler(object sender, EventArgs e)
         {
@@ -182,6 +181,39 @@ namespace Test_Bey
                 {
                     LayoutAnchorable previousAnchorable = _currentAnchorables.Last();
                     previousAnchorable.IsActive = true;
+                }
+
+                //Make sure we delete the corresponding view model from the list
+                var content = currentAnchorable.Content;
+                if (content is ContentControl)
+                {
+                    ContentControl contentControl = (ContentControl)content;
+                    if (contentControl.Tag is DataTableViewModel)
+                    {
+                        DataTableViewModel viewModel = (DataTableViewModel)contentControl.Tag;
+                        _allDataTableViewModels.Remove(viewModel);
+                    }
+                }
+            }
+        }
+
+        private void dockingManager_ActiveContentChanged(object sender, EventArgs e)
+        {
+            var active = dockingManager.ActiveContent;
+            if (active is ContentControl)
+            {
+                ContentControl contentControl = (ContentControl)active;
+                var content = contentControl.Content;
+                if (content is DataTableView)
+                {
+                    DataTableView view = (DataTableView)content;
+                    _currentTableModel = view.Model;
+
+                    foreach(DataTableViewModel model in _allDataTableViewModels)
+                    {
+                        model.BorderColor = DataTableViewModel.DEFUALT_BORDER_COLOR;
+                    }
+                    _currentTableModel.BorderColor = Brushes.SteelBlue;
                 }
             }
         }

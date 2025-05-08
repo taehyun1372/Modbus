@@ -14,7 +14,6 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.pdb
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\ControlViews\DataTableView.g.cs
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\ControlViews\DataTableView.baml
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\Control_Library.csproj.AssemblyReference.cache
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.g.cs
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\ValueEnterView.baml
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\bin\Debug\AvalonDock.dll

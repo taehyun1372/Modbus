@@ -33,7 +33,7 @@
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <DockingManager Name="dockingManager">
+                    <DockingManager Name="dockingManager" ActiveContentChanged="dockingManager_ActiveContentChanged" >
                         <LayoutRoot x:Name="layoutRoot">
                             <LayoutPanel>
                                 <LayoutAnchorablePane x:Name="mainAnchorablePane">
