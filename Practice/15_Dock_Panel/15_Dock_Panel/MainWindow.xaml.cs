@@ -33,16 +33,16 @@ namespace _15_Dock_Panel
             for (int i = 0; i < 5; i++)
             {
                 ContentControl contentControl = new ContentControl();
-                MainWindowView view = new MainWindowView();
+                MainWindowView view = new MainWindowView() { Id = i };
                 contentControl.Content = view;
                 LayoutDocument document = new LayoutDocument()
                 {
-                    Content = contentControl
+                    Content = contentControl,
+                    Title = $"Default Document {i}"
                 };
-                Binding binding = new Binding("DocumentTitle") { Mode = BindingMode.TwoWay };
-                BindingOperations.SetBinding(document, LayoutDocument.TitleProperty, binding);
                 mainDocumentPane.Children.Add(document);
             }
+
         }
 
         private string _documentTitle;
@@ -63,6 +63,20 @@ namespace _15_Dock_Panel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        
+
+        private void DockingManager_ActiveContentChanged(object sender, EventArgs e)
+        {
+            var active = mainDockingManager.ActiveContent;
+            if (active is ContentControl)
+            {
+                ContentControl control = (ContentControl)active;
+                var content = control.Content;
+                if (content is MainWindowView)
+                {
+                    MainWindowView view = (MainWindowView)content;
+                    Console.WriteLine($"Active Content Changed, Currently selected view is {view.Id}");
+                }
+            }
+        }
     }
 }

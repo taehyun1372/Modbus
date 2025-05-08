@@ -111,7 +111,6 @@ namespace _21_Infinite_Loop_Problem
         {
             Value = value;
         }
-
     }
        
     public class DataChangedEventArg
@@ -126,5 +125,4 @@ namespace _21_Infinite_Loop_Problem
 
         public UIChangeEventArg(int value) => Value = value;
     }
-
 }

@@ -24,5 +24,7 @@ namespace _15_Dock_Panel
         {
             InitializeComponent();
         }
+
+        public int Id { get; set; }
     }
 }
