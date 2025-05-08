@@ -218,7 +218,6 @@ namespace Control_Library.ControlViewModels
                 ListDataItems[i].ValueItem.Content = values[i];
             }
         }
-
         private void UpdateDataTableList()
         {
             if (Quantity == ListDataItems.Count)

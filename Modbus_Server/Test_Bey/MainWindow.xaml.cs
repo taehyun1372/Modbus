@@ -115,7 +115,6 @@ namespace Test_Bey
 
             ContentControl contenControl = new ContentControl();
             contenControl.Content = dataTableView;
-            contenControl.Tag = dataTableViewModel;
 
             LayoutAnchorable anchorable = new LayoutAnchorable()
             {
@@ -123,9 +122,7 @@ namespace Test_Bey
                 Content = contenControl
             };
 
-            anchorable.IsActiveChanged += AnchorableIsActiveChangedHandler;
-            anchorable.IsSelected = true;
-            anchorable.IsActive = true;
+            contenControl.Tag = anchorable;
 
             if (mainAnchorablePane.Parent == null)
             {
@@ -134,17 +131,8 @@ namespace Test_Bey
             }
             mainAnchorablePane.Children.Add(anchorable);
             _allDataTableViewModels.Add(dataTableViewModel);
-        }
-        public void AnchorableIsActiveChangedHandler(object sender, EventArgs e)
-        {
-            if (sender is LayoutAnchorable)
-            {
-                LayoutAnchorable anchorable = (LayoutAnchorable)sender;
-                if (anchorable.IsActive)
-                {
-                    _currentAnchorables.Add(anchorable);
-                }
-            }
+
+            dockingManager.ActiveContent = anchorable.Content;
         }
 
         public DataTableViewModel GetDataTableModelFromAnchorable(LayoutAnchorable anchorable)
@@ -180,7 +168,7 @@ namespace Test_Bey
                 if (_currentAnchorables.Count > 0)
                 {
                     LayoutAnchorable previousAnchorable = _currentAnchorables.Last();
-                    previousAnchorable.IsActive = true;
+                    dockingManager.ActiveContent = previousAnchorable.Content;
                 }
 
                 //Make sure we delete the corresponding view model from the list
@@ -188,10 +176,11 @@ namespace Test_Bey
                 if (content is ContentControl)
                 {
                     ContentControl contentControl = (ContentControl)content;
-                    if (contentControl.Tag is DataTableViewModel)
+                    if (contentControl.Content is DataTableView)
                     {
-                        DataTableViewModel viewModel = (DataTableViewModel)contentControl.Tag;
-                        _allDataTableViewModels.Remove(viewModel);
+                        DataTableView view = (DataTableView)contentControl.Content;
+                        DataTableViewModel model = view.Model;
+                        _allDataTableViewModels.Remove(model);
                     }
                 }
             }
@@ -208,12 +197,20 @@ namespace Test_Bey
                 {
                     DataTableView view = (DataTableView)content;
                     _currentTableModel = view.Model;
-
+            
+                    //Border Color Change
                     foreach(DataTableViewModel model in _allDataTableViewModels)
                     {
                         model.BorderColor = DataTableViewModel.DEFUALT_BORDER_COLOR;
                     }
                     _currentTableModel.BorderColor = Brushes.SteelBlue;
+            
+                    //current Anchorable Storing
+                    if (contentControl.Tag is LayoutAnchorable)
+                    {
+                        LayoutAnchorable anchorable = (LayoutAnchorable)contentControl.Tag;
+                        _currentAnchorables.Add(anchorable);
+                    }
                 }
             }
         }

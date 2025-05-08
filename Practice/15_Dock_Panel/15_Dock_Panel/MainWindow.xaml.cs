@@ -35,7 +35,7 @@ namespace _15_Dock_Panel
                 ContentControl contentControl = new ContentControl();
                 MainWindowView view = new MainWindowView() { Id = i };
                 contentControl.Content = view;
-                LayoutDocument document = new LayoutDocument()
+                LayoutAnchorable document = new LayoutAnchorable()
                 {
                     Content = contentControl,
                     Title = $"Default Document {i}"
@@ -77,6 +77,11 @@ namespace _15_Dock_Panel
                     Console.WriteLine($"Active Content Changed, Currently selected view is {view.Id}");
                 }
             }
+        }
+
+        private void mainDockingManager_GotMouseCapture(object sender, MouseEventArgs e)
+        {
+            Console.WriteLine($"Mouse Capture Changed");
         }
     }
 }

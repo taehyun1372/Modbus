@@ -7,13 +7,11 @@
         xmlns:views="clr-namespace:_15_Dock_Panel"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockingManager Background="WhiteSmoke" Name="mainDockingManager" ActiveContentChanged="DockingManager_ActiveContentChanged">
+    <DockingManager Background="WhiteSmoke" Name="mainDockingManager" GotMouseCapture="mainDockingManager_GotMouseCapture" ActiveContentChanged="DockingManager_ActiveContentChanged">
         <LayoutRoot>
             <LayoutPanel Orientation="Horizontal">
-                <LayoutPanel Orientation="Horizontal" DockWidth="*">
-                    <LayoutDocumentPane x:Name="mainDocumentPane">
-                    </LayoutDocumentPane>
-                </LayoutPanel>
+                <LayoutAnchorablePane x:Name="mainDocumentPane">
+                </LayoutAnchorablePane>
             </LayoutPanel>
         </LayoutRoot>
     </DockingManager>
