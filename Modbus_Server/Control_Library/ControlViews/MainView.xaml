@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:Control_Library.ControlViews"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <DockingManager Name="myDockingManager"  ActiveContentChanged="myDockingManager_ActiveContentChanged" >
+    <Grid Background="LightGray">
+        <DockingManager Name="myDockingManager" ActiveContentChanged="myDockingManager_ActiveContentChanged" >
             <LayoutRoot x:Name="myLayoutRoot">
                 <LayoutPanel>
                     <LayoutAnchorablePane x:Name="myAnchorablePane">
