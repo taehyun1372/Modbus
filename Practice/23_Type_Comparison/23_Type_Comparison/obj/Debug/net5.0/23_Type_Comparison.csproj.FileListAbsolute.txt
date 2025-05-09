@@ -1,0 +1,15 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\bin\Debug\net5.0\23_Type_Comparison.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\bin\Debug\net5.0\23_Type_Comparison.deps.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\bin\Debug\net5.0\23_Type_Comparison.runtimeconfig.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\bin\Debug\net5.0\23_Type_Comparison.runtimeconfig.dev.json
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\bin\Debug\net5.0\23_Type_Comparison.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\bin\Debug\net5.0\ref\23_Type_Comparison.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\bin\Debug\net5.0\23_Type_Comparison.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\net5.0\23_Type_Comparison.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\net5.0\23_Type_Comparison.AssemblyInfoInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\net5.0\23_Type_Comparison.AssemblyInfo.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\net5.0\23_Type_Comparison.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\net5.0\23_Type_Comparison.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\net5.0\ref\23_Type_Comparison.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\net5.0\23_Type_Comparison.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\net5.0\23_Type_Comparison.genruntimeconfig.cache
