@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="22"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Save"/>
+                <MenuItem Header="_Open"/>
+            </MenuItem>
+            <MenuItem Header="_Connection">
+            </MenuItem>
+            <MenuItem Header="_Setup">
+                <MenuItem Name="miCreateTable" Header="Create _Table" Click="miCreateTable_Click"/>
+                <MenuItem Name="miDeleteTable" Header="_Delete Table" Click="miDeleteTable_Click"/>
+            </MenuItem>
+        </Menu>
+        <ContentControl Grid.Row="1" Name="ccMainArea"/>
+        <TextBlock Grid.Row="2" Name="tbStatusBar" Text="Dummy Status"/>
     </Grid>
 </Window>

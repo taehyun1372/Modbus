@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Control_Library.ControlViewModels;
+using Control_Library.ControlViews;
+using Control_Library.Core;
 
 namespace Modbus_Server
 {
@@ -20,9 +23,30 @@ namespace Modbus_Server
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainViewModel _mainViewModel;
+        private MainView _mainView;
+
         public MainWindow()
         {
             InitializeComponent();
+            MainViewModel mainViewModel = new MainViewModel();
+            _mainViewModel = mainViewModel;
+            MainView mainView = new MainView(mainViewModel);
+            _mainView = mainView;
+
+            ccMainArea.Content = mainView;
+
+            mainViewModel.CreateNewTable();
+        }
+
+        private void miCreateTable_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.CreateNewTable();
+        }
+
+        private void miDeleteTable_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.DeleteTable();
         }
     }
 }

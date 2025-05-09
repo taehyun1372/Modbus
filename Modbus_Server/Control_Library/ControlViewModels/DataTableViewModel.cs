@@ -22,6 +22,7 @@ namespace Control_Library.ControlViewModels
         public const int DEFAULT_QUANTITY = 10;
         public const int DEFAULT_START_ADDRESS = 0;
         public static SolidColorBrush DEFUALT_BORDER_COLOR = Brushes.LightGray;
+        public static SolidColorBrush ACTIVE_BORDER_COLOR = Brushes.SteelBlue;
 
         private ValueEnterView _valueEnterView;
         private ValueEnterViewModel _valueEnterViewModel;

@@ -58,6 +58,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlViews\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PopupViews\SetupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -71,8 +75,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="ControlViewModels\DataTableViewModel.cs" />
+    <Compile Include="ControlViewModels\MainViewModel.cs" />
     <Compile Include="ControlViews\DataTableView.xaml.cs">
       <DependentUpon>DataTableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlViews\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Core\SlaveHelper.cs" />
     <Compile Include="PopupViewModels\SetupViewModel.cs" />
