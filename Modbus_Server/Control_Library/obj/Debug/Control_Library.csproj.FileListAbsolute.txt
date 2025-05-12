@@ -82,3 +82,7 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\ControlViews\MainView.baml
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\CommunicationLogView.g.cs
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\CommunicationLogView.baml
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\ControlViews\MainView.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\CommunicationLogView.g.cs
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\ControlViews\MainView.baml
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Control_Library\obj\Debug\PopupViews\CommunicationLogView.baml

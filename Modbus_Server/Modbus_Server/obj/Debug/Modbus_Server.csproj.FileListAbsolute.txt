@@ -73,3 +73,5 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\NModbus4.xml
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.dll
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.pdb
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.dll
+C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.pdb

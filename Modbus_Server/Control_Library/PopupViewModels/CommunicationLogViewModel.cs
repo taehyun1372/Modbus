@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using Control_Library.Core;
+using System.Windows.Threading;
+using System.Windows;
 
 namespace Control_Library.PopupViewModels
 {
     public class CommunicationLogViewModel
     {
+        public event Action<object, NewMessageGeneratedEventArgs> NewMessageGenerated;
         private ObservableCollection<string> _packetLogs = new ObservableCollection<string>();
         public ObservableCollection<string> PacketLogs
         {
@@ -52,18 +55,30 @@ namespace Control_Library.PopupViewModels
 
         private void OnModbusSlaveRequestReceived(object sender,Modbus.Device.ModbusSlaveRequestEventArgs e)
         {
-            //disassemble packet from master
-            byte fc = e.Message.FunctionCode;
-            byte[] data = e.Message.MessageFrame;
-            byte[] byteStartAddress = new byte[] { data[3], data[2] };
-            byte[] byteNum = new byte[] { data[5], data[4] };
-            Int16 StartAddress = BitConverter.ToInt16(byteStartAddress, 0);
-            Int16 NumOfPoint = BitConverter.ToInt16(byteNum, 0);
-            Console.WriteLine(fc.ToString() + "," + StartAddress.ToString() + "," +
-            NumOfPoint.ToString());
-
-            PacketLogs.Add(fc.ToString());
+            Dispatcher dispatcher = Application.Current.Dispatcher;
+            dispatcher.BeginInvoke(new Action<object, Modbus.Device.ModbusSlaveRequestEventArgs>(GenerateNewMessage), sender, e);
         }
 
+        private void GenerateNewMessage(object sender, Modbus.Device.ModbusSlaveRequestEventArgs e)
+        {
+            var timeStamp = DateTime.Now.ToString("HH:mm:ss:fff");
+            var messageFrame = BitConverter.ToString(e.Message.MessageFrame);
+
+            var message = string.Join(" - ", timeStamp, messageFrame);
+
+            //PacketLogs.Add(e.Message.ToString());
+
+            NewMessageGenerated?.Invoke(this, new NewMessageGeneratedEventArgs(message));
+        }
+    }
+
+    public class NewMessageGeneratedEventArgs
+    {
+        public string Message { get; set; }
+
+        public NewMessageGeneratedEventArgs(string message)
+        {
+            Message = message;
+        }
     }
 }

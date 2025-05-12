@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ namespace Control_Library.PopupViews
     /// </summary>
     public partial class CommunicationLogView : Window
     {
+        private ScrollViewer _scrollViewer;
+
         private CommunicationLogViewModel _model;
         public CommunicationLogViewModel Model
         {
@@ -37,6 +40,41 @@ namespace Control_Library.PopupViews
             InitializeComponent();
             this.DataContext = model;
             Model = model;
+            Model.NewMessageGenerated += OnModelNewMessageGenerated;
+            lbCommunicationLog.Loaded += (sender, e) =>
+            {
+                if (VisualTreeHelper.GetChildrenCount(lbCommunicationLog) > 0)
+                {
+                    Border border = (Border)VisualTreeHelper.GetChild(lbCommunicationLog, 0);
+                    _scrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(border, 0);
+                }
+            };
+        }
+
+        private void OnModelNewMessageGenerated(object sender, NewMessageGeneratedEventArgs e)
+        {
+            var scrollMoveRequired = false;
+
+            double extentHeight = 0;
+            double viewportHeight = 0;
+            double verticalOffset = 0;
+
+            if (_scrollViewer != null)
+            {
+                extentHeight = _scrollViewer.ExtentHeight;
+                viewportHeight = _scrollViewer.ViewportHeight;
+                verticalOffset = _scrollViewer.VerticalOffset;
+            }
+
+            //If a user was watching the last screen of scroll view, move scroll to the new end screen.
+            scrollMoveRequired = (verticalOffset + viewportHeight == extentHeight) ? true : false;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Model.PacketLogs.Add(e.Message);
+            }
+
+            if (scrollMoveRequired) ScrollDownToTheBottom();
         }
 
         private void btnResume_Click(object sender, RoutedEventArgs e)
@@ -55,17 +93,16 @@ namespace Control_Library.PopupViews
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             Model.PacketLogs.Clear();
+            Model.TempPacketLogs.Clear();
         }
 
         private void ScrollDownToTheBottom()
         {
-            if (VisualTreeHelper.GetChildrenCount(lbCommunicationLog) > 0)
+            if (_scrollViewer != null)
             {
-                Border border = (Border)VisualTreeHelper.GetChild(lbCommunicationLog, 0);
-                ScrollViewer scrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(border, 0);
-
-                scrollViewer.ScrollToBottom();
+                _scrollViewer.ScrollToBottom();
             }
+                
         }
     }
 }
