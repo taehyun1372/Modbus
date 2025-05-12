@@ -1,0 +1,15 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\bin\Debug\24_ListView.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\bin\Debug\24_ListView.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\bin\Debug\24_ListView.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\24_ListView.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\24_ListView_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\24_ListView_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\24_ListView.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\_24_ListView.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\24_ListView.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\24_ListView.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\24_ListView.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\24_ListView\24_ListView\obj\Debug\24_ListView.pdb

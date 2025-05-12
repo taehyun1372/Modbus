@@ -11,3 +11,4 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_T
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\netcoreapp3.1\23_Type_Comparison.dll
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\netcoreapp3.1\23_Type_Comparison.pdb
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\netcoreapp3.1\23_Type_Comparison.genruntimeconfig.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\23_Type_Comparison\23_Type_Comparison\obj\Debug\netcoreapp3.1\23_Type_Comparison.csproj.AssemblyReference.cache
