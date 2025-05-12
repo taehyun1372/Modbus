@@ -17,6 +17,8 @@
             <Button Name="btnCreate" Content="Create" Click="btnCreate_Click"/>
             <Button Name="btnClear" Content="Clear" Click="btnClear_Click"/>
             <Button Name="btnQuery" Content="Query" Click="btnQuery_Click"/>
+            <Button Name="btnStop" Content="Stop" Click="btnStop_Click"/>
+            <Button Name="btnResume" Content="Resume" Click="btnResume_Click"/>
         </StackPanel>
     </Grid>
 </Window>
