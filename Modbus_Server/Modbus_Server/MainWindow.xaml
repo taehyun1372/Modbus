@@ -20,8 +20,11 @@
             <MenuItem Header="_Connection">
             </MenuItem>
             <MenuItem Header="_Setup">
-                <MenuItem Name="miCreateTable" Header="Create _Table" Click="miCreateTable_Click"/>
-                <MenuItem Name="miDeleteTable" Header="_Delete Table" Click="miDeleteTable_Click"/>
+                <MenuItem Name="mnCreateTable" Header="Create _Table" Click="mnCreateTable_Click"/>
+                <MenuItem Name="mnDeleteTable" Header="_Delete Table" Click="mnDeleteTable_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Analysis">
+                <MenuItem Name="mnCommunicationLog" Header="Communication _Log" Click="mnCommunicationLog_Click"/>
             </MenuItem>
         </Menu>
         <ContentControl Grid.Row="1" Name="ccMainArea"/>

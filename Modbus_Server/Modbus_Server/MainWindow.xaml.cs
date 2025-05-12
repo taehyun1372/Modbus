@@ -39,14 +39,19 @@ namespace Modbus_Server
             mainViewModel.CreateNewTable();
         }
 
-        private void miCreateTable_Click(object sender, RoutedEventArgs e)
+        private void mnCreateTable_Click(object sender, RoutedEventArgs e)
         {
             _mainViewModel.CreateNewTable();
         }
 
-        private void miDeleteTable_Click(object sender, RoutedEventArgs e)
+        private void mnDeleteTable_Click(object sender, RoutedEventArgs e)
         {
             _mainViewModel.DeleteTable();
+        }
+
+        private void mnCommunicationLog_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.ShowCommunicationLog();
         }
     }
 }

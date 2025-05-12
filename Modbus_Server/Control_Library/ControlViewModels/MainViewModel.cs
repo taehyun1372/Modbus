@@ -11,11 +11,16 @@ using Control_Library.ControlViews;
 using Control_Library.Core;
 using AvalonDock.Layout;
 using System.Windows.Controls;
+using Control_Library.PopupViewModels;
+using Control_Library.PopupViews;
 
 namespace Control_Library.ControlViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        private CommunicationLogViewModel _communicationLogViewModel;
+        private CommunicationLogView _communicationLogView;
+
         public event PropertyChangedEventHandler PropertyChanged;
         public event Action<object, NewTableCreatedEventArg> NewTableCreated;
         public event Action<object, TableDeletedEventArg> TableDeleted;
@@ -161,6 +166,21 @@ namespace Control_Library.ControlViewModels
                     _currentAnchorables.Add(anchorable);
                 }
             }
+        }
+
+        public void ShowCommunicationLog()
+        {
+            if (_communicationLogView != null)
+            {
+                _communicationLogView.Activate();
+            }
+            else
+            {
+                _communicationLogViewModel = new CommunicationLogViewModel(Slave);
+                _communicationLogView = new CommunicationLogView(_communicationLogViewModel);
+                _communicationLogView.Show();
+            }
+
         }
     }
 

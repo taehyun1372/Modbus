@@ -26,7 +26,7 @@ namespace Control_Library.ControlViewModels
 
         private ValueEnterView _valueEnterView;
         private ValueEnterViewModel _valueEnterViewModel;
-        private SlaveHelper _slaveHelper;
+        private SlaveHelper _slave;
 
         private SolidColorBrush _borderColor = DEFUALT_BORDER_COLOR;
         public SolidColorBrush BorderColor
@@ -195,24 +195,24 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        public SlaveHelper SlaveHelper
+        public SlaveHelper Slave
         {
-            get { return _slaveHelper; }
-            set { _slaveHelper = value; }
+            get { return _slave; }
+            set { _slave = value; }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public DataTableViewModel(SlaveHelper slaveHelper)
         {
-            SlaveHelper = slaveHelper;
-            SlaveHelper.Slave.DataStore.DataStoreWrittenTo += OnDataStoreWrittenTo;
-            SlaveHelper.HoldingRegisterChanged += OnSlaveHelperHoldingRegisterChanged;
+            Slave = slaveHelper;
+            Slave.Slave.DataStore.DataStoreWrittenTo += OnDataStoreWrittenTo;
+            Slave.HoldingRegisterChanged += OnSlaveHelperHoldingRegisterChanged;
         }
 
         public void SynchroniseDataTable()
         {
-            ushort[] values = SlaveHelper.GetHoldingRegisters(StartAddress + 1, Quantity);
+            ushort[] values = Slave.GetHoldingRegisters(StartAddress + 1, Quantity);
 
             for (int i = 0; i < values.Length; i++)
             {
@@ -359,7 +359,7 @@ namespace Control_Library.ControlViewModels
 
         public void OnDataItemValueChanged(object sender, ValueChangedEventArgs e)
         {
-            SlaveHelper.SetHoldingRegister(e.Index + StartAddress + 1, (ushort)e.Value);
+            Slave.SetHoldingRegister(e.Index + StartAddress + 1, (ushort)e.Value);
         }
 
         public void OnSlaveHelperHoldingRegisterChanged(object sender, HoldingRegisterChangeEventArg e)
