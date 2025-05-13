@@ -41,17 +41,77 @@ namespace Control_Library.PopupViews
             this.DataContext = model;
             Model = model;
             Model.NewMessageGenerated += OnModelNewMessageGenerated;
-            lbCommunicationLog.Loaded += (sender, e) =>
+            Model.IsDateTimeChanged += OnModelIsDateTimeChanged;
+            Model.IsByteTextMessageChanged += OnModelIsByteTextMessageChanged;
+
+            lvCommunicationLog.Loaded += (sender, e) =>
             {
-                if (VisualTreeHelper.GetChildrenCount(lbCommunicationLog) > 0)
-                {
-                    Border border = (Border)VisualTreeHelper.GetChild(lbCommunicationLog, 0);
-                    _scrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(border, 0);
-                }
+                _scrollViewer = FindVisualChild<ScrollViewer>(lvCommunicationLog);
+                UpdateGridViewColumns();
             };
         }
 
-        private void OnModelNewMessageGenerated(object sender, NewMessageGeneratedEventArgs e)
+        public void OnModelIsDateTimeChanged(object sender, EventArgs e)
+        {
+            UpdateGridViewColumns();
+        }
+
+        public void OnModelIsByteTextMessageChanged(object sender, EventArgs e)
+        {
+            UpdateGridViewColumns();
+        }
+
+        public void UpdateGridViewColumns()
+        {
+            myGridView.Columns.Clear();
+
+            if (Model.IsDate)
+            {
+                var dateColumn = new GridViewColumn()
+                {
+                    Header = "Date",
+                    Width = 80,
+                    DisplayMemberBinding = new Binding("DateStamp")
+                };
+                myGridView.Columns.Add(dateColumn);
+            }
+           
+
+            if (Model.IsTime)
+            {
+                var timeColumn = new GridViewColumn()
+                {
+                    Header = "Time",
+                    Width = 90,
+                    DisplayMemberBinding = new Binding("TimeStamp")
+                };
+                myGridView.Columns.Add(timeColumn);
+            }
+
+            if (Model.IsByteMessage)
+            {
+                var messageColumn = new GridViewColumn()
+                {
+                    Header = "Message",
+                    Width = 300,
+                    DisplayMemberBinding = new Binding("ByteMessage")
+                };
+                myGridView.Columns.Add(messageColumn);
+            }
+
+            if (Model.IsTextMessage)
+            {
+                var messageColumn = new GridViewColumn()
+                {
+                    Header = "Message",
+                    Width = 300,
+                    DisplayMemberBinding = new Binding("TextMessage")
+                };
+                myGridView.Columns.Add(messageColumn);
+            }
+        }
+
+        private void OnModelNewMessageGenerated(object sender, EventArgs e)
         {
             var scrollMoveRequired = false;
 
@@ -69,31 +129,29 @@ namespace Control_Library.PopupViews
             //If a user was watching the last screen of scroll view, move scroll to the new end screen.
             scrollMoveRequired = (verticalOffset + viewportHeight == extentHeight) ? true : false;
 
-            for (int i = 0; i < 10; i++)
-            {
-                Model.PacketLogs.Add(e.Message);
-            }
-
             if (scrollMoveRequired) ScrollDownToTheBottom();
         }
 
         private void btnResume_Click(object sender, RoutedEventArgs e)
         {
-            lbCommunicationLog.ItemsSource = Model.PacketLogs;
+            Binding binding = new Binding("OriginalPacketLogs");
+            lvCommunicationLog.SetBinding(ListView.ItemsSourceProperty, binding);
             ScrollDownToTheBottom();
         }
 
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
-            Model.TempPacketLogs = Model.PacketLogs.ToList();
-            lbCommunicationLog.ItemsSource = Model.TempPacketLogs;
+            Model.CopyPacketLogs();
+
+            Binding binding = new Binding("FrozenPacketLogs");
+            lvCommunicationLog.SetBinding(ListView.ItemsSourceProperty, binding);
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            Model.PacketLogs.Clear();
-            Model.TempPacketLogs.Clear();
+            Model.OriginalPacketLogs.Clear();
+            Model.FrozenPacketLogs.Clear();
         }
 
         private void ScrollDownToTheBottom()
@@ -103,6 +161,20 @@ namespace Control_Library.PopupViews
                 _scrollViewer.ScrollToBottom();
             }
                 
+        }
+        private static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
+        {
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+            {
+                DependencyObject child = VisualTreeHelper.GetChild(parent, i);
+                if (child is T t)
+                    return t;
+
+                T childOfChild = FindVisualChild<T>(child);
+                if (childOfChild != null)
+                    return childOfChild;
+            }
+            return null;
         }
     }
 }

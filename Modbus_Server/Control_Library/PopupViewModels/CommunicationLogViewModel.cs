@@ -11,32 +11,36 @@ using System.Windows;
 
 namespace Control_Library.PopupViewModels
 {
-    public class CommunicationLogViewModel
+    public class CommunicationLogViewModel : INotifyPropertyChanged
     {
-        public event Action<object, NewMessageGeneratedEventArgs> NewMessageGenerated;
-        private ObservableCollection<string> _packetLogs = new ObservableCollection<string>();
-        public ObservableCollection<string> PacketLogs
+        public event Action<object, EventArgs> NewMessageGenerated;
+        public event Action<object, EventArgs> IsDateTimeChanged;
+        public event Action<object, EventArgs> IsByteTextMessageChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private ObservableCollection<PacketLog> _originalPacketLogs = new ObservableCollection<PacketLog>();
+        public ObservableCollection<PacketLog> OriginalPacketLogs
         {
             get
             {
-                return _packetLogs;
+                return _originalPacketLogs;
             }
             set
             {
-                _packetLogs = value;
+                _originalPacketLogs = value;
             }
         }
 
-        private List<string> _tempPacketLogs = new List<string>();
-        public List<string>  TempPacketLogs
+        private ObservableCollection<PacketLog> _frozenPacketLogs = new ObservableCollection<PacketLog>();
+        public ObservableCollection<PacketLog>  FrozenPacketLogs
         {
             get
             {
-                return _tempPacketLogs;
+                return _frozenPacketLogs;
             }
             set
             {
-                _tempPacketLogs = value;
+                _frozenPacketLogs = value;
             }
         }
 
@@ -47,38 +51,126 @@ namespace Control_Library.PopupViewModels
             set { _slave = value; }
         }
 
+        private bool _isTime;
+        public bool IsTime
+        {
+            get
+            {
+                return _isTime;
+            }
+            set
+            {
+                _isTime = value;
+                IsDateTimeChanged?.Invoke(this, EventArgs.Empty);
+                OnPropertyChanged(nameof(IsTime));
+            }
+        }
+
+        private bool _isDate;
+        public bool IsDate
+        {
+            get
+            {
+                return _isDate;
+            }
+            set
+            {
+                _isDate = value;
+                IsDateTimeChanged?.Invoke(this, EventArgs.Empty);
+                OnPropertyChanged(nameof(IsDate));
+            }
+        }
+
+        private bool _isByteMessage;
+        public bool IsByteMessage
+        {
+            get
+            {
+                return _isByteMessage;
+            }
+            set
+            {
+                _isByteMessage = value;
+                IsByteTextMessageChanged?.Invoke(this, EventArgs.Empty);
+                OnPropertyChanged(nameof(IsByteMessage));
+            }
+        }
+
+        private bool _isTextMessage;
+        public bool IsTextMessage
+        {
+            get
+            {
+                return _isTextMessage;
+            }
+            set
+            {
+                _isTextMessage = value;
+                IsByteTextMessageChanged?.Invoke(this, EventArgs.Empty);
+                OnPropertyChanged(nameof(IsTextMessage));
+            }
+        }
+
         public CommunicationLogViewModel(SlaveHelper slaveHelper)
         {
             Slave = slaveHelper;
             Slave.Slave.ModbusSlaveRequestReceived += OnModbusSlaveRequestReceived;
+            IsTime = true;
+            IsByteMessage = true;
+        }
+
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        internal void CopyPacketLogs()
+        {
+            FrozenPacketLogs = new ObservableCollection<PacketLog>(
+                OriginalPacketLogs.Select(item => item.DeepCopy())
+                );
         }
 
         private void OnModbusSlaveRequestReceived(object sender,Modbus.Device.ModbusSlaveRequestEventArgs e)
         {
             Dispatcher dispatcher = Application.Current.Dispatcher;
-            dispatcher.BeginInvoke(new Action<object, Modbus.Device.ModbusSlaveRequestEventArgs>(GenerateNewMessage), sender, e);
+            dispatcher.BeginInvoke(new Action<object, Modbus.Device.ModbusSlaveRequestEventArgs>(GenerateNewPacketLog), sender, e);
         }
 
-        private void GenerateNewMessage(object sender, Modbus.Device.ModbusSlaveRequestEventArgs e)
+        private void GenerateNewPacketLog(object sender, Modbus.Device.ModbusSlaveRequestEventArgs e)
         {
-            var timeStamp = DateTime.Now.ToString("HH:mm:ss:fff");
-            var messageFrame = BitConverter.ToString(e.Message.MessageFrame);
+            var packetLog = new PacketLog()
+            {
+                ByteMessage = BitConverter.ToString(e.Message.MessageFrame),
+                TextMessage = e.Message.ToString(),
+                TimeStamp = DateTime.Now.ToString("HH:mm:ss:fff"),
+                DateStamp = DateTime.Now.ToString("yyyy-MM-dd")
+            };
 
-            var message = string.Join(" - ", timeStamp, messageFrame);
 
-            //PacketLogs.Add(e.Message.ToString());
+            OriginalPacketLogs.Add(packetLog);
 
-            NewMessageGenerated?.Invoke(this, new NewMessageGeneratedEventArgs(message));
+            NewMessageGenerated?.Invoke(this, EventArgs.Empty);
         }
     }
 
-    public class NewMessageGeneratedEventArgs
+    public class PacketLog
     {
-        public string Message { get; set; }
+        public string ByteMessage { get; set; }
+        public string TextMessage { get; set; }
+        public string TimeStamp { get; set; }
+        public string DateStamp { get; set; }
 
-        public NewMessageGeneratedEventArgs(string message)
+        public PacketLog DeepCopy()
         {
-            Message = message;
+            return new PacketLog
+            {
+                ByteMessage = this.ByteMessage,
+                TextMessage = this.TextMessage,
+                TimeStamp = this.TimeStamp,
+                DateStamp = this.DateStamp
+            };
         }
+
     }
 }

@@ -12,21 +12,25 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            <Button Name="btnResume" Content="Resume" Height="25" Width="50" Margin="10 0 5 3" Click="btnResume_Click"/>
-            <Button Name="btnStop" Content="Stop" Height="25" Width="50" Margin="5 0 5 3" Click="btnStop_Click"/>
+            <Button Name="btnResume" Content="Resume" FontSize="12" Height="25" Width="50" Margin="10 0 5 3" Click="btnResume_Click"/>
+            <Button Name="btnStop" Content="Stop" FontSize="12" Height="25" Width="50" Margin="5 0 5 3" Click="btnStop_Click"/>
             <Button Name="btnClear" Content="Clear" Height="25" Width="50" Margin="5 0 10 3" Click="btnClear_Click"/>
-            <CheckBox Name="cbDate" FontSize="15" Content="Date" IsChecked="{Binding IsDate}" VerticalContentAlignment="Center" Margin= "40 0 5 0"/>
-            <CheckBox Name="cbTime" FontSize="15" Content="Time" IsChecked="{Binding IsTime}" VerticalContentAlignment="Center" Margin= "5 0 10 0"/>
+            <CheckBox Name="cbDate" FontSize="12" Content="Date" IsChecked="{Binding IsDate}" VerticalContentAlignment="Center" Margin= "40 0 5 0"/>
+            <CheckBox Name="cbTime" FontSize="12" Content="Time" IsChecked="{Binding IsTime}" VerticalContentAlignment="Center" Margin= "5 0 10 0"/>
             <GroupBox Header="Message Format" Margin="20 0 0 0">
                 <StackPanel Orientation="Horizontal">
-                    <RadioButton Content="Byte" FontSize="15" VerticalContentAlignment="Bottom" Margin="40 0 5 0"/>
-                    <RadioButton Content="Text" FontSize="15" VerticalContentAlignment="Bottom" Margin="5 0 0 0"/>
+                    <RadioButton Content="Byte" FontSize="12" IsChecked="{Binding IsByteMessage}" VerticalContentAlignment="Bottom" Margin="40 0 5 0"/>
+                    <RadioButton Content="Text" FontSize="12" IsChecked="{Binding IsTextMessage}" VerticalContentAlignment="Bottom" Margin="5 0 0 0"/>
                 </StackPanel>
             </GroupBox>
         </StackPanel>
         <GroupBox Header="Communication Log" Grid.Row="1">
-            <ListBox Margin="5" Name="lbCommunicationLog" ItemsSource="{Binding PacketLogs}" >
-            </ListBox>
+            <ListView Margin="5" Name="lvCommunicationLog" ItemsSource="{Binding OriginalPacketLogs}" SelectionMode="Multiple" >
+                <ListView.View>
+                    <GridView x:Name="myGridView">
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </GroupBox>
     </Grid>
 </Window>
