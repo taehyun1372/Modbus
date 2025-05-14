@@ -43,6 +43,7 @@ namespace Control_Library.PopupViews
             Model.NewMessageGenerated += OnModelNewMessageGenerated;
             Model.IsDateTimeChanged += OnModelIsDateTimeChanged;
             Model.IsByteTextMessageChanged += OnModelIsByteTextMessageChanged;
+            Model.IsRunning = true;
 
             lvCommunicationLog.Loaded += (sender, e) =>
             {
@@ -65,6 +66,14 @@ namespace Control_Library.PopupViews
         {
             myGridView.Columns.Clear();
 
+            var indexColumn = new GridViewColumn()
+            {
+                Header = "",
+                Width = 32,
+                DisplayMemberBinding = new Binding("Index")
+            };
+            myGridView.Columns.Add(indexColumn);
+
             if (Model.IsDate)
             {
                 var dateColumn = new GridViewColumn()
@@ -76,7 +85,6 @@ namespace Control_Library.PopupViews
                 myGridView.Columns.Add(dateColumn);
             }
            
-
             if (Model.IsTime)
             {
                 var timeColumn = new GridViewColumn()
@@ -134,16 +142,28 @@ namespace Control_Library.PopupViews
 
         private void btnResume_Click(object sender, RoutedEventArgs e)
         {
+            Model.IsRunning = !Model.IsRunning;
+            if (Model.IsRunning)
+            {
+                SetOriginalPacketLogs();
+            }
+            else
+            {
+                SetFrozenPacketLogs();
+            }
+
+        }
+
+        private void SetOriginalPacketLogs()
+        {
             Binding binding = new Binding("OriginalPacketLogs");
             lvCommunicationLog.SetBinding(ListView.ItemsSourceProperty, binding);
             ScrollDownToTheBottom();
         }
 
-
-        private void btnStop_Click(object sender, RoutedEventArgs e)
+        private void SetFrozenPacketLogs()
         {
             Model.CopyPacketLogs();
-
             Binding binding = new Binding("FrozenPacketLogs");
             lvCommunicationLog.SetBinding(ListView.ItemsSourceProperty, binding);
         }

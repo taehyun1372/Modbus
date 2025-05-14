@@ -96,6 +96,20 @@ namespace Control_Library.PopupViewModels
             }
         }
 
+        private bool _isRunning;
+        public bool IsRunning
+        {
+            get
+            {
+                return _isRunning;
+            }
+            set
+            {
+                _isRunning = value;
+                OnPropertyChanged(nameof(IsRunning));
+            }
+        }
+
         private bool _isTextMessage;
         public bool IsTextMessage
         {
@@ -141,6 +155,7 @@ namespace Control_Library.PopupViewModels
         {
             var packetLog = new PacketLog()
             {
+                Index = OriginalPacketLogs.Count,
                 ByteMessage = BitConverter.ToString(e.Message.MessageFrame),
                 TextMessage = e.Message.ToString(),
                 TimeStamp = DateTime.Now.ToString("HH:mm:ss:fff"),
@@ -156,19 +171,22 @@ namespace Control_Library.PopupViewModels
 
     public class PacketLog
     {
+        public int Index {get; set;}
+        public string DateStamp { get; set; }
+        public string TimeStamp { get; set; }
         public string ByteMessage { get; set; }
         public string TextMessage { get; set; }
-        public string TimeStamp { get; set; }
-        public string DateStamp { get; set; }
+
 
         public PacketLog DeepCopy()
         {
             return new PacketLog
             {
-                ByteMessage = this.ByteMessage,
-                TextMessage = this.TextMessage,
+                Index = this.Index,
+                DateStamp = this.DateStamp,
                 TimeStamp = this.TimeStamp,
-                DateStamp = this.DateStamp
+                ByteMessage = this.ByteMessage,
+                TextMessage = this.TextMessage
             };
         }
 

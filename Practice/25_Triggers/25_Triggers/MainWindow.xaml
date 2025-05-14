@@ -16,7 +16,7 @@
                 </DataTrigger>
                 <DataTrigger Binding="{Binding IsRunning}" Value="false">
                     <Setter Property="Content" Value="Resume"/>
-                    <Setter Property="Background" Value="SkyBlue"/>
+                    <Setter Property="Background" Value="AliceBlue"/>
                 </DataTrigger>
             </Style.Triggers>
             <Setter Property="Foreground" Value="black"/>

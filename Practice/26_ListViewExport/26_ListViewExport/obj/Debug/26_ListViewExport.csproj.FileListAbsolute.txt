@@ -1,0 +1,15 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\bin\Debug\26_ListViewExport.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\bin\Debug\26_ListViewExport.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\bin\Debug\26_ListViewExport.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\26_ListViewExport.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\26_ListViewExport_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\26_ListViewExport_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\26_ListViewExport.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\_26_ListViewExport.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\26_ListViewExport.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\26_ListViewExport.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\26_ListViewExport.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\26_ListViewExport\26_ListViewExport\obj\Debug\26_ListViewExport.pdb

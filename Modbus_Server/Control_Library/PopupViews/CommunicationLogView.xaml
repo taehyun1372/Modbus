@@ -6,14 +6,29 @@
         xmlns:local="clr-namespace:Control_Library.PopupViews"
         mc:Ignorable="d"
         Title="CommunicationLogView" Height="370" Width="640">
+    <Window.Resources>
+        <Style x:Key="ResumeButtonStyle" TargetType="Button">
+            <Style.Triggers>
+                <!-- DataTrigger binds to IsRunning -->
+                <DataTrigger Binding="{Binding IsRunning}" Value="true">
+                    <Setter Property="Content" Value="Stop"/>
+                    <Setter Property="Background" Value="IndianRed"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsRunning}" Value="false">
+                    <Setter Property="Content" Value="Resume"/>
+                    <Setter Property="Background" Value="LightBlue"/>
+                </DataTrigger>
+            </Style.Triggers>
+            <Setter Property="Foreground" Value="black"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            <Button Name="btnResume" Content="Resume" FontSize="12" Height="25" Width="50" Margin="10 0 5 3" Click="btnResume_Click"/>
-            <Button Name="btnStop" Content="Stop" FontSize="12" Height="25" Width="50" Margin="5 0 5 3" Click="btnStop_Click"/>
+            <Button Name="btnResume" Style="{StaticResource ResumeButtonStyle}" FontSize="12" Height="25" Width="50" Margin="10 0 5 3" Click="btnResume_Click"/>
             <Button Name="btnClear" Content="Clear" Height="25" Width="50" Margin="5 0 10 3" Click="btnClear_Click"/>
             <CheckBox Name="cbDate" FontSize="12" Content="Date" IsChecked="{Binding IsDate}" VerticalContentAlignment="Center" Margin= "40 0 5 0"/>
             <CheckBox Name="cbTime" FontSize="12" Content="Time" IsChecked="{Binding IsTime}" VerticalContentAlignment="Center" Margin= "5 0 10 0"/>
