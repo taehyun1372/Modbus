@@ -1,7 +1,6 @@
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\25_Triggers\25_Triggers\bin\Debug\25_Triggers.exe.config
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\25_Triggers\25_Triggers\bin\Debug\25_Triggers.exe
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\25_Triggers\25_Triggers\bin\Debug\25_Triggers.pdb
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\25_Triggers\25_Triggers\obj\Debug\25_Triggers.csproj.AssemblyReference.cache
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\25_Triggers\25_Triggers\obj\Debug\MainWindow.g.cs
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\25_Triggers\25_Triggers\obj\Debug\App.g.cs
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\25_Triggers\25_Triggers\obj\Debug\25_Triggers_MarkupCompile.cache

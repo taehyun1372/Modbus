@@ -41,6 +41,20 @@ namespace _25_Triggers
                 }
             }
         }
+
+        private int _speed;
+        public int Speed
+        {
+            get
+            {
+                return _speed;
+            }
+            set
+            {
+                _speed = value;
+                OnPropertyChanged(nameof(Speed));
+            }
+        }
     }
 
     public partial class MainWindow : Window
@@ -54,6 +68,7 @@ namespace _25_Triggers
             this.DataContext = _dataModel;
             
             _dataModel.IsRunning = true;  // Initial value of IsRunning
+            _dataModel.Speed = 20;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

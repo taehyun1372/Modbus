@@ -10,19 +10,21 @@
         <Style x:Key="MyButtonStyle" TargetType="Button">
             <Style.Triggers>
                 <!-- DataTrigger binds to IsRunning -->
-                <DataTrigger Binding="{Binding IsRunning, RelativeSource={RelativeSource AncestorType=Window}}" Value="True">
+                <DataTrigger Binding="{Binding IsRunning}" Value="true">
                     <Setter Property="Content" Value="Stop"/>
-                    <Setter Property="Background" Value="AliceBlue"/>
+                    <Setter Property="Background" Value="IndianRed"/>
                 </DataTrigger>
-                <DataTrigger Binding="{Binding IsRunning, RelativeSource={RelativeSource AncestorType=Window}}" Value="False">
+                <DataTrigger Binding="{Binding IsRunning}" Value="false">
                     <Setter Property="Content" Value="Resume"/>
-                    <Setter Property="Background" Value="WhiteSmoke"/>
+                    <Setter Property="Background" Value="SkyBlue"/>
                 </DataTrigger>
             </Style.Triggers>
+            <Setter Property="Foreground" Value="black"/>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Button Width="100" Height="50" Content="Stop" Click="Button_Click" Style="{StaticResource MyButtonStyle}">
+    <StackPanel>
+        <Button Width="100" Height="50" Click="Button_Click" Style="{StaticResource MyButtonStyle}">
         </Button>
-    </Grid>
+        <TextBlock Text="{Binding IsRunning}"/>
+    </StackPanel>
 </Window>
