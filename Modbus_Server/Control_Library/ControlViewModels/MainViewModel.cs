@@ -178,6 +178,11 @@ namespace Control_Library.ControlViewModels
             {
                 _communicationLogViewModel = new CommunicationLogViewModel(Slave);
                 _communicationLogView = new CommunicationLogView(_communicationLogViewModel);
+                _communicationLogView.Closed += (s, e) =>
+                {
+                    _communicationLogView = null;
+                    _communicationLogViewModel = null;
+                };
                 _communicationLogView.Show();
             }
 
