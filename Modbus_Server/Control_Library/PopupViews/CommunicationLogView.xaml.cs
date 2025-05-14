@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Control_Library.PopupViewModels;
+using Microsoft.Win32;
 
 namespace Control_Library.PopupViews
 {
@@ -195,6 +196,38 @@ namespace Control_Library.PopupViews
                     return childOfChild;
             }
             return null;
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            string filePath = PromptSaveAs();
+            if (filePath != "")
+            {
+                Model.ExportCommunicationLog(filePath);
+            }
+        }
+
+        public string PromptSaveAs()
+        {
+            string filePath = "";
+
+            var dialog = new SaveFileDialog
+            {
+                Title = "Export to CSV",
+                Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*",
+                DefaultExt = "csv",
+                FileName = "export.csv"
+            };
+
+            bool? result = dialog.ShowDialog();
+
+            if (result == true)
+            {
+                filePath = dialog.FileName;
+                Model.ExportCommunicationLog(filePath);  // Your export method
+            }
+
+            return filePath;
         }
     }
 }

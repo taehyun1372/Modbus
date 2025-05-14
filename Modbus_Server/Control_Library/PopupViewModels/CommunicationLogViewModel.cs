@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using Control_Library.Core;
 using System.Windows.Threading;
 using System.Windows;
+using System.IO;
 
 namespace Control_Library.PopupViewModels
 {
@@ -166,6 +167,59 @@ namespace Control_Library.PopupViewModels
             OriginalPacketLogs.Add(packetLog);
 
             NewMessageGenerated?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void ExportCommunicationLog(string filePath)
+        {
+            var lines = new List<string>();
+            var columnHeader = $"{nameof(PacketLog.Index)}";
+
+            if (IsDate)
+            {
+                columnHeader = string.Join(",", columnHeader, $"{nameof(PacketLog.DateStamp)}");
+            }
+
+            if (IsTime)
+            {
+                columnHeader = string.Join(",", columnHeader, $"{nameof(PacketLog.TimeStamp)}");
+            }
+
+            if (IsByteMessage)
+            {
+                columnHeader = string.Join(",", columnHeader, $"{nameof(PacketLog.ByteMessage)}");
+            }
+            else
+            {
+                columnHeader = string.Join(",", columnHeader, $"{nameof(PacketLog.TextMessage)}");
+            }
+
+
+            foreach (var item in OriginalPacketLogs)
+            {
+                string line = $"{item.Index}";
+                if (IsDate)
+                {
+                    line = string.Join(",", line, item.DateStamp);
+                }
+
+                if (IsTime)
+                {
+                    line = string.Join(",", line, item.DateStamp);
+                }
+
+                if(IsByteMessage)
+                {
+                    line = string.Join(",", line, item.ByteMessage);
+                }
+                else
+                {
+                    line = string.Join(",", line, item.TextMessage);
+                }
+
+                lines.Add(line);
+            }
+
+            File.WriteAllLines(filePath, lines);
         }
     }
 

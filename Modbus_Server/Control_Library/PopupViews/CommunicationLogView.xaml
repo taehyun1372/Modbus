@@ -29,7 +29,8 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <Button Name="btnResume" Style="{StaticResource ResumeButtonStyle}" FontSize="12" Height="25" Width="50" Margin="10 0 5 3" Click="btnResume_Click"/>
-            <Button Name="btnClear" Content="Clear" Height="25" Width="50" Margin="5 0 10 3" Click="btnClear_Click"/>
+            <Button Name="btnClear" Content="Clear" Height="25" Width="50" Margin="5 0 5 3" Click="btnClear_Click"/>
+            <Button Name="btnSave" Content="Save" Height="25" Width="50" Margin="5 0 10 3" Click="btnSave_Click"/>
             <CheckBox Name="cbDate" FontSize="12" Content="Date" IsChecked="{Binding IsDate}" VerticalContentAlignment="Center" Margin= "40 0 5 0"/>
             <CheckBox Name="cbTime" FontSize="12" Content="Time" IsChecked="{Binding IsTime}" VerticalContentAlignment="Center" Margin= "5 0 10 0"/>
             <GroupBox Header="Message Format" Margin="20 0 0 0">
