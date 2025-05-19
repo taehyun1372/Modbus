@@ -14,3 +14,6 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\28_C
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\28_Converters\28_Converters\obj\Debug\28_Converters.csproj.CoreCompileInputs.cache
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\28_Converters\28_Converters\obj\Debug\28_Converters.exe
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\28_Converters\28_Converters\obj\Debug\28_Converters.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\28_Converters\28_Converters\obj\Debug\MainView2.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\28_Converters\28_Converters\obj\Debug\MainView2.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\28_Converters\28_Converters\obj\Debug\GeneratedInternalTypeHelper.g.cs

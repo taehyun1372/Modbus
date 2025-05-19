@@ -16,15 +16,14 @@ using System.Windows.Shapes;
 namespace _28_Converters
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MianView2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView2 : UserControl
     {
-        public MainWindow()
+        public MainView2(MainView2Model model)
         {
             InitializeComponent();
-            var mainView2Model = new MainView2Model();
-            ccMain.Content = new MainView2(mainView2Model);
+            this.DataContext = model;
         }
     }
 }
