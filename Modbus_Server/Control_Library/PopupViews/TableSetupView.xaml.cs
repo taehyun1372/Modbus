@@ -18,10 +18,10 @@ namespace Control_Library.PopupViews
     /// <summary>
     /// Interaction logic for SetupView.xaml
     /// </summary>
-    public partial class SetupView : Window
+    public partial class TableSetupView : Window
     {
-        private PopupViewModels.SetupViewModel _model;
-        public SetupView(SetupViewModel model)
+        private PopupViewModels.TableSetupViewModel _model;
+        public TableSetupView(TableSetupViewModel model)
         {
             InitializeComponent();
             this.DataContext = model;
@@ -37,6 +37,20 @@ namespace Control_Library.PopupViews
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                Close();
+            }
+            else if (e.Key == Key.Enter)
+            {
+                _model.OkayClickedHandler(sender, e);
+                Close();
+            }
+
         }
     }
 }

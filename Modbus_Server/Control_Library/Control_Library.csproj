@@ -66,7 +66,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopupViews\SetupView.xaml">
+    <Page Include="PopupViews\TableSetupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,13 +88,13 @@
     </Compile>
     <Compile Include="Core\SlaveHelper.cs" />
     <Compile Include="PopupViewModels\CommunicationLogViewModel.cs" />
-    <Compile Include="PopupViewModels\SetupViewModel.cs" />
+    <Compile Include="PopupViewModels\TableSetupViewModel.cs" />
     <Compile Include="PopupViewModels\ValueEnterViewModel.cs" />
     <Compile Include="PopupViews\CommunicationLogView.xaml.cs">
       <DependentUpon>CommunicationLogView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopupViews\SetupView.xaml.cs">
-      <DependentUpon>SetupView.xaml</DependentUpon>
+    <Compile Include="PopupViews\TableSetupView.xaml.cs">
+      <DependentUpon>TableSetupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="PopupViews\ValueEnterView.xaml.cs">
       <DependentUpon>ValueEnterView.xaml</DependentUpon>

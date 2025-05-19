@@ -112,9 +112,6 @@ namespace Control_Library.PopupViewModels
             {
                 UpdateListCheckBox(value);
             }
-            
-            
-
         }
 
         public void CheckBoxClickedHanlder(object sender, RoutedEventArgs e)

@@ -8,16 +8,16 @@ using System.ComponentModel;
 
 namespace Control_Library.PopupViewModels
 {
-    public class SetupViewModel : INotifyPropertyChanged
+    public class TableSetupViewModel : INotifyPropertyChanged
     {
-        private int _row;
-        public int Row
+        private int _rowCounts;
+        public int RowCounts
         {
-            get { return _row; }
+            get { return _rowCounts; }
             set
             {
-                _row = value;
-                OnPropertyChanged(nameof(Row));
+                _rowCounts = value;
+                OnPropertyChanged(nameof(RowCounts));
             }
         }
 
@@ -35,15 +35,15 @@ namespace Control_Library.PopupViewModels
         public event Action<object, SetupFinishedEventArg> SetupFinished;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public SetupViewModel()
+        public TableSetupViewModel()
         {
-            Row = 10;
+            RowCounts = 10;
             Quantity = 10;
         }
 
         public void OkayClickedHandler(object sender, RoutedEventArgs e)
         {
-            SetupFinished?.Invoke(this, new SetupFinishedEventArg(Row, Quantity));
+            SetupFinished?.Invoke(this, new SetupFinishedEventArg(RowCounts, Quantity));
         }
 
         public void CancelClickedHandler(object sender, RoutedEventArgs e)

@@ -26,8 +26,8 @@ namespace Test_Bey
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SetupViewModel _setupViewModel;
-        private SetupView _setupView;
+        private TableSetupViewModel _setupViewModel;
+        private TableSetupView _setupView;
         private SlaveHelper _slaveHelper;
         private List<LayoutAnchorable> _currentAnchorables = new List<LayoutAnchorable>();
         private List<DataTableViewModel> _allDataTableViewModels = new List<DataTableViewModel>();
@@ -91,8 +91,8 @@ namespace Test_Bey
 
         private void btnSetup_Click(object sender, RoutedEventArgs e)
         {
-            _setupViewModel = new SetupViewModel();
-            _setupView = new SetupView(_setupViewModel);
+            _setupViewModel = new TableSetupViewModel();
+            _setupView = new TableSetupView(_setupViewModel);
 
             _setupViewModel.SetupFinished += UpdateTextBlocks;
 

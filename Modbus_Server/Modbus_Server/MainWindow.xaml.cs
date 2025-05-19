@@ -53,5 +53,10 @@ namespace Modbus_Server
         {
             _mainViewModel.ShowCommunicationLog();
         }
+
+        private void mnTableSetup_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.ShowTableSetup();
+        }
     }
 }

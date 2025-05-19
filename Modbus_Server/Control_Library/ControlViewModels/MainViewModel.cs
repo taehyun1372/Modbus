@@ -20,6 +20,8 @@ namespace Control_Library.ControlViewModels
     {
         private CommunicationLogViewModel _communicationLogViewModel;
         private CommunicationLogView _communicationLogView;
+        private TableSetupViewModel _setupViewModel;
+        private TableSetupView _setupView;
 
         public event PropertyChangedEventHandler PropertyChanged;
         public event Action<object, NewTableCreatedEventArg> NewTableCreated;
@@ -185,7 +187,25 @@ namespace Control_Library.ControlViewModels
                 };
                 _communicationLogView.Show();
             }
+        }
 
+        public void ShowTableSetup()
+        {
+            if (_setupView != null)
+            {
+                _setupView.Activate();
+            }
+            else
+            {
+                _setupViewModel = new TableSetupViewModel ();
+                _setupView = new TableSetupView(_setupViewModel);
+                _setupView.Closed += (s, e) =>
+                {
+                    _setupView = null;
+                    _setupViewModel = null;
+                };
+                _setupView.ShowDialog();
+            }
         }
     }
 

@@ -1,37 +1,3 @@
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.exe.config
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.exe
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.pdb
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.AssemblyReference.cache
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\MainWindow.g.cs
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\App.g.cs
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server_MarkupCompile.cache
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server_MarkupCompile.lref
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\MainWindow.baml
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.g.resources
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.Properties.Resources.resources
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.GenerateResource.cache
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.CoreCompileInputs.cache
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.exe
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.pdb
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\AvalonDock.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ca-ES\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\cs-CZ\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\de\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\es\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\fr\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\hu\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\it\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ja\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ko\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\nl-BE\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\pl\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\pt\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ro\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ru\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\sv\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\zh-Hans\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\zh-Hant\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.CopyComplete
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.exe.config
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.exe
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.pdb
@@ -69,9 +35,43 @@ C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.CopyComplete
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.exe
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.pdb
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\NModbus4.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\NModbus4.xml
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.pdb
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.dll
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Modbus_Server.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\AvalonDock.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\NModbus4.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\Control_Library.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\NModbus4.xml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ca-ES\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\cs-CZ\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\de\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\es\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\fr\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\hu\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\it\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ja\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ko\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\nl-BE\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\pl\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\pt\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ro\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\ru\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\sv\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\zh-Hans\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\bin\Debug\zh-Hant\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.csproj.CopyComplete
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Modbus_Server\obj\Debug\Modbus_Server.pdb

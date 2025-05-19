@@ -20,6 +20,7 @@
             <MenuItem Header="_Connection">
             </MenuItem>
             <MenuItem Header="_Setup">
+                <MenuItem Name="mnTableSetup" Header="_Table Setup" Click="mnTableSetup_Click"/>
                 <MenuItem Name="mnCreateTable" Header="Create _Table" Click="mnCreateTable_Click"/>
                 <MenuItem Name="mnDeleteTable" Header="_Delete Table" Click="mnDeleteTable_Click"/>
             </MenuItem>

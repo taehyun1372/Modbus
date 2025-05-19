@@ -1,39 +1,3 @@
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Test_Bey.exe.config
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Test_Bey.exe
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Test_Bey.pdb
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Control_Library.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Control_Library.pdb
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.AssemblyReference.cache
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\MainWindow.g.cs
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\App.g.cs
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey_MarkupCompile.cache
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey_MarkupCompile.lref
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\MainWindow.baml
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.g.resources
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.Properties.Resources.resources
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.GenerateResource.cache
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.CoreCompileInputs.cache
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.CopyComplete
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.exe
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.pdb
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\AvalonDock.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ca-ES\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\cs-CZ\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\de\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\es\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\fr\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\hu\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\it\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ja\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ko\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\nl-BE\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\pl\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\pt\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ro\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ru\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\sv\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\zh-Hans\AvalonDock.resources.dll
-C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\zh-Hant\AvalonDock.resources.dll
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.AssemblyReference.cache
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.SuggestedBindingRedirects.cache
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\MainWindow.g.cs
@@ -73,5 +37,41 @@ C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csp
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.CopyComplete
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.exe
 C:\Users\taehy\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Test_Bey.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Test_Bey.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Test_Bey.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\AvalonDock.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Control_Library.dll
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\NModbus4.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\Control_Library.pdb
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\NModbus4.xml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ca-ES\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\cs-CZ\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\de\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\es\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\fr\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\hu\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\it\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ja\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ko\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\nl-BE\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\pl\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\pt\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ro\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\ru\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\sv\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\zh-Hans\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\bin\Debug\zh-Hant\AvalonDock.resources.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.csproj.CopyComplete
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Modbus_Server\Test_Bey\obj\Debug\Test_Bey.pdb
