@@ -47,6 +47,12 @@ namespace Control_Library.PopupViews
             }
             else if (e.Key == Key.Enter)
             {
+                var quantityBinding = tbCustomQuantity.GetBindingExpression(TextBox.TextProperty);
+                quantityBinding?.UpdateSource();
+
+                var rowCountsBinding = tbCustomRowCounts.GetBindingExpression(TextBox.TextProperty);
+                rowCountsBinding?.UpdateSource();
+
                 _model.OnOkayClicked(sender, e);
                 Close();
             }

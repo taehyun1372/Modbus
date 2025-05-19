@@ -54,7 +54,7 @@ namespace Control_Library.PopupViewModels
                 else
                 {
                     IsRowCountsCustom = true;
-                    CustomQuantity = _rowCounts;
+                    CustomRowCounts = _rowCounts;
                 }
             }
         }
@@ -145,6 +145,7 @@ namespace Control_Library.PopupViewModels
             set
             {
                 _isRowCountsCustom = value;
+                if (_isRowCountsCustom) CustomRowCounts = RowCounts;
                 OnPropertyChanged(nameof(IsRowCountsCustom));
             }
         }
@@ -251,6 +252,7 @@ namespace Control_Library.PopupViewModels
             set
             {
                 _isQuantityCustom = value;
+                if (_isQuantityCustom) CustomQuantity = Quantity;
                 OnPropertyChanged(nameof(IsQuantityCustom));
             }
         }
@@ -266,7 +268,15 @@ namespace Control_Library.PopupViewModels
 
         public void OnOkayClicked(object sender, RoutedEventArgs e)
         {
-            DataTable.RowCounts = RowCounts;
+            if (IsRowCountsFitQuantity)
+            {
+                DataTable.RowCounts = Quantity;
+            }
+            else
+            {
+                DataTable.RowCounts = RowCounts;
+            }
+            
             DataTable.Quantity = Quantity;
         }
 
