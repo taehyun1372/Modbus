@@ -11,8 +11,6 @@ using Control_Library.ControlViews;
 using Control_Library.Core;
 using AvalonDock.Layout;
 using System.Windows.Controls;
-using Control_Library.PopupViewModels;
-using Control_Library.PopupViews;
 
 namespace Control_Library.ControlViewModels
 {
@@ -197,7 +195,7 @@ namespace Control_Library.ControlViewModels
             }
             else
             {
-                _setupViewModel = new TableSetupViewModel ();
+                _setupViewModel = new TableSetupViewModel (_currentDataTableViewModel);
                 _setupView = new TableSetupView(_setupViewModel);
                 _setupView.Closed += (s, e) =>
                 {

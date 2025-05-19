@@ -40,12 +40,6 @@ namespace Test_Bey
             CreateDocument();
         }
 
-        private void UpdateTextBlocks(object sender, SetupFinishedEventArg e)
-        {
-            tbRow.Text = e.Row.ToString();
-            tbQuantity.Text = e.Quantity.ToString();
-        }
-
         private void btnRowCounts_Click(object sender, RoutedEventArgs e)
         {
             int count;
@@ -91,10 +85,8 @@ namespace Test_Bey
 
         private void btnSetup_Click(object sender, RoutedEventArgs e)
         {
-            _setupViewModel = new TableSetupViewModel();
+            _setupViewModel = new TableSetupViewModel(_currentTableModel);
             _setupView = new TableSetupView(_setupViewModel);
-
-            _setupViewModel.SetupFinished += UpdateTextBlocks;
 
             _setupView.ShowDialog();
         }

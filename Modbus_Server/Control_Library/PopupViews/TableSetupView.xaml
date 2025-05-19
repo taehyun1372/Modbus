@@ -10,26 +10,26 @@
         <StackPanel>
             <GroupBox Header="Quantity">
                 <StackPanel>
-                    <RadioButton Content="10" Margin="0 5 0 2" GroupName="Quantity"/>
-                    <RadioButton Content="20" Margin="0 2 0 2" GroupName="Quantity"/>
-                    <RadioButton Content="30" Margin="0 2 0 0" GroupName="Quantity"/>
+                    <RadioButton Content="10" Margin="0 5 0 2" GroupName="Quantity" IsChecked="{Binding IsQuantity10}"/>
+                    <RadioButton Content="20" Margin="0 2 0 2" GroupName="Quantity" IsChecked="{Binding IsQuantity20}"/>
+                    <RadioButton Content="30" Margin="0 2 0 0" GroupName="Quantity" IsChecked="{Binding IsQuantity30}"/>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton Content="Custom" VerticalAlignment="Center" GroupName="Quantity"/>
+                        <RadioButton Content="Custom" VerticalAlignment="Center" GroupName="Quantity" IsChecked="{Binding IsQuantityCustom}"/>
                         <Label Margin="50 0 0 0" Content="Value :"/>
-                        <TextBox Width="50" Background="AliceBlue"/>
+                        <TextBox Name="tbCustomQuantity" Width="50" Background="AliceBlue" Text="{Binding CustomQuantity}"/>
                     </StackPanel>
                 </StackPanel>
             </GroupBox>
             <GroupBox Header="Row Counts">
                 <StackPanel>
-                    <RadioButton Content="10" Margin="0 5 0 2" GroupName="RowCounts"/>
-                    <RadioButton Content="20" Margin="0 2 0 2"  GroupName="RowCounts"/>
-                    <RadioButton Content="30" Margin="0 2 0 2"  GroupName="RowCounts"/>
-                    <RadioButton Content="Fit to the quantity" Margin="0 2 0 0"  GroupName="RowCounts"/>
+                    <RadioButton Content="10" Margin="0 5 0 2" GroupName="RowCounts" IsChecked="{Binding IsRowCounts10}"/>
+                    <RadioButton Content="20" Margin="0 2 0 2"  GroupName="RowCounts" IsChecked="{Binding IsRowCounts20}"/>
+                    <RadioButton Content="30" Margin="0 2 0 2"  GroupName="RowCounts" IsChecked="{Binding IsRowCounts30}"/>
+                    <RadioButton Content="Fit to the quantity" Margin="0 2 0 0"  GroupName="RowCounts" IsChecked="{Binding IsRowCountsFitQuantity}"/>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton Content="Custom" VerticalAlignment="Center"  GroupName="RowCounts"/>
+                        <RadioButton Content="Custom" VerticalAlignment="Center"  GroupName="RowCounts" IsChecked="{Binding IsRowCountsCustom}"/>
                         <Label Margin="50 0 0 0" Content="Value :"/>
-                        <TextBox Width="50" Background="AliceBlue"/>
+                        <TextBox Name="tbCustomRowCounts" Width="50" Background="AliceBlue" Text="{Binding CustomRowCounts}"/>
                     </StackPanel>
                 </StackPanel>
             </GroupBox>

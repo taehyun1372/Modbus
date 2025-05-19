@@ -30,7 +30,7 @@ namespace Control_Library.PopupViews
 
         private void btnOkay_Click(object sender, RoutedEventArgs e)
         {
-            _model.OkayClickedHandler(sender, e);
+            _model.OnOkayClicked(sender, e);
             Close();
         }
 
@@ -47,7 +47,7 @@ namespace Control_Library.PopupViews
             }
             else if (e.Key == Key.Enter)
             {
-                _model.OkayClickedHandler(sender, e);
+                _model.OnOkayClicked(sender, e);
                 Close();
             }
 
