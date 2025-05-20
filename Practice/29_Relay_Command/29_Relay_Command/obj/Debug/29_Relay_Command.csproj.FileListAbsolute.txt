@@ -1,0 +1,17 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\bin\Debug\29_Relay_Command.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\bin\Debug\29_Relay_Command.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\bin\Debug\29_Relay_Command.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\29_Relay_Command.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\MainView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\29_Relay_Command_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\29_Relay_Command_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\MainView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\29_Relay_Command.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\_29_Relay_Command.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\29_Relay_Command.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\29_Relay_Command.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\29_Relay_Command.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\29_Relay_Command\29_Relay_Command\obj\Debug\29_Relay_Command.pdb
