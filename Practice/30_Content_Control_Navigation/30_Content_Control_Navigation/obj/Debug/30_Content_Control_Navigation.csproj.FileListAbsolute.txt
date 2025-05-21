@@ -1,0 +1,17 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\30_Content_Control_Navigation.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\MainView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\30_Content_Control_Navigation_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\30_Content_Control_Navigation_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\bin\Debug\30_Content_Control_Navigation.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\bin\Debug\30_Content_Control_Navigation.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\bin\Debug\30_Content_Control_Navigation.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\MainView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\30_Content_Control_Navigation.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\_30_Content_Control_Navigation.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\30_Content_Control_Navigation.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\30_Content_Control_Navigation.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\30_Content_Control_Navigation.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\30_Content_Control_Navigation\30_Content_Control_Navigation\obj\Debug\30_Content_Control_Navigation.pdb
