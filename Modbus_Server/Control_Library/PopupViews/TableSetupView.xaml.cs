@@ -58,5 +58,15 @@ namespace Control_Library.PopupViews
             }
 
         }
+
+        private void tbCustomQuantity_GotFocus(object sender, RoutedEventArgs e)
+        {
+            _model.IsQuantityCustom = true;
+        }
+
+        private void tbCustomRowCounts_GotFocus(object sender, RoutedEventArgs e)
+        {
+            _model.IsRowCountsCustom = true;
+        }
     }
 }

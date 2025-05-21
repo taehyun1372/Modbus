@@ -24,6 +24,20 @@ namespace Control_Library.PopupViewModels
             }
         }
 
+        private int _startAddress;
+        public int StartAddress
+        {
+            get
+            {
+                return _startAddress;
+            }
+            set
+            {
+                _startAddress = value;
+                OnPropertyChanged(nameof(StartAddress));
+            }
+        }
+
         private int _rowCounts;
         public int RowCounts
         {
@@ -264,6 +278,7 @@ namespace Control_Library.PopupViewModels
             DataTable = dataTable;
             Quantity = DataTable.Quantity;
             RowCounts = DataTable.RowCounts;
+            StartAddress = DataTable.StartAddress;
         }
 
         public void OnOkayClicked(object sender, RoutedEventArgs e)
@@ -278,6 +293,7 @@ namespace Control_Library.PopupViewModels
             }
             
             DataTable.Quantity = Quantity;
+            DataTable.StartAddress = StartAddress;
         }
 
         public void OnPropertyChanged(string name)

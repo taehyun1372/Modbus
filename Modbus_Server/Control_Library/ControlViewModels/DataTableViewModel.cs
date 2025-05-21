@@ -301,7 +301,9 @@ namespace Control_Library.ControlViewModels
 
                     if (skipCondition)
                     {
-                        continue;
+                        expandoDict[$"Name{colIndex}"] = new NameItem() { Content = "" };
+                        expandoDict[$"Value{colIndex}"] = new ValueItem() { };
+
                     }
                     else
                     {
