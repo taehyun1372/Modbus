@@ -31,6 +31,10 @@ namespace _31_NModbus_Connection
                 {
                     Disconnect();
                 }
+                else if (input == "3")
+                {
+                    _slave.UnitId = 2;
+                }
             }
             Console.WriteLine("Goodbye World");
             Console.ReadLine();

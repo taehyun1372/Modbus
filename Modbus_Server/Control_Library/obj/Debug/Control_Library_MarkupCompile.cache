@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-61326175395
+71433327184
 
-15-69529543
+18579998868
 15-670872322
-ControlViews\DataTableView.xaml;ControlViews\MainView.xaml;PopupViews\CommunicationLogView.xaml;PopupViews\TableSetupView.xaml;PopupViews\ValueEnterView.xaml;UserControl1.xaml;
+ControlViews\DataTableView.xaml;ControlViews\MainView.xaml;PopupViews\CommunicationLogView.xaml;PopupViews\ConnectionView.xaml;PopupViews\TableSetupView.xaml;PopupViews\ValueEnterView.xaml;UserControl1.xaml;
 
 False
 

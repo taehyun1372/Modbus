@@ -20,6 +20,9 @@ namespace Control_Library.ControlViewModels
         private CommunicationLogView _communicationLogView;
         private TableSetupViewModel _setupViewModel;
         private TableSetupView _setupView;
+        private ConnectionViewModel _connectionViewModel;
+        private ConnectionView _connectionView;
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         public event Action<object, NewTableCreatedEventArg> NewTableCreated;
@@ -168,7 +171,7 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        public void ShowCommunicationLog()
+        public void ShowCommunicationLogPopup()
         {
             if (_communicationLogView != null)
             {
@@ -187,7 +190,7 @@ namespace Control_Library.ControlViewModels
             }
         }
 
-        public void ShowTableSetup()
+        public void ShowTableSetupPopup()
         {
             if (_setupView != null)
             {
@@ -203,6 +206,25 @@ namespace Control_Library.ControlViewModels
                     _setupViewModel = null;
                 };
                 _setupView.ShowDialog();
+            }
+        }
+
+        public void ShowConnectPopup()
+        {
+            if (_connectionView != null)
+            {
+                _connectionView.Activate();
+            }
+            else
+            {
+                _connectionViewModel = new ConnectionViewModel(Slave);
+                _connectionView = new ConnectionView(_connectionViewModel);
+                _connectionView.Closed += (s, e) =>
+                {
+                    _connectionView = null;
+                    _connectionViewModel = null;
+                };
+                _connectionView.ShowDialog();
             }
         }
     }

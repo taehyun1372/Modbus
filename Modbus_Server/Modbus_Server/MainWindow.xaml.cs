@@ -37,6 +37,11 @@ namespace Modbus_Server
             ccMainArea.Content = mainView;
 
             mainViewModel.CreateNewTable();
+
+            this.Loaded += (s, e) =>
+            {
+                mainViewModel.ShowConnectPopup(); //Initially open connection popup
+            };
         }
 
         private void mnCreateTable_Click(object sender, RoutedEventArgs e)
@@ -51,12 +56,22 @@ namespace Modbus_Server
 
         private void mnCommunicationLog_Click(object sender, RoutedEventArgs e)
         {
-            _mainViewModel.ShowCommunicationLog();
+            _mainViewModel.ShowCommunicationLogPopup();
         }
 
         private void mnTableSetup_Click(object sender, RoutedEventArgs e)
         {
-            _mainViewModel.ShowTableSetup();
+            _mainViewModel.ShowTableSetupPopup();
+        }
+
+        private void mnConnect_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.ShowConnectPopup();
+        }
+        
+        private void mnDisconnect_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.Slave.Disconnect();
         }
     }
 }

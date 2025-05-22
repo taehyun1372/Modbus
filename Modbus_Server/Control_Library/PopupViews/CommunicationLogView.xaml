@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Control_Library.PopupViews"
         mc:Ignorable="d"
-        Title="CommunicationLogView" Height="370" Width="640">
+        Title="Communication Log" Height="370" Width="640">
     <Window.Resources>
         <Style x:Key="ResumeButtonStyle" TargetType="Button">
             <Style.Triggers>

@@ -17,7 +17,9 @@
                 <MenuItem Header="_Save"/>
                 <MenuItem Header="_Open"/>
             </MenuItem>
-            <MenuItem Header="_Connection">
+            <MenuItem Header="Connection">
+                <MenuItem Name="mnConnect" Header="_Connect" Click="mnConnect_Click"/>
+                <MenuItem Name="mnDisconnect" Header="_Disconnect" Click="mnDisconnect_Click"/>
             </MenuItem>
             <MenuItem Header="_Setup">
                 <MenuItem Name="mnTableSetup" Header="_Table Setup" Click="mnTableSetup_Click"/>

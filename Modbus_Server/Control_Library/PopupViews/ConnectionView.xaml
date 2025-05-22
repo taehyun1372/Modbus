@@ -1,0 +1,38 @@
+﻿<Window x:Class="Control_Library.PopupViews.ConnectionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_Library.PopupViews"
+        mc:Ignorable="d"
+        Title="Connection View" Height="370" Width="370" KeyDown="Window_KeyDown">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10">
+            <Label Content="Connection Type : " Margin="10 0 5 0"/>
+            <TextBlock Text="Modbus TCP" VerticalAlignment="Center" Margin="5 0 10 0" Background="White"/>
+        </StackPanel>
+        <GroupBox BorderThickness="2" Header="Connection Detail" Margin="10">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="7 10 10 0">
+                    <Label Content="IP Address : " Margin="10 0 5 0"/>
+                    <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" Width="130" VerticalAlignment="Center" Margin="5 0 10 0" Background="AliceBlue"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="7 0 10 0">
+                    <Label Content="Port : " Margin="10 0 5 0"/>
+                    <TextBox Text="{Binding Port, UpdateSourceTrigger=PropertyChanged}" Width="50" VerticalAlignment="Center" Margin="39 0 10 0" Background="AliceBlue"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="7 0 10 0">
+                    <Label Content="Unit Id : " Margin="10 0 5 0"/>
+                    <TextBox Text="{Binding UnitId, UpdateSourceTrigger=PropertyChanged}" Width="50" VerticalAlignment="Center" Margin="25 0 10 0" Background="AliceBlue"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <Label Height="100"/>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Name="btnOkay" Content="Okay" Height="25" Width="60" Margin="10 0 5 0" Click="btnOkay_Click"/>
+                <Button Name="btnCancel" Content="Cancel" Height="25" Width="60" Margin="5 0 10 0" Click="btnCancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>

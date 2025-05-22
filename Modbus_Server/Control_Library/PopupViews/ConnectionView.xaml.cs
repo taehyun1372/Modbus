@@ -16,12 +16,12 @@ using Control_Library.PopupViewModels;
 namespace Control_Library.PopupViews
 {
     /// <summary>
-    /// Interaction logic for SetupView.xaml
+    /// Interaction logic for ConnectionView.xaml
     /// </summary>
-    public partial class TableSetupView : Window
+    public partial class ConnectionView : Window
     {
-        private PopupViewModels.TableSetupViewModel _model;
-        public TableSetupView(TableSetupViewModel model)
+        private ConnectionViewModel _model;
+        public ConnectionView(ConnectionViewModel model)
         {
             InitializeComponent();
             this.DataContext = model;
@@ -30,7 +30,7 @@ namespace Control_Library.PopupViews
 
         private void btnOkay_Click(object sender, RoutedEventArgs e)
         {
-            _model.OnOkayClicked(sender, e);
+            _model.OnOkayClicked();
             Close();
         }
 
@@ -47,19 +47,9 @@ namespace Control_Library.PopupViews
             }
             else if (e.Key == Key.Enter)
             {
-                _model.OnOkayClicked(sender, e);
+                _model.OnOkayClicked();
                 Close();
             }
-        }
-
-        private void tbCustomQuantity_GotFocus(object sender, RoutedEventArgs e)
-        {
-            _model.IsQuantityCustom = true;
-        }
-
-        private void tbCustomRowCounts_GotFocus(object sender, RoutedEventArgs e)
-        {
-            _model.IsRowCountsCustom = true;
         }
     }
 }

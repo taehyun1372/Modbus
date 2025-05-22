@@ -206,12 +206,21 @@ namespace Control_Library.ControlViewModels
         public DataTableViewModel(SlaveHelper slaveHelper)
         {
             Slave = slaveHelper;
-            Slave.Slave.DataStore.DataStoreWrittenTo += OnDataStoreWrittenTo;
-            Slave.HoldingRegisterChanged += OnSlaveHelperHoldingRegisterChanged;
+            Slave.Connected += (s, e) => 
+            {
+                Slave.Slave.DataStore.DataStoreWrittenTo += OnDataStoreWrittenTo;
+                Slave.HoldingRegisterChanged += OnSlaveHelperHoldingRegisterChanged;
+                SynchroniseDataTable();
+            };
         }
 
         public void SynchroniseDataTable()
         {
+            if (!Slave.IsConnected)
+            {
+                return;
+            }
+
             ushort[] values = Slave.GetHoldingRegisters(StartAddress + 1, Quantity);
 
             for (int i = 0; i < values.Length; i++)
