@@ -1,0 +1,10 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\bin\Debug\31_NModbus_Connection.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\bin\Debug\31_NModbus_Connection.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\bin\Debug\31_NModbus_Connection.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\bin\Debug\NModbus4.dll
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\bin\Debug\NModbus4.xml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\obj\Debug\31_NModbus_Connection.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\obj\Debug\31_NModbus_Connection.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\obj\Debug\31_NModbus_Connection.csproj.CopyComplete
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\obj\Debug\31_NModbus_Connection.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\31_NModbus_Connection\31_NModbus_Connection\obj\Debug\31_NModbus_Connection.pdb
