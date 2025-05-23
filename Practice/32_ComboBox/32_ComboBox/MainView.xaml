@@ -6,9 +6,18 @@
              xmlns:local="clr-namespace:_32_ComboBox"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
+    </UserControl.Resources>
     <Grid>
         <StackPanel Width="200">
-            <ComboBox ItemsSource="{Binding FunctionCodes}" SelectedItem="{Binding FunctionCode, Mode=TwoWay}" />
+            <ComboBox ItemsSource="{Binding FunctionCodes}" SelectedItem="{Binding FunctionCode, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -15,3 +15,4 @@ C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_C
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.csproj.CoreCompileInputs.cache
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.exe
 C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -7,6 +7,8 @@ using System.Windows;
 using System.ComponentModel;
 using Control_Library.ControlViewModels;
 using Control_Library.Core;
+using System.Windows.Data;
+using System.Globalization;
 
 namespace Control_Library.PopupViewModels
 {
@@ -324,6 +326,24 @@ namespace Control_Library.PopupViewModels
         public void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+    }
+    public class EnumDescriptionConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null) return "";
+
+            var field = value.GetType().GetField(value.ToString());
+            if (field == null) return value.ToString();
+
+            var attribute = Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) as DescriptionAttribute;
+            return attribute?.Description ?? value.ToString();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

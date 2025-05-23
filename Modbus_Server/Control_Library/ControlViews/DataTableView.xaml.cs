@@ -116,7 +116,7 @@ namespace Control_Library.ControlViews
                     Binding = new Binding($"Name{colIndex}.Content")
                     {
                         Mode = BindingMode.TwoWay,
-                        UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+                        UpdateSourceTrigger = UpdateSourceTrigger.Default
                     },
                     Width = Model.NameColumnWidth,
                     CanUserSort = false,
@@ -141,7 +141,7 @@ namespace Control_Library.ControlViews
                     Binding = new Binding($"Value{colIndex}.Content")
                     {
                         Mode = BindingMode.TwoWay,
-                        UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+                        UpdateSourceTrigger = UpdateSourceTrigger.Default
                     },
                     Width = Model.ValueColumnWidth,
                     CanUserSort = false,
