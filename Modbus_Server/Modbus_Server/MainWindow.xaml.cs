@@ -42,6 +42,11 @@ namespace Modbus_Server
             {
                 mainViewModel.ShowConnectPopup(); //Initially open connection popup
             };
+
+            StatusBarViewModel statusBarViewModel = new StatusBarViewModel(mainViewModel.Slave);
+            StatusBarView statusBarView = new StatusBarView(statusBarViewModel);
+
+            ccStatusBar.Content = statusBarView;
         }
 
         private void mnCreateTable_Click(object sender, RoutedEventArgs e)

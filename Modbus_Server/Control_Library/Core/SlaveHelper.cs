@@ -9,11 +9,13 @@ using System.Net;
 using Control_Library.PopupViewModels;
 using Control_Library.PopupViews;
 using System.Windows;
+using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace Control_Library.Core
 {
 
-    public class SlaveHelper
+    public class SlaveHelper : INotifyPropertyChanged
     {
         public const string DEFAULT_IP_ADDRESS = "127.0.0.1";
         public const int DEFAULT_PORT = 502;
@@ -21,6 +23,7 @@ namespace Control_Library.Core
         public event Action<object, EventArgs> Connected;
         public event Action<object, EventArgs> Disconnected;
         public event Action<object, HoldingRegisterChangeEventArg> HoldingRegisterChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private bool _isConnected;
         public bool IsConnected
@@ -32,6 +35,7 @@ namespace Control_Library.Core
             set
             {
                 _isConnected = value;
+                OnPropertyChanged(nameof(IsConnected));
             }
         }
 
@@ -90,6 +94,7 @@ namespace Control_Library.Core
             set
             {
                 _address = value;
+                OnPropertyChanged(nameof(Address));
             }
         }
 
@@ -103,6 +108,50 @@ namespace Control_Library.Core
             set
             {
                 _port = value;
+                OnPropertyChanged(nameof(Port));
+            }
+        }
+
+        public int ConnectionCounts
+        {
+            get
+            {
+                if (Slave == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return Slave.Masters.Count;
+                }
+            }
+        }
+
+        private int _RxCounts;
+        public int RxCounts
+        {
+            get
+            {
+                return _RxCounts;
+            }
+            set
+            {
+                _RxCounts = value;
+                OnPropertyChanged(nameof(RxCounts));
+            }
+        }
+
+        private int _TxCounts;
+        public int TxCounts
+        {
+            get
+            {
+                return _TxCounts;
+            }
+            set
+            {
+                _TxCounts = value;
+                OnPropertyChanged(nameof(TxCounts));
             }
         }
 
@@ -131,6 +180,7 @@ namespace Control_Library.Core
                 HoldingRegisterChanged?.Invoke(this, new HoldingRegisterChangeEventArg(index, value));
             }
         }
+
         public void Connect(string address, int port, byte unitId)
         {
             if (Slave != null)
@@ -143,12 +193,16 @@ namespace Control_Library.Core
                 EndPoint.Address = IPAddress.Parse(address);
                 EndPoint.Port = port;
                 Listener = new TcpListener(EndPoint);
-                _listener.Start();
+                Listener.Start();
 
                 Slave = ModbusTcpSlave.CreateTcp(unitId, Listener);
                 Slave.DataStore = Modbus.Data.DataStoreFactory.CreateDefaultDataStore();
 
                 Slave.Listen();
+                Slave.ModbusSlaveRequestReceived += (s, e) =>
+                {
+                    RxCounts += 1;
+                };
 
                 IsConnected = true;
                 Connected?.Invoke(this, EventArgs.Empty);
@@ -187,6 +241,11 @@ namespace Control_Library.Core
                 var message = "Failed to close the server";
                 MessageBox.Show(message, "Disconnection Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+        }
+
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 

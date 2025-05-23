@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Control_Library.ControlViews.StatusBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Control_Library.ControlViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="800">
+    <Border Padding="12 3 12 3">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="({0} : {1})">
+                            <Binding Path="Address"/>
+                            <Binding Path="Port"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+                <TextBlock Margin="10 0 0 0" FontWeight="SemiBold">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsConnected}" Value="true">
+                                    <Setter Property="Foreground" Value="Green"/>
+                                    <Setter Property="Text" Value="Server is opened"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsConnected}" Value="false">
+                                    <Setter Property="Foreground" Value="Red"/>
+                                    <Setter Property="Text" Value="Server is closed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" >
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="Connections : {0}, Tx : {1}, Rx : {2}">
+                            <Binding Path="ConnectionCounts"/>
+                            <Binding Path="TxCounts"/>
+                            <Binding Path="RxCounts"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

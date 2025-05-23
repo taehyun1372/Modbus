@@ -9,6 +9,7 @@ using Control_Library.Core;
 using System.Windows.Threading;
 using System.Windows;
 using System.IO;
+using Modbus.Device;
 
 namespace Control_Library.PopupViewModels
 {
@@ -133,7 +134,6 @@ namespace Control_Library.PopupViewModels
             IsTime = true;
             IsByteMessage = true;
         }
-
         public void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));

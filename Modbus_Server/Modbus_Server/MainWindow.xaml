@@ -31,6 +31,6 @@
             </MenuItem>
         </Menu>
         <ContentControl Grid.Row="1" Name="ccMainArea"/>
-        <TextBlock Grid.Row="2" Name="tbStatusBar" Text="Dummy Status"/>
+        <ContentControl Grid.Row="2" Name="ccStatusBar" />
     </Grid>
 </Window>
