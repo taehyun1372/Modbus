@@ -21,6 +21,7 @@ namespace Control_Library.ControlViewModels
         private const int DEFAULT_VALUE_COLUMN_WIDTH = 70;
         public const int DEFAULT_QUANTITY = 10;
         public const int DEFAULT_START_ADDRESS = 0;
+        public const EnumFunctionCodes DEFAULT_FUNCTION_CODE = EnumFunctionCodes.HolidngRegister;
         public static SolidColorBrush DEFUALT_BORDER_COLOR = Brushes.LightGray;
         public static SolidColorBrush ACTIVE_BORDER_COLOR = Brushes.SteelBlue;
 
@@ -39,6 +40,21 @@ namespace Control_Library.ControlViewModels
             {
                 _borderColor = value;
                 OnPropertyChanged(nameof(BorderColor));
+            }
+        }
+
+        private EnumFunctionCodes _functionCode = DEFAULT_FUNCTION_CODE;
+        public EnumFunctionCodes FunctionCode
+        {
+            get
+            {
+                return _functionCode;
+            }
+            set
+            {
+                _functionCode = value;
+                SynchroniseDataTable();
+                OnPropertyChanged(nameof(FunctionCode));
             }
         }
 
@@ -208,8 +224,7 @@ namespace Control_Library.ControlViewModels
             Slave = slaveHelper;
             Slave.Connected += (s, e) => 
             {
-                Slave.Slave.DataStore.DataStoreWrittenTo += OnDataStoreWrittenTo;
-                Slave.HoldingRegisterChanged += OnSlaveHelperHoldingRegisterChanged;
+                Slave.RegisterChanged += OnSlaveHelperRegisterChanged;
                 SynchroniseDataTable();
             };
         }
@@ -221,12 +236,28 @@ namespace Control_Library.ControlViewModels
                 return;
             }
 
-            ushort[] values = Slave.GetHoldingRegisters(StartAddress + 1, Quantity);
+            ushort[] values = new ushort[Quantity];
+
+            switch (FunctionCode)
+            {
+                case EnumFunctionCodes.CoilStatus:
+                    break;
+                case EnumFunctionCodes.InputStatus:
+                    break;
+                case EnumFunctionCodes.HolidngRegister:
+                    values = Slave.GetHoldingRegisters(StartAddress + 1, Quantity);
+                    break;
+                case EnumFunctionCodes.InputRegister:
+                    values = Slave.GetInputRegisters(StartAddress + 1, Quantity);
+                    break;
+            }
 
             for (int i = 0; i < values.Length; i++)
             {
                 ListDataItems[i].ValueItem.Content = values[i];
             }
+            
+
         }
         private void UpdateDataTableList()
         {
@@ -370,11 +401,27 @@ namespace Control_Library.ControlViewModels
 
         public void OnDataItemValueChanged(object sender, ValueChangedEventArgs e)
         {
-            Slave.SetHoldingRegister(e.Index + StartAddress + 1, (ushort)e.Value);
+            switch(FunctionCode)
+            {
+                case EnumFunctionCodes.CoilStatus:
+                    break;
+                case EnumFunctionCodes.InputStatus:
+                    break;
+                case EnumFunctionCodes.HolidngRegister:
+                    Slave.SetHoldingRegister(e.Index + StartAddress + 1, (ushort)e.Value);
+                    break;
+                case EnumFunctionCodes.InputRegister:
+                    Slave.SetInputRegister(e.Index + StartAddress + 1, (ushort)e.Value);
+                    break;
+            }
         }
 
-        public void OnSlaveHelperHoldingRegisterChanged(object sender, HoldingRegisterChangeEventArg e)
+        public void OnSlaveHelperRegisterChanged(object sender, RegisterChangeEventArg e)
         {
+            if (e.FunctionCode != FunctionCode)
+            {
+                return;
+            }
             var lowerBound = 0;
             var upperBound = ListDataItems.Count() - 1;
             var index = e.Index - StartAddress - 1;
@@ -386,22 +433,6 @@ namespace Control_Library.ControlViewModels
             else
             {
                 ListDataItems[index].ValueItem.Content = e.Value;
-            }
-        }
-
-        public void OnDataStoreWrittenTo(object sender, Modbus.Data.DataStoreEventArgs e)
-        {
-            var lowerBound = 0;
-            var upperBound = ListDataItems.Count() - 1;
-            var index = e.StartAddress - StartAddress;
-
-            for (int i=0; i < e.Data.B.Count; i++)
-            {
-                if (index + i < lowerBound || index + i > upperBound)
-                {
-                    continue;
-                }
-                ListDataItems[index].ValueItem.Content = e.Data.B[i];
             }
         }
 

@@ -10,6 +10,12 @@
         <StackPanel>
             <GroupBox BorderThickness="2" Margin="5 8 5 0" VerticalContentAlignment="Center" Padding="0 10 0 5">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Label Content="Function "/>
+                    <ComboBox  ItemsSource="{Binding FunctionCodes}" SelectedItem="{Binding FunctionCode, Mode=TwoWay}" />
+                </StackPanel>
+            </GroupBox>
+            <GroupBox BorderThickness="2" Margin="5 8 5 0" VerticalContentAlignment="Center" Padding="0 10 0 5">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Label Content="Start Address : "/>
                     <TextBox Name="tbStartAddress" Width="50" Background="AliceBlue" Text="{Binding StartAddress, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>

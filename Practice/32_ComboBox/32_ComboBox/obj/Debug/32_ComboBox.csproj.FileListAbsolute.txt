@@ -1,0 +1,17 @@
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\bin\Debug\32_ComboBox.exe.config
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\bin\Debug\32_ComboBox.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\bin\Debug\32_ComboBox.pdb
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.csproj.AssemblyReference.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\MainView.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\MainWindow.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\App.g.cs
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox_MarkupCompile.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox_MarkupCompile.lref
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\MainView.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\MainWindow.baml
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.g.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\_32_ComboBox.Properties.Resources.resources
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.csproj.GenerateResource.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.csproj.CoreCompileInputs.cache
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.exe
+C:\Users\a00533064\OneDrive - ONEVIRTUALOFFICE\Desktop\Code\Modbus\Practice\32_ComboBox\32_ComboBox\obj\Debug\32_ComboBox.pdb

@@ -22,7 +22,7 @@ namespace Control_Library.Core
         public const byte DEFAULT_SLAVE_ID = 1;
         public event Action<object, EventArgs> Connected;
         public event Action<object, EventArgs> Disconnected;
-        public event Action<object, HoldingRegisterChangeEventArg> HoldingRegisterChanged;
+        public event Action<object, RegisterChangeEventArg> RegisterChanged;
         public event PropertyChangedEventHandler PropertyChanged;
 
         private bool _isConnected;
@@ -177,7 +177,40 @@ namespace Control_Library.Core
             if (_slave.DataStore.HoldingRegisters.Count() > index)
             {
                 _slave.DataStore.HoldingRegisters[index] = value;
-                HoldingRegisterChanged?.Invoke(this, new HoldingRegisterChangeEventArg(index, value));
+                RegisterChanged?.Invoke(this, new RegisterChangeEventArg(index, value, EnumFunctionCodes.HolidngRegister));
+            }
+        }
+
+        public ushort[] GetInputRegisters(int start, int quantity)
+        {
+            return _slave.DataStore.InputRegisters.Skip(start).Take(quantity).ToArray();
+        }
+
+        public void SetInputRegister(int index, ushort value)
+        {
+            if (_slave.DataStore.InputRegisters.Count() > index)
+            {
+                _slave.DataStore.InputRegisters[index] = value;
+                RegisterChanged?.Invoke(this, new RegisterChangeEventArg(index, value, EnumFunctionCodes.InputRegister));
+            }
+        }
+
+        public void OnDataStoreWrittenTo(object sender, Modbus.Data.DataStoreEventArgs e)
+        {
+            switch (e.ModbusDataType)
+            {
+                case (Modbus.Data.ModbusDataType.Coil):
+                    break;
+                case (Modbus.Data.ModbusDataType.Input):
+                    break;
+                case (Modbus.Data.ModbusDataType.HoldingRegister):
+                    for (int i = 0; i < e.Data.B.Count; i++)
+                    {
+                        RegisterChanged?.Invoke(this, new RegisterChangeEventArg(e.StartAddress + i + 1, e.Data.B[i], EnumFunctionCodes.HolidngRegister));
+                    }
+                    break;
+                case (Modbus.Data.ModbusDataType.InputRegister):
+                    break;
             }
         }
 
@@ -197,12 +230,14 @@ namespace Control_Library.Core
 
                 Slave = ModbusTcpSlave.CreateTcp(unitId, Listener);
                 Slave.DataStore = Modbus.Data.DataStoreFactory.CreateDefaultDataStore();
+                Slave.DataStore.DataStoreWrittenTo += OnDataStoreWrittenTo;
 
                 Slave.Listen();
                 Slave.ModbusSlaveRequestReceived += (s, e) =>
                 {
                     RxCounts += 1;
                 };
+
 
                 IsConnected = true;
                 Connected?.Invoke(this, EventArgs.Empty);
@@ -249,15 +284,18 @@ namespace Control_Library.Core
         }
     }
 
-    public class HoldingRegisterChangeEventArg
+    public class RegisterChangeEventArg
     {
         public int Index { get; set; }
         public ushort Value { get; set; }
+        public EnumFunctionCodes FunctionCode { get; set; }
 
-        public HoldingRegisterChangeEventArg(int index, ushort value)
+
+        public RegisterChangeEventArg(int index, ushort value, EnumFunctionCodes functionCode)
         {
             Index = index;
             Value = value;
+            FunctionCode = functionCode;
         }
     }
 }

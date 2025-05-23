@@ -98,6 +98,7 @@
     <Compile Include="ControlViews\StatusBarView.xaml.cs">
       <DependentUpon>StatusBarView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Core\DataTypes.cs" />
     <Compile Include="Core\SlaveHelper.cs" />
     <Compile Include="Core\Utils.cs" />
     <Compile Include="PopupViewModels\CommunicationLogViewModel.cs" />

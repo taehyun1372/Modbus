@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.ComponentModel;
 using Control_Library.ControlViewModels;
+using Control_Library.Core;
 
 namespace Control_Library.PopupViewModels
 {
@@ -21,6 +22,28 @@ namespace Control_Library.PopupViewModels
             set
             {
                 _dataTable = value;
+            }
+        }
+
+        public IEnumerable<EnumFunctionCodes> FunctionCodes
+        {
+            get
+            {
+                return (IEnumerable<EnumFunctionCodes>)Enum.GetValues(typeof(EnumFunctionCodes));
+            }
+        }
+
+        private EnumFunctionCodes _functionCode;
+        public EnumFunctionCodes FunctionCode
+        {
+            get
+            {
+                return _functionCode;
+            }
+            set
+            {
+                _functionCode = value;
+                OnPropertyChanged(nameof(FunctionCode));
             }
         }
 
@@ -279,6 +302,7 @@ namespace Control_Library.PopupViewModels
             Quantity = DataTable.Quantity;
             RowCounts = DataTable.RowCounts;
             StartAddress = DataTable.StartAddress;
+            FunctionCode = DataTable.FunctionCode;
         }
 
         public void OnOkayClicked(object sender, RoutedEventArgs e)
@@ -294,6 +318,7 @@ namespace Control_Library.PopupViewModels
             
             DataTable.Quantity = Quantity;
             DataTable.StartAddress = StartAddress;
+            DataTable.FunctionCode = FunctionCode;
         }
 
         public void OnPropertyChanged(string name)
