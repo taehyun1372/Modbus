@@ -11,6 +11,7 @@ using Control_Library.ControlViews;
 using Control_Library.Core;
 using AvalonDock.Layout;
 using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace Control_Library.ControlViewModels
 {
@@ -103,9 +104,16 @@ namespace Control_Library.ControlViewModels
 
             LayoutAnchorable anchorable = new LayoutAnchorable()
             {
-                Title = "Default Table",
                 Content = contenControl
             };
+
+            Binding titleBinding = new Binding("DisplayTitle")
+            {
+                Source = dataTableViewModel,
+                Mode = BindingMode.OneWay
+            };
+
+            BindingOperations.SetBinding(anchorable, LayoutAnchorable.TitleProperty, titleBinding);
 
             contenControl.Tag = anchorable;
 

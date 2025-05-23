@@ -23,6 +23,7 @@ namespace Control_Library.Core
         public event Action<object, EventArgs> Connected;
         public event Action<object, EventArgs> Disconnected;
         public event Action<object, RegisterChangeEventArg> RegisterChanged;
+        public event Action<object, StatusChangeEventArg> StatusChanged;
         public event PropertyChangedEventHandler PropertyChanged;
 
         private bool _isConnected;
@@ -167,6 +168,34 @@ namespace Control_Library.Core
             UnitId = DEFAULT_SLAVE_ID;
         }
 
+        public bool[] GetCoilStatus(int start, int quantity)
+        {
+            return _slave.DataStore.CoilDiscretes.Skip(start).Take(quantity).ToArray();
+        }
+
+        public void SetCoilStatus(int index, bool value)
+        {
+            if (_slave.DataStore.CoilDiscretes.Count() > index)
+            {
+                _slave.DataStore.CoilDiscretes[index] = value;
+                StatusChanged?.Invoke(this, new StatusChangeEventArg(index, value, EnumFunctionCodes.CoilStatus));
+            }
+        }
+
+        public bool[] GetInputStatus(int start, int quantity)
+        {
+            return _slave.DataStore.InputDiscretes.Skip(start).Take(quantity).ToArray();
+        }
+
+        public void SetInputStatus(int index, bool value)
+        {
+            if (_slave.DataStore.InputDiscretes.Count() > index)
+            {
+                _slave.DataStore.InputDiscretes[index] = value;
+                StatusChanged?.Invoke(this, new StatusChangeEventArg(index, value, EnumFunctionCodes.InputStatus));
+            }
+        }
+
         public ushort[] GetHoldingRegisters(int start, int quantity)
         {
             return _slave.DataStore.HoldingRegisters.Skip(start).Take(quantity).ToArray();
@@ -200,6 +229,10 @@ namespace Control_Library.Core
             switch (e.ModbusDataType)
             {
                 case (Modbus.Data.ModbusDataType.Coil):
+                    for (int i = 0; i < e.Data.A.Count; i++)
+                    {
+                        StatusChanged?.Invoke(this, new StatusChangeEventArg(e.StartAddress + i + 1, e.Data.A[i], EnumFunctionCodes.CoilStatus));
+                    }
                     break;
                 case (Modbus.Data.ModbusDataType.Input):
                     break;
@@ -292,6 +325,21 @@ namespace Control_Library.Core
 
 
         public RegisterChangeEventArg(int index, ushort value, EnumFunctionCodes functionCode)
+        {
+            Index = index;
+            Value = value;
+            FunctionCode = functionCode;
+        }
+    }
+
+    public class StatusChangeEventArg
+    {
+        public int Index { get; set; }
+        public bool Value { get; set; }
+        public EnumFunctionCodes FunctionCode { get; set; }
+
+
+        public StatusChangeEventArg(int index, bool value, EnumFunctionCodes functionCode)
         {
             Index = index;
             Value = value;

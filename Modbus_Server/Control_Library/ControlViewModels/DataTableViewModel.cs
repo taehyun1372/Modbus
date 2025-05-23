@@ -21,6 +21,7 @@ namespace Control_Library.ControlViewModels
         private const int DEFAULT_VALUE_COLUMN_WIDTH = 70;
         public const int DEFAULT_QUANTITY = 10;
         public const int DEFAULT_START_ADDRESS = 0;
+        public const string DEFAULT_DISPLAY_TITLE = "Default Title";
         public const EnumFunctionCodes DEFAULT_FUNCTION_CODE = EnumFunctionCodes.HolidngRegister;
         public static SolidColorBrush DEFUALT_BORDER_COLOR = Brushes.LightGray;
         public static SolidColorBrush ACTIVE_BORDER_COLOR = Brushes.SteelBlue;
@@ -28,6 +29,20 @@ namespace Control_Library.ControlViewModels
         private ValueEnterView _valueEnterView;
         private ValueEnterViewModel _valueEnterViewModel;
         private SlaveHelper _slave;
+
+        private string _displayTitle = DEFAULT_DISPLAY_TITLE;
+        public string DisplayTitle
+        {
+            get
+            {
+                return _displayTitle;
+            }
+            set
+            {
+                _displayTitle = value;
+                OnPropertyChanged(nameof(DisplayTitle));
+            }
+        }
 
         private SolidColorBrush _borderColor = DEFUALT_BORDER_COLOR;
         public SolidColorBrush BorderColor
@@ -53,6 +68,7 @@ namespace Control_Library.ControlViewModels
             set
             {
                 _functionCode = value;
+                DisplayTitle = Utils.ConvertEnumFunctionCodesToReadableString(_functionCode);
                 SynchroniseDataTable();
                 OnPropertyChanged(nameof(FunctionCode));
             }
@@ -225,8 +241,10 @@ namespace Control_Library.ControlViewModels
             Slave.Connected += (s, e) => 
             {
                 Slave.RegisterChanged += OnSlaveHelperRegisterChanged;
+                Slave.StatusChanged += OnSlaveHelperStatusChanged;
                 SynchroniseDataTable();
             };
+            FunctionCode = EnumFunctionCodes.HolidngRegister;
         }
 
         public void SynchroniseDataTable()
@@ -241,8 +259,10 @@ namespace Control_Library.ControlViewModels
             switch (FunctionCode)
             {
                 case EnumFunctionCodes.CoilStatus:
+                    values = Utils.ConvertBoolArrayToUshortArray(Slave.GetCoilStatus(StartAddress + 1, Quantity));
                     break;
                 case EnumFunctionCodes.InputStatus:
+                    values = Utils.ConvertBoolArrayToUshortArray(Slave.GetInputStatus(StartAddress + 1, Quantity));
                     break;
                 case EnumFunctionCodes.HolidngRegister:
                     values = Slave.GetHoldingRegisters(StartAddress + 1, Quantity);
@@ -404,8 +424,10 @@ namespace Control_Library.ControlViewModels
             switch(FunctionCode)
             {
                 case EnumFunctionCodes.CoilStatus:
+                    Slave.SetCoilStatus(e.Index + StartAddress + 1, (e.Value > 0) ? true : false);
                     break;
                 case EnumFunctionCodes.InputStatus:
+                    Slave.SetInputStatus(e.Index + StartAddress + 1, (e.Value > 0) ? true : false);
                     break;
                 case EnumFunctionCodes.HolidngRegister:
                     Slave.SetHoldingRegister(e.Index + StartAddress + 1, (ushort)e.Value);
@@ -433,6 +455,26 @@ namespace Control_Library.ControlViewModels
             else
             {
                 ListDataItems[index].ValueItem.Content = e.Value;
+            }
+        }
+
+        public void OnSlaveHelperStatusChanged(object sender, StatusChangeEventArg e)
+        {
+            if (e.FunctionCode != FunctionCode)
+            {
+                return;
+            }
+            var lowerBound = 0;
+            var upperBound = ListDataItems.Count() - 1;
+            var index = e.Index - StartAddress - 1;
+
+            if (index < lowerBound || index > upperBound)
+            {
+                return;
+            }
+            else
+            {
+                ListDataItems[index].ValueItem.Content = e.Value? 1 : 0;
             }
         }
 
