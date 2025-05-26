@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32210.238
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modbus_Server", "Modbus_Server\Modbus_Server.csproj", "{207EE378-6315-4021-993D-6D63EACBF086}"
 EndProject
@@ -9,14 +9,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control_Library", "Control_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Bey", "Test_Bey\Test_Bey.csproj", "{513062A2-EC36-4574-B05E-6C6AB076F9FC}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Modbus_Server_Setup", "Modbus_Server_Setup\Modbus_Server_Setup.vdproj", "{49315235-7F2D-472C-B58E-347D544634DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{207EE378-6315-4021-993D-6D63EACBF086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{207EE378-6315-4021-993D-6D63EACBF086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{207EE378-6315-4021-993D-6D63EACBF086}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{207EE378-6315-4021-993D-6D63EACBF086}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{207EE378-6315-4021-993D-6D63EACBF086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{207EE378-6315-4021-993D-6D63EACBF086}.Release|Any CPU.Build.0 = Release|Any CPU
 		{30747CF4-20F2-4988-A286-C0DFE297825C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{513062A2-EC36-4574-B05E-6C6AB076F9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{513062A2-EC36-4574-B05E-6C6AB076F9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{513062A2-EC36-4574-B05E-6C6AB076F9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49315235-7F2D-472C-B58E-347D544634DB}.Debug|Any CPU.ActiveCfg = Debug
+		{49315235-7F2D-472C-B58E-347D544634DB}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
